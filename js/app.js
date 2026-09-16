@@ -42,6 +42,7 @@ async function init() {
       getZonedParts(new Date(), schedule.event.timezone),
     );
 
+    renderStructuredData(schedule.event);
     renderHeader(schedule);
     renderAll();
     setupTabKeyboardNavigation();
@@ -51,6 +52,71 @@ async function init() {
   } catch (error) {
     showLoadError(error);
   }
+}
+
+function renderStructuredData(event) {
+  const pageUrl = "https://ikigai.colivefukuoka.com/";
+  const imageUrl = `${pageUrl}assets/og-ikigai-academy-2026.jpg`;
+  const description = "A two-day participant guide to the Ikigai Academy program, sessions, speakers, booking, and venue at Colive Fukuoka 2026.";
+  const venueAddress = event.venue_address || event.venue;
+  const addressParts = venueAddress.split(",").map((part) => part.trim());
+  const cityAndPostal = addressParts.at(-2)?.match(/^(.*)\s+(\d{3}-\d{4})$/);
+  const postalAddress = {
+    "@type": "PostalAddress",
+    streetAddress: addressParts.slice(1, -2).join(", ") || venueAddress,
+    addressCountry: "JP",
+  };
+  if (cityAndPostal) {
+    postalAddress.addressLocality = cityAndPostal[1];
+    postalAddress.postalCode = cityAndPostal[2];
+  }
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": `${pageUrl}#webpage`,
+        url: pageUrl,
+        name: `${event.name} | Colive Fukuoka 2026`,
+        description,
+        inLanguage: "en-US",
+        mainEntity: { "@id": `${pageUrl}#event` },
+        primaryImageOfPage: {
+          "@type": "ImageObject",
+          url: imageUrl,
+          width: 1200,
+          height: 630,
+        },
+      },
+      {
+        "@type": "Event",
+        "@id": `${pageUrl}#event`,
+        name: event.name,
+        description: "Two days of talks and workshops for Colive Fukuoka participants.",
+        startDate: event.dates[0],
+        endDate: event.dates.at(-1),
+        eventStatus: "https://schema.org/EventScheduled",
+        eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+        image: imageUrl,
+        url: pageUrl,
+        location: {
+          "@type": "Place",
+          name: event.venue.split(",")[0],
+          address: postalAddress,
+        },
+        organizer: {
+          "@type": "Organization",
+          name: "Colive Fukuoka",
+          url: event.booking_base,
+        },
+      },
+    ],
+  };
+  const script = document.createElement("script");
+  script.id = "event-structured-data";
+  script.type = "application/ld+json";
+  script.textContent = JSON.stringify(structuredData);
+  document.head.append(script);
 }
 
 function loadJapaneseFont(schedule) {
