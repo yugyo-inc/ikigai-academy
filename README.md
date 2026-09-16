@@ -18,6 +18,9 @@ Colive Fukuoka 2026「Ikigai Academy」の参加者向け1ページサイトで�
 ```text
 ikigai-colivefukuoka-site/
 ├── index.html
+├── favicon.ico
+├── robots.txt
+├── sitemap.xml
 ├── hero-comparison.html        # 以前の写真ベース3案。公開本体からリンクしない
 ├── css/
 │   ├── styles.css
@@ -32,9 +35,13 @@ ikigai-colivefukuoka-site/
 ├── assets/
 │   ├── Logo (white).png
 │   ├── logo-white-480.png
+│   ├── favicon-32.png
+│   ├── apple-touch-icon.png
+│   ├── icon-192.png
 │   ├── key-visual-horizontal.jpg
 │   ├── key-visual-vertical.jpg
-│   ├── Ikigai_Academy_Thumbnail_1200x630.jpg
+│   ├── og-ikigai-academy-2026.jpg
+│   ├── Ikigai_Academy_Thumbnail_1200x630.jpg # 旧素材。公開対象外
 │   ├── Woven_Ground_Photo.jpg
 │   ├── Woven_Ground_Photo_web.jpg
 │   ├── conference-2025-stage.jpg
@@ -46,6 +53,8 @@ ikigai-colivefukuoka-site/
 │   ├── fukuoka-now.png
 │   └── faces/
 │       └── 600px角の顔写真.jpg
+├── scripts/
+│   └── build-brand-images.py   # 素材変更時のみ使う制作スクリプト。公開対象外
 ├── vercel.json
 └── README.md
 ```
@@ -59,6 +68,15 @@ Ask Us欄の `volunteers-2025.jpg` は、指定の[受付で笑顔の3人の写�
 **公開前の確認:** 比較ページには識別可能な人物写真が含まれます。`noindex` でもURLを知る人は見られるため、比較ページと比較案専用写真は `.gitignore` と `.vercelignore` で公開対象から除外しています。公開本体にも登壇者と受付ボランティアの写真があるため、これらの掲載許諾を確認してから公開してください。
 
 `logo-white-480.png` は表示速度のための軽量版で、正規ロゴも同梱しています。
+
+## OG画像・ファビコン・検索表示
+
+- 共有時の画像は `assets/og-ikigai-academy-2026.jpg`（1200×630）です。指定の公式キーグラフィックとColive Fukuokaロゴから作成したもので、AI生成画像は使用していません。旧 `Ikigai_Academy_Thumbnail_1200x630.jpg` はOG画像に指定していません。
+- ファビコンは `favicon.ico`、`assets/favicon-32.png`、Apple用 `assets/apple-touch-icon.png` です。すべて正規のColive Fukuokaロゴを濃紺の正方形に配置しています。
+- `index.html` に正規URL、ページ説明、OG/Twitter設定、機械可読なスケジュールJSONへのリンクを置き、`robots.txt` と `sitemap.xml` には公開本体のURLだけを載せています。
+- Event／WebPageの構造化データは、ページ読み込み時にスケジュールJSONの `event` から生成します。日付・会場をHTMLに二重入力しません。GoogleはJavaScript生成の構造化データを処理できますが、すべての検索・AIサービスでの表示を保証するものではありません。
+- キーグラフィック・ロゴ・イベント日付を変更した場合は、OG画像も作り直してください。制作環境にPillowがある場合は `python3 scripts/build-brand-images.py` で再生成できます。公開サイト自体にPythonは不要です。
+- SNSの共有画像はサービス側のキャッシュにより更新が遅れることがあります。新画像のURLで公開HTMLが返ることを確認してください。
 
 ## スケジュールを更新する
 
@@ -187,6 +205,7 @@ http://localhost:4173
 10. CLF26のコピーボタンが使える
 11. Ask Usで3人の顔が見切れず、WhatsAppグループへのボタンが正しい
 12. トップのヒーローに公式キーグラフィックが表示され、PC・360px幅とも中央揃えの文字が読める
+13. 公開HTMLの `og:image` が `og-ikigai-academy-2026.jpg` を指し、正方形ファビコン・`robots.txt`・`sitemap.xml` が開ける
 
 ## 現在進行中の枠の表示
 
@@ -232,4 +251,4 @@ Service Workerは使っていません。会期直前・会期中の更新が古
 - VIPディナーの会場名を書かない
 - 未確定の3件は `note: "soon"` のままにし、内容を創作しない
 
-OG画像は `assets/Ikigai_Academy_Thumbnail_1200x630.jpg` です。
+OG画像は `assets/og-ikigai-academy-2026.jpg` です。
