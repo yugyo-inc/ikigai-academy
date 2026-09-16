@@ -1,0 +1,1060 @@
+{
+ "event": {
+  "name": "Ikigai Academy",
+  "dates": [
+   "2026-10-01",
+   "2026-10-02"
+  ],
+  "venue": "THE LUIGANS Spa & Resort, Uminonakamichi, Fukuoka",
+  "timezone": "Asia/Tokyo",
+  "booking_base": "https://community.colivefukuoka.com/",
+  "venue_map": "https://venue-map.colivefukuoka.com/",
+  "venue_address": "THE LUIGANS Spa & Resort, 18-25 Saitozaki, Higashi-ku, Fukuoka 811-0321, Japan",
+  "google_maps": "https://www.google.com/maps/search/?api=1&query=THE+LUIGANS+Spa+%26+Resort+18-25+Saitozaki+Fukuoka",
+  "before_program": "Before 09:00 · BUS TRANSPORTATION — Check your Academy event page on the community site for the departure point, time, and reservation.",
+  "vip_dinner": "https://community.colivefukuoka.com/vipdinner"
+ },
+ "categories": {
+  "japan": {
+   "en": "Messages from Japan",
+   "color": "#EB6100"
+  },
+  "world": {
+   "en": "Messages from the World",
+   "color": "#3FA9F5"
+  },
+  "senses": {
+   "en": "Sharpen Your Senses",
+   "color": "#00AF84"
+  },
+  "local": {
+   "en": "Local Issues, Up Close",
+   "color": "#F4C542"
+  },
+  "global": {
+   "en": "Global Issues, Up Close",
+   "color": "#C77DFF"
+  }
+ },
+ "rooms": {
+  "MAIN": "MAIN HALL",
+  "A": "BALLROOM A",
+  "B": "BALLROOM B",
+  "G": "GARDEN",
+  "BEACH": "GRAND BEACH",
+  "OUT": "OFF-SITE"
+ },
+ "sessions": [
+  {
+   "day": "2026-10-01",
+   "kind": "plenary",
+   "time": "9:00-10:00",
+   "room": "MAIN",
+   "room_label": "MAIN HALL",
+   "title": "Gut-Health Breakfast: Elevating IQ and Happiness through Gut Health",
+   "who": "Masaomi Sakata 阪田真臣 (Koji Ouji 麹王子) with the Obaachan Shokudo team · 60 servings, first come first served",
+   "category": "senses",
+   "photos": [
+    "sakata",
+    "obaachan1",
+    "obaachan2"
+   ],
+   "community_slug": "elevating-iq-and-happiness-through",
+   "note": null
+  },
+  {
+   "day": "2026-10-01",
+   "kind": "plenary",
+   "time": "10:00-10:15",
+   "room": "MAIN",
+   "room_label": "MAIN HALL",
+   "title": "Opening: Chikuzen Hakata Koma",
+   "who": "Chikushi Shuraku III 三代目 筑紫珠楽 · 480 years of spinning-top performance · Welcome MC: Nikoleta Kouli",
+   "category": "japan",
+   "photos": [
+    "shuraku",
+    "nikoleta"
+   ],
+   "community_slug": "chikuzen-hakata-koma",
+   "note": null
+  },
+  {
+   "day": "2026-10-01",
+   "kind": "plenary",
+   "time": "10:15-10:20",
+   "room": "MAIN",
+   "room_label": "MAIN HALL",
+   "title": "Welcome Speech by Fukuoka City",
+   "who": "Words of welcome from Fukuoka City",
+   "category": null,
+   "photos": [],
+   "community_slug": null,
+   "note": null
+  },
+  {
+   "day": "2026-10-01",
+   "kind": "plenary",
+   "time": "10:20-10:30",
+   "room": "MAIN",
+   "room_label": "MAIN HALL",
+   "title": "Co-founders Opening Talk",
+   "who": "Akina Shu and Ryo Osera, co-founders of Colive Fukuoka",
+   "category": null,
+   "photos": ["akina", "ryo"],
+   "community_slug": null,
+   "note": null
+  },
+  {
+   "day": "2026-10-01",
+   "kind": "plenary",
+   "time": "10:30-11:10",
+   "room": "MAIN",
+   "room_label": "MAIN HALL",
+   "title": "Keynote 1: Why We Came, Why We Stayed, and What Comes Next",
+   "who": "Nick Szasz (FUKUOKA NOW) with Douglas Weber, Jean-Pierre Villeneuve and Micaela Anne",
+   "category": "local",
+   "photos": [
+    "nick"
+   ],
+   "partner_logo": "assets/fukuoka-now.png",
+   "community_slug": null,
+   "note": null
+  },
+  {
+   "day": "2026-10-01",
+   "kind": "plenary",
+   "time": "11:10-11:50",
+   "room": "MAIN",
+   "room_label": "MAIN HALL",
+   "title": "Keynote 2: Matcha Crisis",
+   "who": "Yumi Imamura, Tea Farmers and Distributors",
+   "category": "local",
+   "photos": [
+    "imamura"
+   ],
+   "community_slug": null,
+   "note": null
+  },
+  {
+   "day": "2026-10-01",
+   "kind": "plenary",
+   "time": "11:50-12:30",
+   "room": "MAIN",
+   "room_label": "MAIN HALL",
+   "title": "Destination Pitches (3 mins)",
+   "who": "Local Craftsmen, Nagasaki City, Goto Island, Hirado City, Yame City, Buzen City, Koga City, Tour de Kyushu, Chiang Mai, Taiwan Digital Fest",
+   "category": "world",
+   "photos": ["nikoleta"],
+   "community_slug": null,
+   "note": null
+  },
+  {
+   "day": "2026-10-01",
+   "kind": "plenary",
+   "time": "12:30-14:00",
+   "room": "BEACH",
+   "room_label": "GRAND BEACH",
+   "title": "Lunch Buffet + Sponsor Booth Time in the Garden",
+   "who": "All pass holders · Grand Beach",
+   "category": null,
+   "photos": [],
+   "community_slug": "lunch-buffet",
+   "note": null
+  },
+  {
+   "day": "2026-10-01",
+   "kind": "workshop",
+   "time": "14:00-14:45",
+   "room": "A",
+   "room_label": "BALLROOM A",
+   "title": "Builders' Meetups with Local Communities [INAKA]",
+   "who": "Jacquie Wortley × local destinations",
+   "category": "local",
+   "photos": [
+    "jacquie"
+   ],
+   "community_slug": null,
+   "note": null
+  },
+  {
+   "day": "2026-10-01",
+   "kind": "workshop",
+   "time": "14:00-14:45",
+   "room": "B",
+   "room_label": "BALLROOM B",
+   "title": "Speak Before You're Ready",
+   "who": "Multilingual Matt (Matt Karkut)",
+   "category": "world",
+   "photos": [
+    "matt"
+   ],
+   "community_slug": "speak-before-youre-ready",
+   "note": null
+  },
+  {
+   "day": "2026-10-01",
+   "kind": "workshop",
+   "time": "14:00-14:45",
+   "room": "G",
+   "room_label": "GARDEN",
+   "title": "Booth Time",
+   "who": "Meet the sponsors in the garden · drop in any time",
+   "category": null,
+   "photos": [],
+   "community_slug": null,
+   "note": null
+  },
+  {
+   "day": "2026-10-01",
+   "kind": "workshop",
+   "time": "15:00-15:45",
+   "room": "A",
+   "room_label": "BALLROOM A",
+   "title": "Become Yourself Here: Japan as the Place You Discover Who You Really Are",
+   "who": "Kiki Fukai (Krossing) + immigration specialist Ellie Yamatsu",
+   "category": "japan",
+   "photos": [
+    "kiki"
+   ],
+   "community_slug": "become-yourself-here-japan-as-the-p",
+   "note": null
+  },
+  {
+   "day": "2026-10-01",
+   "kind": "workshop",
+   "time": "15:00-15:45",
+   "room": "B",
+   "room_label": "BALLROOM B",
+   "title": "Building Brands That Centre Human Dignity Over Profit",
+   "who": "Mirela Curiman",
+   "category": "global",
+   "photos": [
+    "mirela"
+   ],
+   "community_slug": "building-brands-that-centre-human-d",
+   "note": null
+  },
+  {
+   "day": "2026-10-01",
+   "kind": "workshop",
+   "time": "15:00-15:45",
+   "room": "G",
+   "room_label": "GARDEN",
+   "title": "CHATEA Workshop",
+   "who": "Gil Petersil · details coming soon",
+   "category": "senses",
+   "photos": [
+    "gil"
+   ],
+   "community_slug": null,
+   "note": "soon"
+  },
+  {
+   "day": "2026-10-01",
+   "kind": "workshop",
+   "time": "16:00-16:45",
+   "room": "A",
+   "room_label": "BALLROOM A",
+   "title": "SME Takeover Lab [ATOTSUGI]: How to Acquire a Small Business",
+   "who": "Stella Schneider (Business Wege) × Ikehiko Corporation",
+   "category": "local",
+   "photos": [
+    "stella"
+   ],
+   "community_slug": "sme-takeover-lab-how-to-acquire-a-s",
+   "note": null
+  },
+  {
+   "day": "2026-10-01",
+   "kind": "workshop",
+   "time": "16:00-16:45",
+   "room": "B",
+   "room_label": "BALLROOM B",
+   "title": "Content Strategy for Small Businesses",
+   "who": "Daycia Harley Kennedy (Daylightful)",
+   "category": "world",
+   "photos": [
+    "daycia"
+   ],
+   "community_slug": "content-strategy-for-small-business",
+   "note": null
+  },
+  {
+   "day": "2026-10-01",
+   "kind": "workshop",
+   "time": "16:00-16:45",
+   "room": "G",
+   "room_label": "GARDEN",
+   "title": "CHATEA Workshop (continued)",
+   "who": "Gil Petersil",
+   "category": "senses",
+   "photos": [],
+   "community_slug": null,
+   "note": "cont"
+  },
+  {
+   "day": "2026-10-01",
+   "kind": "workshop",
+   "time": "17:00-17:45",
+   "room": "A",
+   "room_label": "BALLROOM A",
+   "title": "YEN TO EN: Turning Money Back into Connection",
+   "who": "Ryotaro Sakurai 櫻井亮太郎 × Kazuhiro Arai 新井和宏 (eumo) × Kotaro Motojima 本嶋孔太郎 × Kiyoko Mitsui 三井紀代子 (KIBOTCHA)",
+   "category": "japan",
+   "photos": [
+    "sakurai"
+   ],
+   "community_slug": "yen-to-en-turning-money-back-into-c",
+   "note": null
+  },
+  {
+   "day": "2026-10-01",
+   "kind": "workshop",
+   "time": "17:00-17:45",
+   "room": "B",
+   "room_label": "BALLROOM B",
+   "title": "Breaking Conceptions: From Nomadic Couple to Nomadic Family",
+   "who": "Yarden Avirav & Roza Gavrilov (NomadsTwoGo)",
+   "category": "world",
+   "photos": [
+    "nomads2go"
+   ],
+   "community_slug": "breaking-conceptions-from-nomadic-c",
+   "note": null
+  },
+  {
+   "day": "2026-10-01",
+   "kind": "workshop",
+   "time": "17:00-17:45",
+   "room": "G",
+   "room_label": "GARDEN",
+   "title": "Latino Dance: Bachata for Everyone",
+   "who": "Nika Rey",
+   "category": "senses",
+   "photos": [
+    "nika"
+   ],
+   "community_slug": "latino-dance",
+   "note": null
+  },
+  {
+   "day": "2026-10-01",
+   "kind": "evening",
+   "time": "17:45-18:00",
+   "room": "MAIN",
+   "room_label": "MAIN HALL",
+   "title": "Day 1 Closing",
+   "who": "Nikoleta Kouli (MC)",
+   "category": null,
+   "photos": ["nikoleta"],
+   "community_slug": null,
+   "note": null
+  },
+  {
+   "day": "2026-10-01",
+   "kind": "evening",
+   "time": "18:00-19:00",
+   "room": "OUT",
+   "room_label": "OFF-SITE",
+   "title": "Bus Transportation",
+   "who": "Reserve on the community event page. The Co-Creators' Gathering shuttle leaves THE LUIGANS at 18:15.",
+   "category": null,
+   "photos": [],
+   "community_slug": null,
+   "note": null
+  },
+  {
+   "day": "2026-10-01",
+   "kind": "evening",
+   "time": "19:00-22:00",
+   "room": "OUT",
+   "room_label": "OFF-SITE",
+   "title": "Co-Creator's Gathering (INVITATION ONLY)",
+   "who": "For eligible pass holders. Check your invitation and community event page for details.",
+   "category": null,
+   "photos": [],
+   "community_slug": "vipdinner",
+   "note": null
+  },
+  {
+   "day": "2026-10-01",
+   "kind": "evening",
+   "time": "19:00-",
+   "room": "OUT",
+   "room_label": "OFF-SITE",
+   "title": "Community Dinner Motsunabe",
+   "who": "Note: No vegan option. Check the community event page for booking and location.",
+   "category": null,
+   "photos": [],
+   "community_slug": null,
+   "note": null
+  },
+  {
+   "day": "2026-10-02",
+   "kind": "plenary",
+   "time": "9:00-10:00",
+   "room": "MAIN",
+   "room_label": "MAIN HALL",
+   "title": "Gut-Health Breakfast, Day 2",
+   "who": "Masaomi Sakata 阪田真臣 (Koji Ouji 麹王子) with the Obaachan Shokudo team · 60 servings",
+   "category": "senses",
+   "photos": [
+    "sakata",
+    "obaachan1",
+    "obaachan2"
+   ],
+   "community_slug": "elevating-iq-and-happiness-through",
+   "note": null
+  },
+  {
+   "day": "2026-10-02",
+   "kind": "workshop",
+   "time": "10:30-11:15",
+   "room": "A",
+   "room_label": "BALLROOM A",
+   "title": "RINNE: Teachings of Buddhism",
+   "who": "Tessei Hosokawa 細川貞晴 · details coming soon",
+   "category": "japan",
+   "photos": [
+    "tessei"
+   ],
+   "community_slug": null,
+   "note": "soon"
+  },
+  {
+   "day": "2026-10-02",
+   "kind": "workshop",
+   "time": "10:30-11:15",
+   "room": "B",
+   "room_label": "BALLROOM B",
+   "title": "Build Wealth. Find Your Purpose. Design a Life You Don't Need to Retire From.",
+   "who": "Diego Taira 平良ディエゴ (Wealth Angels)",
+   "category": "world",
+   "photos": [
+    "diego"
+   ],
+   "community_slug": "build-wealth-find-your-purpose-des",
+   "note": null
+  },
+  {
+   "day": "2026-10-02",
+   "kind": "workshop",
+   "time": "10:30-11:15",
+   "room": "G",
+   "room_label": "GARDEN",
+   "title": "Ask a Digital Nomad: Open Roundtables with JDNA",
+   "who": "Moe Nakano × Vitto Christaldi (Japan Digital Nomad Association) · runs 10:30-12:15",
+   "category": "local",
+   "photos": ["moe", "vitto"],
+   "community_slug": "ask-a-digital-nomad",
+   "note": null
+  },
+  {
+   "day": "2026-10-02",
+   "kind": "workshop",
+   "time": "11:30-12:15",
+   "room": "A",
+   "room_label": "BALLROOM A",
+   "title": "Session by Akira Iguchi",
+   "who": "Akira Iguchi 井口晃 · details coming soon",
+   "category": "japan",
+   "photos": [
+    "iguchi"
+   ],
+   "community_slug": null,
+   "note": "soon"
+  },
+  {
+   "day": "2026-10-02",
+   "kind": "workshop",
+   "time": "11:30-12:15",
+   "room": "B",
+   "room_label": "BALLROOM B",
+   "title": "Align and Connect with Your Ikigai Through Soul",
+   "who": "Roland Tokko (Becoming International, Estonia)",
+   "category": "world",
+   "photos": [
+    "roland"
+   ],
+   "community_slug": "align-and-connect-with-your-ikigai",
+   "note": null
+  },
+  {
+   "day": "2026-10-02",
+   "kind": "workshop",
+   "time": "11:30-12:15",
+   "room": "G",
+   "room_label": "GARDEN",
+   "title": "Ask a Digital Nomad (continued)",
+   "who": "Japan Digital Nomad Association",
+   "category": "local",
+   "photos": [],
+   "community_slug": "ask-a-digital-nomad",
+   "note": "cont"
+  },
+  {
+   "day": "2026-10-02",
+   "kind": "plenary",
+   "time": "12:15-13:30",
+   "room": "BEACH",
+   "room_label": "GRAND BEACH",
+   "title": "Lunch Buffet",
+   "who": "Academy lunch buffet",
+   "category": null,
+   "photos": [],
+   "community_slug": "lunch-buffet",
+   "note": null
+  },
+  {
+   "day": "2026-10-02",
+   "kind": "workshop",
+   "time": "13:30-14:15",
+   "room": "A",
+   "room_label": "BALLROOM A",
+   "title": "Wakachiai: From Everyday Talk to Deep Connection",
+   "who": "Mikiko Sudo 須藤みきこ & Hidehiko Sudo 須藤秀彦 (Kokoro Academy)",
+   "category": "japan",
+   "photos": [
+    "sudo"
+   ],
+   "community_slug": "wakachiai-from-everyday-talk-to-dee",
+   "note": null
+  },
+  {
+   "day": "2026-10-02",
+   "kind": "workshop",
+   "time": "13:30-14:15",
+   "room": "B",
+   "room_label": "BALLROOM B",
+   "title": "Travel Smarter, Work Safer: Everyday Security for Digital Nomads",
+   "who": "Adam Curnow (KarasuSec)",
+   "category": "global",
+   "photos": [
+    "adam"
+   ],
+   "community_slug": "travel-smarter-work-safer-everyday",
+   "note": null
+  },
+  {
+   "day": "2026-10-02",
+   "kind": "workshop",
+   "time": "13:30-14:15",
+   "room": "G",
+   "room_label": "GARDEN",
+   "title": "Booth Time",
+   "who": "Meet the sponsors in the garden · drop in any time",
+   "category": null,
+   "photos": [],
+   "community_slug": null,
+   "note": null
+  },
+  {
+   "day": "2026-10-02",
+   "kind": "workshop",
+   "time": "14:30-15:15",
+   "room": "A",
+   "room_label": "BALLROOM A",
+   "title": "Peace: One Conversation at a Time",
+   "who": "Oren Chazan × Yeji Cheon × Cihan Boz",
+   "category": "global",
+   "photos": [
+    "oren",
+    "yeji"
+   ],
+   "community_slug": null,
+   "note": null
+  },
+  {
+   "day": "2026-10-02",
+   "kind": "workshop",
+   "time": "14:30-15:15",
+   "room": "B",
+   "room_label": "BALLROOM B",
+   "title": "The Power of a Smile: Creating Connection and Joy Within and Around You",
+   "who": "Carlyn Shaw",
+   "category": "world",
+   "photos": [
+    "carlyn"
+   ],
+   "community_slug": "the-power-of-a-smile-creating-conne",
+   "note": null
+  },
+  {
+   "day": "2026-10-02",
+   "kind": "workshop",
+   "time": "14:30-15:15",
+   "room": "G",
+   "room_label": "GARDEN",
+   "title": "HEARIM: Building Trust Across Cultures at Work",
+   "who": "Tressia H. Lee",
+   "category": "global",
+   "photos": [
+    "tressia"
+   ],
+   "community_slug": "hearim-building-trust-across-cultur",
+   "note": null
+  },
+  {
+   "day": "2026-10-02",
+   "kind": "workshop",
+   "time": "15:30-16:15",
+   "room": "A",
+   "room_label": "BALLROOM A",
+   "title": "Beneath Ikigai & Zen: Discovering the Hidden Worldview of Japan, and Your Own",
+   "who": "Sanae Akima 秋間早苗 (La torche / Nashite Fukuoka)",
+   "category": "japan",
+   "photos": [
+    "sanae"
+   ],
+   "community_slug": "beneath-ikigai-zen-discovering-the",
+   "note": null
+  },
+  {
+   "day": "2026-10-02",
+   "kind": "workshop",
+   "time": "15:30-16:15",
+   "room": "B",
+   "room_label": "BALLROOM B",
+   "title": "Beyond Social Media: Grow a Business Through Relationships, Trust and Community",
+   "who": "Lawrence Tuazon (Be Extraordinary Publishing)",
+   "category": "world",
+   "photos": [
+    "lawrence"
+   ],
+   "community_slug": "beyond-social-media-how-to-grow-a-b",
+   "note": null
+  },
+  {
+   "day": "2026-10-02",
+   "kind": "workshop",
+   "time": "15:30-16:15",
+   "room": "G",
+   "room_label": "GARDEN",
+   "title": "Anywhere, But Where?",
+   "who": "Gen Lee",
+   "category": "world",
+   "photos": [
+    "gen"
+   ],
+   "community_slug": null,
+   "note": null
+  },
+  {
+   "day": "2026-10-02",
+   "kind": "workshop",
+   "time": "16:30-18:00",
+   "room": "A",
+   "room_label": "BALLROOM A",
+   "title": "Rain Won't Stop You, Wind Won't Stop You: Live Music, Picture Books and Miyazawa Kenji in Two Languages",
+   "who": "Arthur Binard アーサー・ビナード × Visions (Miki Tsukamoto 塚本美樹, Kiyoshi Mamura 間村清) · 90 min",
+   "category": "senses",
+   "photos": [
+    "binard",
+    "miki"
+   ],
+   "community_slug": "an-evening-of-live-musicpicture-bo",
+   "note": null
+  },
+  {
+   "day": "2026-10-02",
+   "kind": "workshop",
+   "time": "16:30-18:00",
+   "room": "B",
+   "room_label": "BALLROOM B",
+   "title": "What Keeps a Community Alive? From Shared Spaces to Shared Purpose",
+   "who": "Marco Traina (BeetCommunity · Italia Nomad Fest) · 90 min",
+   "category": "global",
+   "photos": [
+    "marco"
+   ],
+   "community_slug": "what-keeps-a-community-alive-from-s",
+   "note": null
+  },
+  {
+   "day": "2026-10-02",
+   "kind": "workshop",
+   "time": "16:30-18:00",
+   "room": "G",
+   "room_label": "GARDEN",
+   "title": "A Conscious Pause: Closing Meditation at the Water's Edge",
+   "who": "Freeman Fung (Travel To Transform) · 16:30-17:15",
+   "category": "senses",
+   "photos": [
+    "freeman"
+   ],
+   "community_slug": "a-conscious-pause-closing-meditatio",
+   "note": null
+  },
+  {
+   "day": "2026-10-02",
+   "kind": "evening",
+   "time": "18:00-19:00",
+   "room": "OUT",
+   "room_label": "OFF-SITE",
+   "title": "Bus Transportation",
+   "who": "Reserve on the community event page. This bus passes the Synapse Festival venue.",
+   "category": null,
+   "photos": [],
+   "community_slug": null,
+   "note": null
+  },
+  {
+   "day": "2026-10-02",
+   "kind": "evening",
+   "time": "19:00-",
+   "room": "OUT",
+   "room_label": "OFF-SITE",
+   "title": "Synapse Festival",
+   "who": "INN THE PARK Fukuoka, Uminonakamichi · music, art, sauna, food · 2-4 October",
+   "category": null,
+   "photos": [],
+   "community_slug": "synapse-festivalpass-holders",
+   "note": null
+  }
+ ],
+ "speakers": [
+  {
+   "photos": ["nikoleta"],
+   "name": "Nikoleta Kouli",
+   "role": "MC",
+   "session": "Opening: Chikuzen Hakata Koma",
+   "category": "world",
+   "when": "Day 1 · 10:00"
+  },
+  {
+   "photos": ["akina"],
+   "name": "Akina Shu",
+   "role": "Co-founder, Colive Fukuoka",
+   "bio": "Akina co-founded Colive Fukuoka to connect international visitors and local communities in Japan.",
+   "session": "Co-founders Opening Talk",
+   "category": "local",
+   "when": "Day 1 · 10:20"
+  },
+  {
+   "photos": ["ryo"],
+   "name": "Ryo Osera 大瀬良亮",
+   "role": "Co-founder, Colive Fukuoka",
+   "bio": "Ryo is a co-founder of Colive Fukuoka and CEO of yugyo inc.",
+   "session": "Co-founders Opening Talk",
+   "category": "local",
+   "when": "Day 1 · 10:20"
+  },
+  {
+   "photos": [
+    "sakata"
+   ],
+   "name": "Masaomi Sakata 阪田真臣",
+   "session": "Gut-Health Breakfast",
+   "category": "senses",
+   "when": "Day 1 & 2 · 9:00"
+  },
+  {
+   "photos": [
+    "shuraku"
+   ],
+   "name": "Chikushi Shuraku III 三代目 筑紫珠楽",
+   "session": "Chikuzen Hakata Koma",
+   "category": "japan",
+   "when": "Day 1 · 10:00"
+  },
+  {
+   "photos": [
+    "imamura"
+   ],
+   "name": "Yumi Imamura (matchabae)",
+   "session": "Keynote 2: Matcha Crisis",
+   "category": "local",
+   "when": "Day 1 · 11:10"
+  },
+  {
+   "photos": [
+    "kiki"
+   ],
+   "name": "Kiki Fukai",
+   "session": "Become Yourself Here",
+   "category": "japan",
+   "when": "Day 1 · 15:00"
+  },
+  {
+   "photos": [
+    "sakurai"
+   ],
+   "name": "Ryotaro Sakurai 櫻井亮太郎",
+   "session": "YEN TO EN",
+   "category": "japan",
+   "when": "Day 1 · 17:00"
+  },
+  {
+   "photos": [
+    "sudo"
+   ],
+   "name": "Mikiko & Hidehiko Sudo 須藤みきこ・秀彦",
+   "session": "Wakachiai",
+   "category": "japan",
+   "when": "Day 2 · 13:30"
+  },
+  {
+   "photos": [
+    "sanae"
+   ],
+   "name": "Sanae Akima 秋間早苗",
+   "session": "Beneath Ikigai & Zen",
+   "category": "japan",
+   "when": "Day 2 · 15:30"
+  },
+  {
+   "photos": [
+    "miki"
+   ],
+   "name": "Miki Tsukamoto 塚本美樹 (Visions)",
+   "session": "Miyazawa Kenji in Two Languages",
+   "category": "senses",
+   "when": "Day 2 · 16:30"
+  },
+  {
+   "photos": [
+    "mamura"
+   ],
+   "name": "Kiyoshi Mamura 間村清 (Visions)",
+   "session": "Miyazawa Kenji in Two Languages",
+   "category": "senses",
+   "when": "Day 2 · 16:30"
+  },
+  {
+   "photos": [
+    "matt"
+   ],
+   "name": "Multilingual Matt",
+   "session": "Speak Before You're Ready",
+   "category": "world",
+   "when": "Day 1 · 14:00"
+  },
+  {
+   "photos": [
+    "mirela"
+   ],
+   "name": "Mirela Curiman",
+   "session": "Building Brands That Centre Human Dignity",
+   "category": "global",
+   "when": "Day 1 · 15:00"
+  },
+  {
+   "photos": [
+    "gil"
+   ],
+   "name": "Gil Petersil",
+   "session": "CHATEA Workshop",
+   "category": "senses",
+   "when": "Day 1 · 15:00"
+  },
+  {
+   "photos": [
+    "stella"
+   ],
+   "name": "Stella Schneider",
+   "session": "SME Takeover Lab [ATOTSUGI]",
+   "category": "local",
+   "when": "Day 1 · 16:00"
+  },
+  {
+   "photos": [
+    "daycia"
+   ],
+   "name": "Daycia Harley Kennedy",
+   "session": "Content Strategy for Small Businesses",
+   "category": "world",
+   "when": "Day 1 · 16:00"
+  },
+  {
+   "photos": [
+    "nomads2go"
+   ],
+   "name": "Yarden Avirav & Roza Gavrilov",
+   "session": "Breaking Conceptions",
+   "category": "world",
+   "when": "Day 1 · 17:00"
+  },
+  {
+   "photos": [
+    "nika"
+   ],
+   "name": "Nika Rey",
+   "session": "Latino Dance",
+   "category": "senses",
+   "when": "Day 1 · 17:00"
+  },
+  {
+   "photos": [
+    "diego"
+   ],
+   "name": "Diego Taira 平良ディエゴ",
+   "session": "Build Wealth. Find Your Purpose.",
+   "category": "world",
+   "when": "Day 2 · 10:30"
+  },
+  {
+   "photos": [
+    "roland"
+   ],
+   "name": "Roland Tokko",
+   "session": "Align and Connect with Your Ikigai",
+   "category": "world",
+   "when": "Day 2 · 11:30"
+  },
+  {
+   "photos": [
+    "adam"
+   ],
+   "name": "Adam Curnow",
+   "session": "Travel Smarter, Work Safer",
+   "category": "global",
+   "when": "Day 2 · 13:30"
+  },
+  {
+   "photos": [
+    "oren",
+    "yeji"
+   ],
+   "name": "Oren Chazan × Yeji Cheon",
+   "session": "Peace: One Conversation at a Time",
+   "category": "global",
+   "when": "Day 2 · 14:30"
+  },
+  {
+   "photos": [
+    "carlyn"
+   ],
+   "name": "Carlyn Shaw",
+   "session": "The Power of a Smile",
+   "category": "world",
+   "when": "Day 2 · 14:30"
+  },
+  {
+   "photos": [
+    "tressia"
+   ],
+   "name": "Tressia H. Lee",
+   "session": "HEARIM",
+   "category": "global",
+   "when": "Day 2 · 14:30"
+  },
+  {
+   "photos": [
+    "lawrence"
+   ],
+   "name": "Lawrence Tuazon",
+   "session": "Beyond Social Media",
+   "category": "world",
+   "when": "Day 2 · 15:30"
+  },
+  {
+   "photos": [
+    "gen"
+   ],
+   "name": "Gen Lee",
+   "session": "Anywhere, But Where?",
+   "category": "world",
+   "when": "Day 2 · 15:30"
+  },
+  {
+   "photos": [
+    "marco"
+   ],
+   "name": "Marco Traina",
+   "session": "What Keeps a Community Alive?",
+   "category": "global",
+   "when": "Day 2 · 16:30"
+  },
+  {
+   "photos": [
+    "freeman"
+   ],
+   "name": "Freeman Fung",
+   "session": "A Conscious Pause",
+   "category": "senses",
+   "when": "Day 2 · 16:30"
+  },
+  {
+   "photos": [
+    "binard"
+   ],
+   "name": "Arthur Binard アーサー・ビナード",
+   "session": "Miyazawa Kenji in Two Languages",
+   "category": "japan",
+   "when": "Day 2 · 16:30"
+  },
+  {
+   "photos": [
+    "nick"
+   ],
+   "name": "Nick Szasz (FUKUOKA NOW)",
+   "session": "Keynote 1: Why We Came, Why We Stayed, and What Comes Next",
+   "category": "local",
+   "when": "Day 1 · 10:30"
+  },
+  {
+   "photos": [
+    "obaachan1",
+    "obaachan2"
+   ],
+   "name": "Obaachan Shokudo おばあちゃん食堂",
+   "session": "Gut-Health Breakfast",
+   "category": "senses",
+   "when": "Day 1 & 2 · 9:00"
+  },
+  {
+   "photos": [
+    "jacquie"
+   ],
+   "name": "Jacquie Wortley",
+   "session": "Builders' Meetups [INAKA]",
+   "category": "local",
+   "when": "Day 1 · 14:00"
+  },
+  {
+   "photos": [
+    "moe"
+   ],
+   "name": "MOE Nakano (JDNA)",
+   "session": "Ask a Digital Nomad",
+   "category": "local",
+   "when": "Day 2 · 10:30"
+  },
+  {
+   "photos": [
+    "vitto"
+   ],
+   "name": "Vitto Christaldi (JDNA)",
+   "session": "Ask a Digital Nomad",
+   "category": "local",
+   "when": "Day 2 · 10:30"
+  },
+  {
+   "photos": [
+    "tessei"
+   ],
+   "name": "Tessei Hosokawa 細川貞晴",
+   "session": "RINNE · coming soon",
+   "category": "japan",
+   "when": "Day 2 · 10:30"
+  },
+  {
+   "photos": [
+    "iguchi"
+   ],
+   "name": "Akira Iguchi 井口晃",
+   "session": "Coming soon",
+   "category": "japan",
+   "when": "Day 2 · 11:30"
+  },
+  {
+   "photos": ["jessica"],
+   "name": "Jessica Hagmaier",
+   "role": "Co-Creator, Colive Fukuoka",
+   "bio": "Jessica is a creative strategist, brand designer, and travel writer whose work explores reinvention and intentional living.",
+   "session": "",
+   "category": "world",
+   "when": ""
+  }
+ ]
+}
