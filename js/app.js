@@ -1,0 +1,268 @@
+import {
+  findSpeakerSession,
+  renderDayTabs,
+  renderFilters,
+  renderHeader,
+  renderSchedule,
+  renderSpeakerProfile,
+  renderSpeakers,
+  sessionId,
+} from "./render.js";
+import {
+  getDefaultDay,
+  getProgramStatus,
+  getZonedParts,
+  parseTimeRange,
+} from "./tokyo-time.js";
+
+const DATA_URL = "data/ikigai_schedule.json";
+
+const state = {
+  schedule: null,
+  selectedDay: null,
+  selectedCategories: new Set(),
+  query: "",
+};
+
+init();
+
+async function init() {
+  try {
+    const response = await fetch(DATA_URL, { cache: "no-store" });
+    if (!response.ok) throw new Error(`The schedule returned HTTP ${response.status}.`);
+
+    const schedule = await response.json();
+    validateSchedule(schedule);
+    loadJapaneseFont(schedule);
+    schedule.sessions = schedule.sessions.map((session, index) => ({ ...session, _index: index }));
+
+    state.schedule = schedule;
+    state.selectedDay = getDefaultDay(
+      schedule.event.dates,
+      getZonedParts(new Date(), schedule.event.timezone),
+    );
+
+    renderHeader(schedule);
+    renderAll();
+    setupTabKeyboardNavigation();
+    setupInteractions();
+    updateNow();
+    window.setInterval(updateNow, 30_000);
+  } catch (error) {
+    showLoadError(error);
+  }
+}
+
+function loadJapaneseFont(schedule) {
+  const characters = [
+    ...new Set(
+      JSON.stringify(schedule).match(/[\u3000-\u30ff\u3400-\u9fff\uff00-\uffef]/gu) || [],
+    ),
+  ].join("");
+  if (!characters) return;
+
+  const appendFont = () => {
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = `https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=optional&text=${encodeURIComponent(characters)}`;
+    document.head.append(link);
+  };
+
+  if ("requestIdleCallback" in window) {
+    window.requestIdleCallback(appendFont, { timeout: 2000 });
+  } else {
+    window.setTimeout(appendFont, 0);
+  }
+}
+
+function renderAll() {
+  renderDayTabs(state.schedule, state.selectedDay, selectDay);
+  renderFilters(
+    state.schedule.categories,
+    state.selectedCategories,
+    toggleCategory,
+    clearCategories,
+  );
+  renderSchedule(state.schedule, state.selectedDay, state.selectedCategories, state.query);
+  renderSpeakers(state.schedule, openSpeakerProfile);
+}
+
+function selectDay(day) {
+  if (day === state.selectedDay) return;
+  state.selectedDay = day;
+  renderDayTabs(state.schedule, state.selectedDay, selectDay);
+  renderSchedule(state.schedule, state.selectedDay, state.selectedCategories, state.query);
+  updateNow();
+  document.querySelector("#schedule").scrollIntoView({ block: "start" });
+}
+
+function toggleCategory(category) {
+  if (state.selectedCategories.has(category)) {
+    state.selectedCategories.delete(category);
+  } else {
+    state.selectedCategories.add(category);
+  }
+
+  renderFilters(
+    state.schedule.categories,
+    state.selectedCategories,
+    toggleCategory,
+    clearCategories,
+  );
+  renderSchedule(state.schedule, state.selectedDay, state.selectedCategories, state.query);
+  updateNow();
+}
+
+function clearCategories() {
+  state.selectedCategories.clear();
+  renderFilters(
+    state.schedule.categories,
+    state.selectedCategories,
+    toggleCategory,
+    clearCategories,
+  );
+  renderSchedule(state.schedule, state.selectedDay, state.selectedCategories, state.query);
+  updateNow();
+}
+
+function openSpeakerProfile(speaker) {
+  renderSpeakerProfile(state.schedule, speaker, state.selectedDay, goToSpeakerSession);
+}
+
+function goToSpeakerSession(speaker) {
+  const target = findSpeakerSession(state.schedule, speaker, state.selectedDay);
+  if (!target) return;
+
+  if (target.day !== state.selectedDay) {
+    state.selectedDay = target.day;
+    renderDayTabs(state.schedule, state.selectedDay, selectDay);
+    renderSchedule(state.schedule, state.selectedDay, state.selectedCategories, state.query);
+    updateNow();
+  }
+
+  window.requestAnimationFrame(() => {
+    const card = document.getElementById(sessionId(target));
+    if (!card) return;
+    card.scrollIntoView({ block: "center" });
+    card.setAttribute("tabindex", "-1");
+    card.focus({ preventScroll: true });
+  });
+}
+
+function updateNow() {
+  if (!state.schedule) return;
+  const programStatus = getProgramStatus(state.schedule, new Date());
+  const clock = document.querySelector("#venue-clock");
+  clock.textContent = `Venue time: ${programStatus.nowParts.clock} JST`;
+  clock.dateTime = `${programStatus.nowParts.date}T${programStatus.nowParts.clock}:00+09:00`;
+  const currentIds = new Set(
+    programStatus.type === "current" && programStatus.nowParts.date === state.selectedDay
+      ? programStatus.sessions.map((session) => sessionId(resolveCurrentPrimary(session)))
+      : [],
+  );
+  document.querySelectorAll(".session-card").forEach((card) => {
+    const current = currentIds.has(card.id);
+    card.classList.toggle("is-current", current);
+    card.querySelector(".current-badge")?.remove();
+    if (current) {
+      const badge = document.createElement("span");
+      badge.className = "current-badge";
+      badge.textContent = "Happening now";
+      card.querySelector(".session-card__top")?.append(badge);
+    }
+  });
+  document.querySelector("#jump-to-current").hidden = currentIds.size === 0;
+}
+
+function resolveCurrentPrimary(session) {
+  if (session.note !== "cont") return session;
+  const candidates = state.schedule.sessions.filter((item) =>
+    item.day === session.day && item.room === session.room && item.kind === session.kind && item.note !== "cont" &&
+    parseTimeRange(item.time)?.start < parseTimeRange(session.time)?.start,
+  );
+  return candidates.at(-1) || session;
+}
+
+function setupInteractions() {
+  const search = document.querySelector("#program-search");
+  search.addEventListener("input", () => {
+    state.query = search.value;
+    renderSchedule(state.schedule, state.selectedDay, state.selectedCategories, state.query);
+    updateNow();
+  });
+  document.querySelector("#jump-to-current").addEventListener("click", () => {
+    document.querySelector(".session-card.is-current")?.scrollIntoView({ block: "center" });
+  });
+  document.querySelector("#speaker-dialog-close").addEventListener("click", () => {
+    document.querySelector("#speaker-dialog").close();
+  });
+  document.querySelector("#speaker-dialog").addEventListener("click", (event) => {
+    if (event.target.id === "speaker-dialog") event.target.close();
+  });
+  document.querySelector("#copy-code").addEventListener("click", () => copyText("CLF26", "#code-copy-status"));
+  document.querySelector("#copy-address").addEventListener("click", () =>
+    copyText(state.schedule.event.venue_address, "#address-copy-status"),
+  );
+}
+
+async function copyText(value, statusSelector) {
+  const status = document.querySelector(statusSelector);
+  try {
+    await navigator.clipboard.writeText(value);
+    status.textContent = "Copied";
+  } catch {
+    status.textContent = "Copy unavailable here. Select and copy the text above.";
+  }
+}
+
+function setupTabKeyboardNavigation() {
+  const tablist = document.querySelector("#day-tabs");
+  tablist.addEventListener("keydown", (event) => {
+    if (!['ArrowLeft', 'ArrowRight'].includes(event.key)) return;
+    const tabs = [...tablist.querySelectorAll('[role="tab"]')];
+    const current = tabs.indexOf(document.activeElement);
+    if (current < 0) return;
+
+    event.preventDefault();
+    const direction = event.key === "ArrowRight" ? 1 : -1;
+    const next = tabs[(current + direction + tabs.length) % tabs.length];
+    next.focus();
+    next.click();
+  });
+}
+
+function validateSchedule(schedule) {
+  const problems = [];
+  if (!schedule?.event) problems.push("event is missing");
+  if (!Array.isArray(schedule?.event?.dates) || schedule.event.dates.length !== 2) {
+    problems.push("event.dates must contain Day 1 and Day 2");
+  }
+  if (schedule?.event?.timezone !== "Asia/Tokyo") problems.push("event.timezone must be Asia/Tokyo");
+  if (!schedule?.categories || Object.keys(schedule.categories).length !== 5) {
+    problems.push("five categories are required");
+  }
+  if (!schedule?.rooms || !Object.keys(schedule.rooms).length) problems.push("rooms are missing");
+  if (!Array.isArray(schedule?.sessions)) problems.push("sessions are missing");
+  if (!Array.isArray(schedule?.speakers)) problems.push("speakers are missing");
+
+  (schedule?.sessions || []).forEach((session, index) => {
+    if (!parseTimeRange(session.time)) problems.push(`sessions[${index}].time is invalid`);
+    if (!schedule.event.dates.includes(session.day)) problems.push(`sessions[${index}].day is invalid`);
+    if (!schedule.rooms[session.room]) problems.push(`sessions[${index}].room is invalid`);
+    if (session.category && !schedule.categories[session.category]) {
+      problems.push(`sessions[${index}].category is invalid`);
+    }
+  });
+
+  if (problems.length) throw new Error(`Schedule data needs attention: ${problems.join("; ")}`);
+}
+
+function showLoadError(error) {
+  const message = document.createElement("p");
+  message.className = "error-message";
+  message.textContent = "The program could not be loaded. Check data/ikigai_schedule.json and reload the page.";
+
+  const timeline = document.querySelector("#timeline");
+  timeline.replaceChildren(message);
+  console.error(error);
+}
