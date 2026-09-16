@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#1F296A">
+    <meta name="description" content="The on-site schedule and venue guide for Ikigai Academy at Colive Fukuoka 2026.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Ikigai Academy | Colive Fukuoka 2026">
+    <meta property="og:description" content="The on-site schedule and venue guide for Ikigai Academy at Colive Fukuoka 2026.">
+    <meta property="og:url" content="https://ikigai.colivefukuoka.com/">
+    <meta property="og:image" content="https://ikigai.colivefukuoka.com/assets/Ikigai_Academy_Thumbnail_1200x630.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ikigai Academy | Colive Fukuoka 2026">
+    <meta name="twitter:image" content="https://ikigai.colivefukuoka.com/assets/Ikigai_Academy_Thumbnail_1200x630.jpg">
+    <title>Ikigai Academy | Colive Fukuoka 2026</title>
+    <link rel="icon" href="assets/logo-white-480.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script type="module" src="js/app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#schedule">Skip to the schedule</a>
+
+    <header class="hero hero--keyvisual" id="top">
+      <picture class="hero__visual" aria-hidden="true">
+        <source media="(max-width: 620px)" srcset="assets/key-visual-vertical.jpg">
+        <img src="assets/key-visual-horizontal.jpg" alt="" width="2400" height="1350" fetchpriority="high">
+      </picture>
+      <div class="hero__copy">
+        <a class="brand-link" href="https://community.colivefukuoka.com/" target="_blank" rel="noopener noreferrer" aria-label="Open Colive Fukuoka community"><img class="brand-logo" src="assets/logo-white-480.png" alt="Colive Fukuoka — Nomads Meet Japan" width="480" height="265"></a>
+        <p class="event-series">Colive Fukuoka 2026</p>
+        <h1 id="event-name">Ikigai Academy</h1>
+        <div class="hero__rule" aria-hidden="true"></div>
+        <p class="event-meta" id="event-dates"></p>
+        <p class="event-meta" id="event-venue"></p>
+      </div>
+    </header>
+
+    <nav class="day-nav" aria-label="Choose a program day">
+      <div class="day-tabs" id="day-tabs" role="tablist" aria-label="Program days"></div>
+    </nav>
+
+    <main>
+      <section class="schedule-section" id="schedule" aria-labelledby="schedule-title">
+        <div class="section-shell">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">Find your room</p>
+              <h2 id="schedule-title">Program</h2>
+            </div>
+            <p class="schedule-date" id="schedule-date"></p>
+          </div>
+
+          <div class="program-clock-line">
+            <time id="venue-clock" aria-label="Current time at the venue in Japan Standard Time"></time>
+            <button id="jump-to-current" type="button" hidden>Jump to current session</button>
+          </div>
+
+          <div class="filter-panel" aria-labelledby="filter-title">
+            <div class="filter-panel__heading">
+              <h3 id="filter-title">Find a session</h3>
+              <button class="clear-filters" id="clear-filters" type="button" hidden>Clear</button>
+            </div>
+            <label class="sr-only" for="program-search">Search by speaker, title, or category</label>
+            <input class="program-search" id="program-search" type="search" placeholder="Search name, title, or category" autocomplete="off">
+            <p class="filter-help">Or choose a theme. Other sessions stay visible.</p>
+            <div class="filter-chips" id="filter-chips" aria-label="Category filters"></div>
+            <p class="sr-only" id="filter-status" aria-live="polite"></p>
+          </div>
+
+          <div class="timeline" id="timeline" role="tabpanel" tabindex="0" aria-live="polite">
+            <p class="loading-message">Loading the program…</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="cocreators-section" id="co-creators" aria-labelledby="cocreators-title">
+        <div class="cocreators-photo" aria-hidden="true"></div>
+        <div class="section-shell cocreators-content">
+          <div class="section-heading section-heading--light">
+            <div>
+              <p class="section-kicker">People to meet</p>
+              <h2 id="cocreators-title">Co-Creators</h2>
+            </div>
+            <p>Tap a photo for a profile and session link.</p>
+          </div>
+          <div class="speaker-grid" id="speaker-grid"></div>
+        </div>
+      </section>
+
+      <dialog class="speaker-dialog" id="speaker-dialog" aria-labelledby="speaker-dialog-title">
+        <button class="speaker-dialog__close" id="speaker-dialog-close" type="button" aria-label="Close profile">×</button>
+        <div id="speaker-dialog-content"></div>
+      </dialog>
+
+      <section class="map-section" id="venue-map" aria-labelledby="map-title">
+        <div class="section-shell">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">Around the venue</p>
+              <h2 id="map-title">Venue map</h2>
+            </div>
+          </div>
+          <p class="map-help">Check this map for restrooms, smoking areas, and lunch venues.</p>
+          <div class="map-link-card">
+            <div><h3>Find your way around</h3><p>Open the interactive map for room locations and facilities.</p></div>
+            <a class="primary-button" id="map-open-link" href="#" target="_blank" rel="noopener noreferrer">Open venue map</a>
+          </div>
+          <div class="access-card">
+            <div><h3>Getting to THE LUIGANS</h3><p id="venue-address"></p></div>
+            <div class="access-actions"><button id="copy-address" type="button">Copy address</button><a id="google-map-link" href="#" target="_blank" rel="noopener noreferrer">Open Google Maps</a></div>
+            <p class="copy-status" id="address-copy-status" aria-live="polite"></p>
+          </div>
+          <p class="premium-note">Premium Pass holders: a coworking lounge is available during the Academy. Check your pass details for access.</p>
+        </div>
+      </section>
+
+      <section class="ask-section" id="ask-us" aria-labelledby="ask-title">
+        <div class="section-shell ask-grid">
+          <img src="assets/volunteers-2025.jpg" alt="Three smiling Colive Fukuoka volunteers at the 2025 welcome desk" width="1199" height="1800" loading="lazy" decoding="async">
+          <div><p class="section-kicker">We are here to help</p><h2 id="ask-title">Ask Us</h2><p>Our volunteers are here to help at the venue. Stop by the desk, or ask a question in the WhatsApp group.</p><a class="primary-button" id="ask-community-link" href="https://chat.whatsapp.com/HDBZGl122yVGrfEXQJ8iaj" target="_blank" rel="noopener noreferrer">Open the WhatsApp group</a></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="section-shell footer-grid">
+        <div>
+          <img class="footer-logo" src="assets/logo-white-480.png" alt="Colive Fukuoka" width="480" height="265" loading="lazy">
+        </div>
+        <div class="footer-links">
+          <a id="all-booking-link" href="#" target="_blank" rel="noopener noreferrer">All sessions &amp; booking</a>
+          <a id="vip-dinner-link" href="#" target="_blank" rel="noopener noreferrer">Co-Creators' Gathering</a>
+        </div>
+        <div class="footer-info">
+          <p>Reserve buses on each event page on the community site.</p>
+          <p>Bringing a friend who does not have a pass? Use code <strong>CLF26</strong> for €25 off.</p>
+          <button class="copy-code" id="copy-code" type="button">Copy CLF26</button><span class="copy-status" id="code-copy-status" aria-live="polite"></span>
+        </div>
+      </div>
+      <a class="back-to-top" href="#top">Back to top</a>
+    </footer>
+
+    <noscript>
+      <div class="noscript-message">This guide needs JavaScript to load the latest schedule.</div>
+    </noscript>
+  </body>
+</html>

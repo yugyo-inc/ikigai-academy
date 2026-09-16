@@ -1,0 +1,10 @@
+# Keep the old hero-comparison page local when connecting a Git repository.
+hero-comparison.html
+css/hero-comparison.css
+js/hero-comparison.js
+assets/conference-2025-stage.jpg
+assets/community-2025.jpg
+assets/community-food-2025.jpg
+assets/performer-2025.jpg
+assets/welcome-2025.jpg
+.vercel/
