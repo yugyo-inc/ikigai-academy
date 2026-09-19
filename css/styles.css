@@ -903,18 +903,10 @@ h2 {
 
 .cocreators-photo {
   position: absolute;
-  z-index: -2;
-  inset: 0 0 0 54%;
-  background: url("../assets/Woven_Ground_Photo_web.jpg") center / cover no-repeat;
-  opacity: 0.21;
-}
-
-.cocreators-section::after {
-  content: "";
-  position: absolute;
   z-index: -1;
   inset: 0;
-  background: linear-gradient(90deg, var(--indigo) 42%, rgba(31, 41, 106, 0.66) 100%);
+  background: linear-gradient(rgba(31, 41, 106, 0.7), rgba(31, 41, 106, 0.7)), url("assets/cocreators-bg.jpg") center / cover no-repeat;
+  opacity: 1;
 }
 
 .section-heading--light h2,
@@ -1332,15 +1324,6 @@ h2 {
 
   .speaker-portrait {
     width: min(100%, 148px);
-  }
-
-  .cocreators-photo {
-    inset: 46% 0 0 20%;
-    opacity: 0.15;
-  }
-
-  .cocreators-section::after {
-    background: linear-gradient(180deg, var(--indigo) 34%, rgba(31, 41, 106, 0.82) 100%);
   }
 
   .map-frame-wrap {
@@ -1803,13 +1786,14 @@ h2 {
   background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("assets/venue-ballroom-b.jpg");
 }
 
-/* YEN TO EN: keep the 4-avatar row small at all screen widths, unlike the generic
-   mobile-only shrink rule used for other 4-avatar sessions (e.g. Fukuoka Now). */
+/* YEN TO EN: keep the 4-avatar row a little smaller at all screen widths (unlike the
+   generic mobile-only shrink rule used for other 4-avatar sessions, e.g. Fukuoka Now),
+   sized to sit comfortably inside the narrow BALLROOM workshop card without crowding. */
 .session-card[data-session-title="YEN TO EN: Turning Money Back into Connection"] .session-avatar {
-  width: 52px;
-  height: 52px;
-  margin-left: -16px;
-  border-width: 3px;
+  width: 66px;
+  height: 66px;
+  margin-left: -14px;
+  border-width: 4px;
 }
 .session-card[data-session-title="YEN TO EN: Turning Money Back into Connection"] .session-avatar:first-child {
   margin-left: 0;

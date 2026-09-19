@@ -232,6 +232,21 @@
       "day": "2026-10-01",
       "kind": "workshop",
       "time": "15:00-15:45",
+      "room": "B",
+      "room_label": "BALLROOM B",
+      "title": "You Can't Outrun Your Life: How to Use Travel as a Catalyst for Reinvention",
+      "who": "Jessica Hagmaier",
+      "category": "world",
+      "photos": [
+        "jessica"
+      ],
+      "community_slug": "you-cant-outrun-your-life-how-to-us",
+      "note": null
+    },
+    {
+      "day": "2026-10-01",
+      "kind": "workshop",
+      "time": "15:00-15:45",
       "room": "G",
       "room_label": "GARDEN",
       "title": "CHATEA Workshop",
@@ -1143,9 +1158,9 @@
       "name": "Jessica Hagmaier",
       "role": "Co-Creator, Colive Fukuoka",
       "bio": "Jessica is a creative strategist, brand designer, and travel writer whose work explores reinvention and intentional living.",
-      "session": "",
+      "session": "You Can't Outrun Your Life: How to Use Travel as a Catalyst for Reinvention",
       "category": "world",
-      "when": ""
+      "when": "Day 1 · 15:00"
     }
   ]
 }
