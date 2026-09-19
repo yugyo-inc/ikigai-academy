@@ -252,6 +252,7 @@ function createSessionCard(schedule, session, selectedCategories, query) {
   const card = element("article", classes.join(" "));
   card.id = sessionId(session);
   card.dataset.category = session.category || "none";
+  card.dataset.sessionTitle = session.title || "";
   card.style.setProperty("--category", categoryColor);
   const cardTop = element("div", "session-card__top");
   cardTop.append(element("p", "room-label", schedule.rooms[session.room] || session.room_label || session.room));
