@@ -769,7 +769,7 @@
         "sakata"
       ],
       "name": "Masaomi Sakata",
-      "session": "Gut-Health Breakfast",
+      "session": "Gut-Health Breakfast: Elevating IQ and Happiness through Gut Health",
       "category": "senses",
       "when": "Day 1 & 2 · 9:00"
     },
@@ -778,7 +778,7 @@
         "shuraku"
       ],
       "name": "Chikushi Shuraku III",
-      "session": "Chikuzen Hakata Koma",
+      "session": "Opening: Chikuzen Hakata Koma",
       "category": "japan",
       "when": "Day 1 · 10:00"
     },
@@ -796,7 +796,7 @@
         "kiki"
       ],
       "name": "Kiki Fukai",
-      "session": "Become Yourself Here",
+      "session": "Become Yourself Here: Japan as the Place You Discover Who You Really Are",
       "category": "japan",
       "when": "Day 1 · 15:00"
     },
@@ -805,7 +805,7 @@
         "sakurai"
       ],
       "name": "Ryotaro Sakurai",
-      "session": "YEN TO EN",
+      "session": "YEN TO EN: Turning Money Back into Connection",
       "category": "japan",
       "when": "Day 1 · 17:00"
     },
@@ -841,7 +841,7 @@
         "sudo"
       ],
       "name": "Mikiko & Hidehiko Sudo",
-      "session": "Wakachiai",
+      "session": "Wakachiai: From Everyday Talk to Deep Connection",
       "category": "japan",
       "when": "Day 2 · 13:30"
     },
@@ -850,7 +850,7 @@
         "sanae"
       ],
       "name": "Sanae Akima",
-      "session": "Beneath Ikigai & Zen",
+      "session": "Beneath Ikigai & Zen: Discovering the Hidden Worldview of Japan, and Your Own",
       "category": "japan",
       "when": "Day 2 · 15:30"
     },
@@ -859,7 +859,7 @@
         "miki"
       ],
       "name": "Miki Tsukamoto (Visions)",
-      "session": "Miyazawa Kenji in Two Languages",
+      "session": "Rain Won't Stop You, Wind Won't Stop You: Live Music, Picture Books and Miyazawa Kenji in Two Languages",
       "category": "senses",
       "when": "Day 2 · 16:30"
     },
@@ -868,7 +868,7 @@
         "mamura"
       ],
       "name": "Kiyoshi Mamura (Visions)",
-      "session": "Miyazawa Kenji in Two Languages",
+      "session": "Rain Won't Stop You, Wind Won't Stop You: Live Music, Picture Books and Miyazawa Kenji in Two Languages",
       "category": "senses",
       "when": "Day 2 · 16:30"
     },
@@ -895,7 +895,7 @@
         "stella"
       ],
       "name": "Stella Schneider",
-      "session": "SME Takeover Lab [ATOTSUGI]",
+      "session": "SME Takeover Lab [ATOTSUGI]: How to Acquire a Small Business",
       "category": "local",
       "when": "Day 1 · 16:00"
     },
@@ -913,7 +913,7 @@
         "nomads2go"
       ],
       "name": "Yarden Avirav & Roza Gavrilov",
-      "session": "Breaking Conceptions",
+      "session": "Breaking Conceptions: From Nomadic Couple to Nomadic Family",
       "category": "world",
       "when": "Day 1 · 17:00"
     },
@@ -922,7 +922,7 @@
         "nika"
       ],
       "name": "Nika Rey",
-      "session": "Latino Dance",
+      "session": "Latino Dance: Bachata for Everyone",
       "category": "senses",
       "when": "Day 1 · 17:00"
     },
@@ -931,7 +931,7 @@
         "diego"
       ],
       "name": "Diego Taira",
-      "session": "Build Wealth. Find Your Purpose.",
+      "session": "Build Wealth. Find Your Purpose. Design a Life You Don't Need to Retire From.",
       "category": "world",
       "when": "Day 2 · 10:30"
     },
@@ -940,7 +940,7 @@
         "roland"
       ],
       "name": "Roland Tokko",
-      "session": "Align and Connect with Your Ikigai",
+      "session": "Align and Connect with Your Ikigai Through Soul",
       "category": "world",
       "when": "Day 2 · 11:30"
     },
@@ -949,7 +949,7 @@
         "adam"
       ],
       "name": "Adam Curnow",
-      "session": "Travel Smarter, Work Safer",
+      "session": "Travel Smarter, Work Safer: Everyday Security for Digital Nomads",
       "category": "global",
       "when": "Day 2 · 13:30"
     },
@@ -985,7 +985,7 @@
         "carlyn"
       ],
       "name": "Carlyn Shaw",
-      "session": "The Power of a Smile",
+      "session": "The Power of a Smile: Creating Connection and Joy Within and Around You",
       "category": "world",
       "when": "Day 2 · 14:30"
     },
@@ -994,7 +994,7 @@
         "tressia"
       ],
       "name": "Tressia H. Lee",
-      "session": "HEARIM",
+      "session": "HEARIM: Building Trust Across Cultures at Work",
       "category": "global",
       "when": "Day 2 · 14:30"
     },
@@ -1003,7 +1003,7 @@
         "lawrence"
       ],
       "name": "Lawrence Tuazon",
-      "session": "Beyond Social Media",
+      "session": "Beyond Social Media: Grow a Business Through Relationships, Trust and Community",
       "category": "world",
       "when": "Day 2 · 15:30"
     },
@@ -1021,7 +1021,7 @@
         "marco"
       ],
       "name": "Marco Traina",
-      "session": "What Keeps a Community Alive?",
+      "session": "What Keeps a Community Alive? From Shared Spaces to Shared Purpose",
       "category": "global",
       "when": "Day 2 · 16:30"
     },
@@ -1030,7 +1030,7 @@
         "freeman"
       ],
       "name": "Freeman Fung",
-      "session": "A Conscious Pause",
+      "session": "A Conscious Pause: Closing Meditation at the Water's Edge",
       "category": "senses",
       "when": "Day 2 · 16:30"
     },
@@ -1039,7 +1039,7 @@
         "binard"
       ],
       "name": "Arthur Binard",
-      "session": "Miyazawa Kenji in Two Languages",
+      "session": "Rain Won't Stop You, Wind Won't Stop You: Live Music, Picture Books and Miyazawa Kenji in Two Languages",
       "category": "japan",
       "when": "Day 2 · 16:30"
     },
@@ -1084,7 +1084,7 @@
         "obaachan1"
       ],
       "name": "Obaachan Shokudo",
-      "session": "Gut-Health Breakfast",
+      "session": "Gut-Health Breakfast: Elevating IQ and Happiness through Gut Health",
       "category": "senses",
       "when": "Day 1 & 2 · 9:00"
     },
@@ -1093,7 +1093,7 @@
         "obaachan2"
       ],
       "name": "Obaachan Shokudo",
-      "session": "Gut-Health Breakfast",
+      "session": "Gut-Health Breakfast: Elevating IQ and Happiness through Gut Health",
       "category": "senses",
       "when": "Day 1 & 2 · 9:00"
     },
@@ -1120,7 +1120,7 @@
         "moe"
       ],
       "name": "MOE Nakano (JDNA)",
-      "session": "Ask a Digital Nomad",
+      "session": "Ask a Digital Nomad: Open Roundtables with JDNA",
       "category": "local",
       "when": "Day 2 · 10:30"
     },
@@ -1129,7 +1129,7 @@
         "vitto"
       ],
       "name": "Vitto Christaldi (JDNA)",
-      "session": "Ask a Digital Nomad",
+      "session": "Ask a Digital Nomad: Open Roundtables with JDNA",
       "category": "local",
       "when": "Day 2 · 10:30"
     },
@@ -1147,7 +1147,7 @@
         "iguchi"
       ],
       "name": "Akira Iguchi",
-      "session": "Coming soon",
+      "session": "Session by Akira Iguchi",
       "category": "japan",
       "when": "Day 2 · 11:30"
     },
