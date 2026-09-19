@@ -1798,3 +1798,36 @@ h2 {
 .session-card[data-session-title="YEN TO EN: Turning Money Back into Connection"] .session-avatar:first-child {
   margin-left: 0;
 }
+
+/* GRAND BEACH: room photo tinted 80% navy, same treatment as MAIN HALL / GARDEN. */
+.session-card--room-BEACH {
+  background-image: linear-gradient(rgba(21, 29, 85, 0.8), rgba(21, 29, 85, 0.8)), url("../assets/grand-beach.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* OFF-SITE sessions: each one gets its own photo (all sharing room "OUT"), tinted
+   80% navy to match the other plenary/evening-styled cards. */
+.session-card[data-session-title="Bus Transportation"] {
+  background-image: linear-gradient(rgba(21, 29, 85, 0.8), rgba(21, 29, 85, 0.8)), url("../assets/offsite-bus.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.session-card[data-session-title="Co-Creator's Gathering (INVITATION ONLY)"] {
+  background-image: linear-gradient(rgba(21, 29, 85, 0.8), rgba(21, 29, 85, 0.8)), url("../assets/offsite-cocreators-gathering.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.session-card[data-session-title="Community Dinner Motsunabe"] {
+  background-image: linear-gradient(rgba(21, 29, 85, 0.8), rgba(21, 29, 85, 0.8)), url("../assets/offsite-motsunabe.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.session-card[data-session-title="Synapse Festival"] {
+  background-image: linear-gradient(rgba(21, 29, 85, 0.8), rgba(21, 29, 85, 0.8)), url("../assets/offsite-synapse.jpg");
+  background-size: cover;
+  background-position: center;
+}

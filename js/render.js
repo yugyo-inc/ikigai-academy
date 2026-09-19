@@ -146,7 +146,7 @@ export function renderSpeakers(schedule, onOpenProfile) {
 
     card.append(portrait);
     card.append(element("span", "speaker-name", speaker.name));
-    card.append(element("span", "speaker-session", speaker.role || speaker.session));
+    card.append(element("span", "speaker-session", speaker.session || speaker.role));
     card.setAttribute("aria-label", `View profile for ${speaker.name}`);
     card.addEventListener("click", () => onOpenProfile(speaker));
     grid.append(card);
