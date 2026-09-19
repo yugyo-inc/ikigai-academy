@@ -905,7 +905,7 @@ h2 {
   position: absolute;
   z-index: -1;
   inset: 0;
-  background: linear-gradient(rgba(31, 41, 106, 0.7), rgba(31, 41, 106, 0.7)), url("assets/cocreators-bg.jpg") center / cover no-repeat;
+  background: linear-gradient(rgba(31, 41, 106, 0.7), rgba(31, 41, 106, 0.7)), url("../assets/cocreators-bg.jpg") center / cover no-repeat;
   opacity: 1;
 }
 
@@ -1741,13 +1741,13 @@ h2 {
    stays legible. MAIN HALL sessions are already light-text (plenary/evening styling); GARDEN
    sessions default to light card styling, so we flip them to light text too. --- */
 .session-card--room-MAIN {
-  background-image: linear-gradient(rgba(21, 29, 85, 0.8), rgba(21, 29, 85, 0.8)), url("assets/venue-main-hall.jpg");
+  background-image: linear-gradient(rgba(21, 29, 85, 0.8), rgba(21, 29, 85, 0.8)), url("../assets/venue-main-hall.jpg");
   background-size: cover;
   background-position: center;
 }
 
 .session-card--room-G {
-  background-image: linear-gradient(rgba(21, 29, 85, 0.8), rgba(21, 29, 85, 0.8)), url("assets/venue-garden.jpg");
+  background-image: linear-gradient(rgba(21, 29, 85, 0.8), rgba(21, 29, 85, 0.8)), url("../assets/venue-garden.jpg");
   background-size: cover;
   background-position: center;
   border-color: transparent;
@@ -1759,31 +1759,31 @@ h2 {
 .session-card--room-G .book-link { color: var(--gold); }
 .session-card--room-G.session-card--soon {
   border: 2px dashed var(--category);
-  background-image: linear-gradient(rgba(21, 29, 85, 0.8), rgba(21, 29, 85, 0.8)), url("assets/venue-garden.jpg");
+  background-image: linear-gradient(rgba(21, 29, 85, 0.8), rgba(21, 29, 85, 0.8)), url("../assets/venue-garden.jpg");
 }
 
 /* BALLROOM A / BALLROOM B: room photo tinted 80% white so the existing dark text
    stays legible without any color overrides. */
 .session-card--room-A {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("assets/venue-ballroom-a.jpg");
+  background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("../assets/venue-ballroom-a.jpg");
   background-size: cover;
   background-position: center;
 }
 
 .session-card--room-B {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("assets/venue-ballroom-b.jpg");
+  background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("../assets/venue-ballroom-b.jpg");
   background-size: cover;
   background-position: center;
 }
 
 .session-card--room-A.session-card--soon {
   border: 2px dashed var(--category);
-  background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("assets/venue-ballroom-a.jpg");
+  background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("../assets/venue-ballroom-a.jpg");
 }
 
 .session-card--room-B.session-card--soon {
   border: 2px dashed var(--category);
-  background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("assets/venue-ballroom-b.jpg");
+  background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("../assets/venue-ballroom-b.jpg");
 }
 
 /* YEN TO EN: keep the 4-avatar row a little smaller at all screen widths (unlike the
