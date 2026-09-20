@@ -64,10 +64,10 @@
    "day": "2026-10-01",
    "kind": "plenary",
    "time": "9:00-10:00",
-   "room": "MAIN",
-   "room_label": "MAIN HALL",
+   "room": "G",
+   "room_label": "GARDEN",
    "title": "Japanese Gut-Health Breakfast: Koji Prince × Grandma's Café",
-   "who": "Masaomi Sakata 阪田真臣 (Koji Prince 麹王子) with the grandmothers of Grandma's Café by Ukiha no Takara うきはの宝 · hands-on miso-ball workshop and handmade onigiri · 60 meals only",
+   "who": "Masaomi Sakata (Koji Prince 麹王子) with the grandmothers of Grandma's Café by Ukiha no Takara うきはの宝 · hands-on miso-ball workshop and handmade onigiri · 60 meals only",
    "category": "senses",
    "photos": [
     "sakata",
@@ -84,7 +84,7 @@
    "room": "MAIN",
    "room_label": "MAIN HALL",
    "title": "Opening: Chikuzen Hakata Koma",
-   "who": "Chikushi Shuraku III 三代目 筑紫珠楽 · 480 years of spinning-top performance · Welcome MC: Nikoleta Kouli",
+   "who": "Chikushi Shuraku III · 480 years of spinning-top performance · Welcome MC: Nikoleta Kouli",
    "category": "japan",
    "photos": [
     "shuraku",
@@ -132,7 +132,10 @@
    "who": "Nick Szasz (FUKUOKA NOW) with Douglas Weber, Jean-Pierre Villeneuve and Micaela Anne",
    "category": "local",
    "photos": [
-    "nick"
+    "nick",
+    "douglas",
+    "jeanpierre",
+    "micaela"
    ],
    "partner_logo": "assets/fukuoka-now.png",
    "community_slug": null,
@@ -187,13 +190,14 @@
    "time": "14:00-14:45",
    "room": "A",
    "room_label": "BALLROOM A",
-   "title": "Builders' Meetups with Local Communities [INAKA]",
-   "who": "Jacquie Wortley × local destinations",
+   "title": "Where can we build something that matters?",
+   "who": "Jacquie Wortley × Ryu Fujii + local destinations",
    "category": "local",
    "photos": [
-    "jacquie"
+    "jacquie",
+    "ryu"
    ],
-   "community_slug": null,
+   "community_slug": "where-can-we-build-something-that-m",
    "note": null
   },
   {
@@ -245,13 +249,13 @@
    "time": "15:00-15:45",
    "room": "B",
    "room_label": "BALLROOM B",
-   "title": "Building Brands That Centre Human Dignity Over Profit",
-   "who": "Mirela Curiman",
-   "category": "global",
+   "title": "You Can't Outrun Your Life: How to Use Travel as a Catalyst for Reinvention",
+   "who": "Jessica Hagmaier",
+   "category": "world",
    "photos": [
-    "mirela"
+    "jessica"
    ],
-   "community_slug": "building-brands-that-centre-human-d",
+   "community_slug": "you-cant-outrun-your-life-how-to-us",
    "note": null
   },
   {
@@ -319,10 +323,13 @@
    "room": "A",
    "room_label": "BALLROOM A",
    "title": "YEN TO EN: Turning Money Back into Connection",
-   "who": "Ryotaro Sakurai 櫻井亮太郎 × Kazuhiro Arai 新井和宏 (eumo) × Kotaro Motojima 本嶋孔太郎 × Kiyoko Mitsui 三井紀代子 (KIBOTCHA)",
+   "who": "Ryotaro Sakurai × Kazuhiro Arai (eumo) × Kotaro Motojima × Kiyoko Mitsui (KIBOTCHA)",
    "category": "japan",
    "photos": [
-    "sakurai"
+    "sakurai",
+    "arai",
+    "motojima",
+    "mitsui"
    ],
    "community_slug": "yen-to-en-turning-money-back-into-c",
    "note": null
@@ -389,19 +396,6 @@
   {
    "day": "2026-10-01",
    "kind": "evening",
-   "time": "19:00-22:00",
-   "room": "OUT",
-   "room_label": "OFF-SITE",
-   "title": "Co-Creator's Gathering (INVITATION ONLY)",
-   "who": "For eligible pass holders. Check your invitation and community event page for details.",
-   "category": null,
-   "photos": [],
-   "community_slug": "vipdinner",
-   "note": null
-  },
-  {
-   "day": "2026-10-01",
-   "kind": "evening",
    "time": "19:00-",
    "room": "OUT",
    "room_label": "OFF-SITE",
@@ -410,6 +404,19 @@
    "category": null,
    "photos": [],
    "community_slug": null,
+   "note": null
+  },
+  {
+   "day": "2026-10-01",
+   "kind": "evening",
+   "time": "19:00-",
+   "room": "OUT",
+   "room_label": "OFF-SITE",
+   "title": "Co-Creator's Gathering (INVITATION ONLY)",
+   "who": "7:00–10:00 PM · Invitation only. Check your invitation and the community event page for details.",
+   "category": null,
+   "photos": [],
+   "community_slug": "vipdinner",
    "note": null
   },
   {
@@ -430,10 +437,10 @@
    "day": "2026-10-02",
    "kind": "plenary",
    "time": "9:00-10:00",
-   "room": "MAIN",
-   "room_label": "MAIN HALL",
+   "room": "G",
+   "room_label": "GARDEN",
    "title": "Japanese Gut-Health Breakfast: Koji Prince × Grandma's Café, Day 2",
-   "who": "Masaomi Sakata 阪田真臣 (Koji Prince 麹王子) with the grandmothers of Grandma's Café by Ukiha no Takara うきはの宝 · hands-on miso-ball workshop and handmade onigiri · 60 meals only",
+   "who": "Masaomi Sakata (Koji Prince 麹王子) with the grandmothers of Grandma's Café by Ukiha no Takara うきはの宝 · hands-on miso-ball workshop and handmade onigiri · 60 meals only",
    "category": "senses",
    "photos": [
     "sakata",
@@ -449,14 +456,14 @@
    "time": "10:30-11:15",
    "room": "A",
    "room_label": "BALLROOM A",
-   "title": "RINNE: Teachings of Buddhism",
-   "who": "Tessei Hosokawa 細川貞晴 · details coming soon",
+   "title": "The \"Death\" of Digital Nomads — Zen, Impermanence, and Living in the Moment",
+   "who": "Tessei Hosokawa",
    "category": "japan",
    "photos": [
     "tessei"
    ],
    "community_slug": null,
-   "note": "soon"
+   "note": null
   },
   {
    "day": "2026-10-02",
@@ -465,7 +472,7 @@
    "room": "B",
    "room_label": "BALLROOM B",
    "title": "Build Wealth. Find Your Purpose. Design a Life You Don't Need to Retire From.",
-   "who": "Diego Taira 平良ディエゴ (Wealth Angels)",
+   "who": "Diego Taira (Wealth Angels)",
    "category": "world",
    "photos": [
     "diego"
@@ -496,7 +503,7 @@
    "room": "A",
    "room_label": "BALLROOM A",
    "title": "Session by Akira Iguchi",
-   "who": "Akira Iguchi 井口晃 · details coming soon",
+   "who": "Akira Iguchi · details coming soon",
    "category": "japan",
    "photos": [
     "iguchi"
@@ -552,7 +559,7 @@
    "room": "A",
    "room_label": "BALLROOM A",
    "title": "Wakachiai: From Everyday Talk to Deep Connection",
-   "who": "Mikiko Sudo 須藤みきこ & Hidehiko Sudo 須藤秀彦 (Kokoro Academy)",
+   "who": "Mikiko Sudo & Hidehiko Sudo (Kokoro Academy)",
    "category": "japan",
    "photos": [
     "sudo"
@@ -599,9 +606,10 @@
    "category": "global",
    "photos": [
     "oren",
-    "yeji"
+    "yeji",
+    "cihan"
    ],
-   "community_slug": null,
+   "community_slug": "peace-one-conversation-at-a-time",
    "note": null
   },
   {
@@ -641,7 +649,7 @@
    "room": "A",
    "room_label": "BALLROOM A",
    "title": "Beneath Ikigai & Zen: Discovering the Hidden Worldview of Japan, and Your Own",
-   "who": "Sanae Akima 秋間早苗 (La torche / Nashite Fukuoka)",
+   "who": "Sanae Akima (La torche / Nashite Fukuoka)",
    "category": "japan",
    "photos": [
     "sanae"
@@ -686,11 +694,12 @@
    "room": "A",
    "room_label": "BALLROOM A",
    "title": "Rain Won't Stop You, Wind Won't Stop You: Live Music, Picture Books and Miyazawa Kenji in Two Languages",
-   "who": "Arthur Binard アーサー・ビナード × Visions (Miki Tsukamoto 塚本美樹, Kiyoshi Mamura 間村清) · 90 min",
+   "who": "Arthur Binard × Visions (Miki Tsukamoto, Kiyoshi Mamura) · 90 min",
    "category": "senses",
    "photos": [
     "binard",
-    "miki"
+    "miki",
+    "mamura"
    ],
    "community_slug": "an-evening-of-live-musicpicture-bo",
    "note": null
@@ -779,7 +788,7 @@
    "photos": [
     "ryo"
    ],
-   "name": "Ryo Osera 大瀬良亮",
+   "name": "Ryo Osera",
    "role": "Co-founder, Colive Fukuoka",
    "bio": "Ryo is a co-founder of Colive Fukuoka and CEO of yugyo inc.",
    "session": "Co-founders Opening Talk",
@@ -790,18 +799,17 @@
    "photos": [
     "sakata"
    ],
-   "name": "Masaomi Sakata 阪田真臣",
-   "session": "Japanese Gut-Health Breakfast",
+   "name": "Masaomi Sakata",
+   "session": "Japanese Gut-Health Breakfast: Koji Prince × Grandma's Café",
    "category": "senses",
-   "when": "Day 1 & 2 · 9:00",
-   "role": "Koji Prince 麹王子"
+   "when": "Day 1 & 2 · 9:00"
   },
   {
    "photos": [
     "shuraku"
    ],
-   "name": "Chikushi Shuraku III 三代目 筑紫珠楽",
-   "session": "Chikuzen Hakata Koma",
+   "name": "Chikushi Shuraku III",
+   "session": "Opening: Chikuzen Hakata Koma",
    "category": "japan",
    "when": "Day 1 · 10:00"
   },
@@ -819,7 +827,7 @@
     "kiki"
    ],
    "name": "Kiki Fukai",
-   "session": "Become Yourself Here",
+   "session": "Become Yourself Here: Japan as the Place You Discover Who You Really Are",
    "category": "japan",
    "when": "Day 1 · 15:00"
   },
@@ -827,8 +835,35 @@
    "photos": [
     "sakurai"
    ],
-   "name": "Ryotaro Sakurai 櫻井亮太郎",
-   "session": "YEN TO EN",
+   "name": "Ryotaro Sakurai",
+   "session": "YEN TO EN: Turning Money Back into Connection",
+   "category": "japan",
+   "when": "Day 1 · 17:00"
+  },
+  {
+   "photos": [
+    "arai"
+   ],
+   "name": "Kazuhiro Arai",
+   "session": "YEN TO EN: Turning Money Back into Connection",
+   "category": "japan",
+   "when": "Day 1 · 17:00"
+  },
+  {
+   "photos": [
+    "motojima"
+   ],
+   "name": "Kotaro Motojima",
+   "session": "YEN TO EN: Turning Money Back into Connection",
+   "category": "japan",
+   "when": "Day 1 · 17:00"
+  },
+  {
+   "photos": [
+    "mitsui"
+   ],
+   "name": "Kiyoko Mitsui",
+   "session": "YEN TO EN: Turning Money Back into Connection",
    "category": "japan",
    "when": "Day 1 · 17:00"
   },
@@ -836,8 +871,8 @@
    "photos": [
     "sudo"
    ],
-   "name": "Mikiko & Hidehiko Sudo 須藤みきこ・秀彦",
-   "session": "Wakachiai",
+   "name": "Mikiko & Hidehiko Sudo",
+   "session": "Wakachiai: From Everyday Talk to Deep Connection",
    "category": "japan",
    "when": "Day 2 · 13:30"
   },
@@ -845,8 +880,8 @@
    "photos": [
     "sanae"
    ],
-   "name": "Sanae Akima 秋間早苗",
-   "session": "Beneath Ikigai & Zen",
+   "name": "Sanae Akima",
+   "session": "Beneath Ikigai & Zen: Discovering the Hidden Worldview of Japan, and Your Own",
    "category": "japan",
    "when": "Day 2 · 15:30"
   },
@@ -854,8 +889,8 @@
    "photos": [
     "miki"
    ],
-   "name": "Miki Tsukamoto 塚本美樹 (Visions)",
-   "session": "Miyazawa Kenji in Two Languages",
+   "name": "Miki Tsukamoto (Visions)",
+   "session": "Rain Won't Stop You, Wind Won't Stop You: Live Music, Picture Books and Miyazawa Kenji in Two Languages",
    "category": "senses",
    "when": "Day 2 · 16:30"
   },
@@ -863,8 +898,8 @@
    "photos": [
     "mamura"
    ],
-   "name": "Kiyoshi Mamura 間村清 (Visions)",
-   "session": "Miyazawa Kenji in Two Languages",
+   "name": "Kiyoshi Mamura (Visions)",
+   "session": "Rain Won't Stop You, Wind Won't Stop You: Live Music, Picture Books and Miyazawa Kenji in Two Languages",
    "category": "senses",
    "when": "Day 2 · 16:30"
   },
@@ -876,15 +911,6 @@
    "session": "Speak Before You're Ready",
    "category": "world",
    "when": "Day 1 · 14:00"
-  },
-  {
-   "photos": [
-    "mirela"
-   ],
-   "name": "Mirela Curiman",
-   "session": "Building Brands That Centre Human Dignity",
-   "category": "global",
-   "when": "Day 1 · 15:00"
   },
   {
    "photos": [
@@ -900,7 +926,7 @@
     "stella"
    ],
    "name": "Stella Schneider",
-   "session": "SME Takeover Lab [ATOTSUGI]",
+   "session": "SME Takeover Lab [ATOTSUGI]: How to Acquire a Small Business",
    "category": "local",
    "when": "Day 1 · 16:00"
   },
@@ -918,7 +944,7 @@
     "nomads2go"
    ],
    "name": "Yarden Avirav & Roza Gavrilov",
-   "session": "Breaking Conceptions",
+   "session": "Breaking Conceptions: From Nomadic Couple to Nomadic Family",
    "category": "world",
    "when": "Day 1 · 17:00"
   },
@@ -927,7 +953,7 @@
     "nika"
    ],
    "name": "Nika Rey",
-   "session": "Latino Dance",
+   "session": "Latino Dance: Bachata for Everyone",
    "category": "senses",
    "when": "Day 1 · 17:00"
   },
@@ -935,8 +961,8 @@
    "photos": [
     "diego"
    ],
-   "name": "Diego Taira 平良ディエゴ",
-   "session": "Build Wealth. Find Your Purpose.",
+   "name": "Diego Taira",
+   "session": "Build Wealth. Find Your Purpose. Design a Life You Don't Need to Retire From.",
    "category": "world",
    "when": "Day 2 · 10:30"
   },
@@ -945,7 +971,7 @@
     "roland"
    ],
    "name": "Roland Tokko",
-   "session": "Align and Connect with Your Ikigai",
+   "session": "Align and Connect with Your Ikigai Through Soul",
    "category": "world",
    "when": "Day 2 · 11:30"
   },
@@ -954,16 +980,33 @@
     "adam"
    ],
    "name": "Adam Curnow",
-   "session": "Travel Smarter, Work Safer",
+   "session": "Travel Smarter, Work Safer: Everyday Security for Digital Nomads",
    "category": "global",
    "when": "Day 2 · 13:30"
   },
   {
    "photos": [
-    "oren",
+    "oren"
+   ],
+   "name": "Oren Chazan",
+   "session": "Peace: One Conversation at a Time",
+   "category": "global",
+   "when": "Day 2 · 14:30"
+  },
+  {
+   "photos": [
     "yeji"
    ],
-   "name": "Oren Chazan × Yeji Cheon",
+   "name": "Yeji Cheon",
+   "session": "Peace: One Conversation at a Time",
+   "category": "global",
+   "when": "Day 2 · 14:30"
+  },
+  {
+   "photos": [
+    "cihan"
+   ],
+   "name": "Cihan Boz",
    "session": "Peace: One Conversation at a Time",
    "category": "global",
    "when": "Day 2 · 14:30"
@@ -973,7 +1016,7 @@
     "carlyn"
    ],
    "name": "Carlyn Shaw",
-   "session": "The Power of a Smile",
+   "session": "The Power of a Smile: Creating Connection and Joy Within and Around You",
    "category": "world",
    "when": "Day 2 · 14:30"
   },
@@ -982,7 +1025,7 @@
     "tressia"
    ],
    "name": "Tressia H. Lee",
-   "session": "HEARIM",
+   "session": "HEARIM: Building Trust Across Cultures at Work",
    "category": "global",
    "when": "Day 2 · 14:30"
   },
@@ -991,7 +1034,7 @@
     "lawrence"
    ],
    "name": "Lawrence Tuazon",
-   "session": "Beyond Social Media",
+   "session": "Beyond Social Media: Grow a Business Through Relationships, Trust and Community",
    "category": "world",
    "when": "Day 2 · 15:30"
   },
@@ -1009,7 +1052,7 @@
     "marco"
    ],
    "name": "Marco Traina",
-   "session": "What Keeps a Community Alive?",
+   "session": "What Keeps a Community Alive? From Shared Spaces to Shared Purpose",
    "category": "global",
    "when": "Day 2 · 16:30"
   },
@@ -1018,7 +1061,7 @@
     "freeman"
    ],
    "name": "Freeman Fung",
-   "session": "A Conscious Pause",
+   "session": "A Conscious Pause: Closing Meditation at the Water's Edge",
    "category": "senses",
    "when": "Day 2 · 16:30"
   },
@@ -1026,8 +1069,8 @@
    "photos": [
     "binard"
    ],
-   "name": "Arthur Binard アーサー・ビナード",
-   "session": "Miyazawa Kenji in Two Languages",
+   "name": "Arthur Binard",
+   "session": "Rain Won't Stop You, Wind Won't Stop You: Live Music, Picture Books and Miyazawa Kenji in Two Languages",
    "category": "japan",
    "when": "Day 2 · 16:30"
   },
@@ -1042,11 +1085,46 @@
   },
   {
    "photos": [
-    "obaachan1",
+    "douglas"
+   ],
+   "name": "Douglas Weber",
+   "session": "Keynote 1: Why We Came, Why We Stayed, and What Comes Next",
+   "category": "local",
+   "when": "Day 1 · 10:30"
+  },
+  {
+   "photos": [
+    "jeanpierre"
+   ],
+   "name": "Jean-Pierre Villeneuve",
+   "session": "Keynote 1: Why We Came, Why We Stayed, and What Comes Next",
+   "category": "local",
+   "when": "Day 1 · 10:30"
+  },
+  {
+   "photos": [
+    "micaela"
+   ],
+   "name": "Micaela Anne",
+   "session": "Keynote 1: Why We Came, Why We Stayed, and What Comes Next",
+   "category": "local",
+   "when": "Day 1 · 10:30"
+  },
+  {
+   "photos": [
+    "obaachan1"
+   ],
+   "name": "Grandma's Café by Ukiha no Takara",
+   "session": "Japanese Gut-Health Breakfast: Koji Prince × Grandma's Café",
+   "category": "senses",
+   "when": "Day 1 & 2 · 9:00"
+  },
+  {
+   "photos": [
     "obaachan2"
    ],
-   "name": "Grandma's Café by Ukiha no Takara うきはの宝",
-   "session": "Japanese Gut-Health Breakfast",
+   "name": "Grandma's Café by Ukiha no Takara",
+   "session": "Japanese Gut-Health Breakfast: Koji Prince × Grandma's Café",
    "category": "senses",
    "when": "Day 1 & 2 · 9:00"
   },
@@ -1055,7 +1133,16 @@
     "jacquie"
    ],
    "name": "Jacquie Wortley",
-   "session": "Builders' Meetups [INAKA]",
+   "session": "Where can we build something that matters?",
+   "category": "local",
+   "when": "Day 1 · 14:00"
+  },
+  {
+   "photos": [
+    "ryu"
+   ],
+   "name": "Ryu Fujii",
+   "session": "Where can we build something that matters?",
    "category": "local",
    "when": "Day 1 · 14:00"
   },
@@ -1064,7 +1151,7 @@
     "moe"
    ],
    "name": "MOE Nakano (JDNA)",
-   "session": "Ask a Digital Nomad",
+   "session": "Ask a Digital Nomad: Open Roundtables with JDNA",
    "category": "local",
    "when": "Day 2 · 10:30"
   },
@@ -1073,7 +1160,7 @@
     "vitto"
    ],
    "name": "Vitto Christaldi (JDNA)",
-   "session": "Ask a Digital Nomad",
+   "session": "Ask a Digital Nomad: Open Roundtables with JDNA",
    "category": "local",
    "when": "Day 2 · 10:30"
   },
@@ -1081,8 +1168,8 @@
    "photos": [
     "tessei"
    ],
-   "name": "Tessei Hosokawa 細川貞晴",
-   "session": "RINNE · coming soon",
+   "name": "Tessei Hosokawa",
+   "session": "The \"Death\" of Digital Nomads — Zen, Impermanence, and Living in the Moment",
    "category": "japan",
    "when": "Day 2 · 10:30"
   },
@@ -1090,8 +1177,8 @@
    "photos": [
     "iguchi"
    ],
-   "name": "Akira Iguchi 井口晃",
-   "session": "Coming soon",
+   "name": "Akira Iguchi",
+   "session": "Session by Akira Iguchi",
    "category": "japan",
    "when": "Day 2 · 11:30"
   },
@@ -1102,9 +1189,9 @@
    "name": "Jessica Hagmaier",
    "role": "Co-Creator, Colive Fukuoka",
    "bio": "Jessica is a creative strategist, brand designer, and travel writer whose work explores reinvention and intentional living.",
-   "session": "",
+   "session": "You Can't Outrun Your Life: How to Use Travel as a Catalyst for Reinvention",
    "category": "world",
-   "when": ""
+   "when": "Day 1 · 15:00"
   }
  ]
 }
