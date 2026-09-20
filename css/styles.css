@@ -903,10 +903,18 @@ h2 {
 
 .cocreators-photo {
   position: absolute;
+  z-index: -2;
+  inset: 0 0 0 54%;
+  background: url("../assets/Woven_Ground_Photo_web.jpg") center / cover no-repeat;
+  opacity: 0.21;
+}
+
+.cocreators-section::after {
+  content: "";
+  position: absolute;
   z-index: -1;
   inset: 0;
-  background: linear-gradient(rgba(31, 41, 106, 0.7), rgba(31, 41, 106, 0.7)), url("../assets/cocreators-bg.jpg") center / cover no-repeat;
-  opacity: 1;
+  background: linear-gradient(90deg, var(--indigo) 42%, rgba(31, 41, 106, 0.66) 100%);
 }
 
 .section-heading--light h2,
@@ -1326,6 +1334,15 @@ h2 {
     width: min(100%, 148px);
   }
 
+  .cocreators-photo {
+    inset: 46% 0 0 20%;
+    opacity: 0.15;
+  }
+
+  .cocreators-section::after {
+    background: linear-gradient(180deg, var(--indigo) 34%, rgba(31, 41, 106, 0.82) 100%);
+  }
+
   .map-frame-wrap {
     min-height: 480px;
     margin: 0 -4px;
@@ -1591,6 +1608,73 @@ h2 {
 .ask-grid p:not(.section-kicker) { max-width: 42ch; font-size: 1.15rem; line-height: 1.6; }
 .copy-code { margin-right: 10px; border-color: var(--gold); background: transparent; color: var(--gold); }
 
+.hero__intro {
+  max-width: 46ch;
+  margin: 26px 0 0;
+  font-size: clamp(0.98rem, 1.35vw, 1.08rem);
+  line-height: 1.62;
+  color: #e3e7ff;
+}
+
+.hero__founder-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 18px;
+  color: var(--gold);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 2px solid rgba(244, 197, 66, 0.55);
+  padding-bottom: 2px;
+  width: max-content;
+}
+
+.hero__founder-link:hover,
+.hero__founder-link:focus-visible {
+  border-bottom-color: var(--gold);
+}
+
+.founders-section {
+  padding: clamp(60px, 8vw, 96px) 0;
+  background: #f4f5fb;
+  scroll-margin-top: 96px;
+}
+
+.founders-section h2 {
+  font-size: clamp(2.5rem, 4.6vw, 3.8rem);
+}
+
+.founders-shell { max-width: 760px; }
+
+.founders-body {
+  margin-top: 26px;
+}
+
+.founders-body p {
+  margin: 0 0 1.15em;
+  font-size: 1.12rem;
+  line-height: 1.72;
+  color: var(--ink);
+}
+
+.founders-signature {
+  margin: 34px 0 0;
+  padding-top: 22px;
+  border-top: 2px solid var(--orange);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--indigo);
+  width: max-content;
+  max-width: 100%;
+}
+
+.founders-signature span {
+  display: block;
+  margin-top: 4px;
+  font-weight: 400;
+  color: #5a608a;
+}
+
 @media (max-width: 900px) {
   .workshop-block .time-group { grid-template-columns: 150px minmax(0, 1fr); }
 }
@@ -1614,22 +1698,13 @@ h2 {
   .hero-face-node--6 { left: 26%; bottom: 3%; top: auto; right: auto; }
   .hero-face-node--7 { left: 51%; bottom: 2%; right: auto; }
   .brand-link { margin-bottom: 24px; }
+  .hero__intro { margin-top: 20px; font-size: 0.98rem; }
   .brand-logo { margin-bottom: 0; }
   .program-clock-line { align-items: flex-start; flex-direction: column; }
   .time-group,
   .workshop-block .time-group { grid-template-columns: minmax(0, 1fr); }
   .time-label { font-size: 1.8rem; }
   .session-avatar { width: 90px; height: 90px; }
-  /* 4+ co-presenters (e.g. YEN TO EN) get a smaller size on mobile so the row doesn't overflow */
-  .session-avatars:has(.session-avatar:nth-child(4)) .session-avatar {
-    width: 52px;
-    height: 52px;
-    margin-left: -16px;
-    border-width: 3px;
-  }
-  .session-avatars:has(.session-avatar:nth-child(4)) .session-avatar:first-child {
-    margin-left: 0;
-  }
   .category-chip { max-width: 54%; font-size: 0.8rem; }
   #speaker-dialog-content { grid-template-columns: 1fr; gap: 16px; }
   .speaker-dialog__portrait img { width: 132px; height: 132px; }
@@ -1719,115 +1794,4 @@ h2 {
   .hero--keyvisual h1 { font-size: clamp(3.5rem, 15.5vw, 4.35rem); }
   .hero--keyvisual .hero__rule { margin: 16px auto 13px; }
   .hero--keyvisual .event-meta { font-size: 1rem; }
-}
-
-
-/* --- Fix: inside a workshop-block, several time-labels share the sticky "top: 86px" anchor.
-   Since display:contents flattens each time-group into the shared grid, every sticky label
-   becomes stuck at the same screen position once scrolled past, rendering on top of each other.
-   Turning sticky off here (each row already sits beside its own sessions, so the sticky repeat
-   isn't needed) removes the overlapping-text glitch while scrolling through concurrent workshops. --- */
-.workshop-block .time-label {
-  position: static;
-  top: auto;
-}
-
-/* --- Hero: uniform 80% navy tint over the venue photo (replaces the varying-opacity gradient) --- */
-.hero.hero--keyvisual::before {
-  background: rgba(21, 29, 85, 0.8);
-}
-
-/* --- Venue-specific session card backgrounds: the actual room photo, tinted 80% navy so text
-   stays legible. MAIN HALL sessions are already light-text (plenary/evening styling); GARDEN
-   sessions default to light card styling, so we flip them to light text too. --- */
-.session-card--room-MAIN {
-  background-image: linear-gradient(rgba(21, 29, 85, 0.8), rgba(21, 29, 85, 0.8)), url("../assets/venue-main-hall.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
-.session-card--room-G {
-  background-image: linear-gradient(rgba(21, 29, 85, 0.8), rgba(21, 29, 85, 0.8)), url("../assets/venue-garden.jpg");
-  background-size: cover;
-  background-position: center;
-  border-color: transparent;
-  color: var(--paper);
-}
-.session-card--room-G .room-label { color: #9edcff; }
-.session-card--room-G .session-title { color: var(--paper); }
-.session-card--room-G .session-who { color: #e6e9f9; }
-.session-card--room-G .book-link { color: var(--gold); }
-.session-card--room-G.session-card--soon {
-  border: 2px dashed var(--category);
-  background-image: linear-gradient(rgba(21, 29, 85, 0.8), rgba(21, 29, 85, 0.8)), url("../assets/venue-garden.jpg");
-}
-
-/* BALLROOM A / BALLROOM B: room photo tinted 80% white so the existing dark text
-   stays legible without any color overrides. */
-.session-card--room-A {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("../assets/venue-ballroom-a.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
-.session-card--room-B {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("../assets/venue-ballroom-b.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
-.session-card--room-A.session-card--soon {
-  border: 2px dashed var(--category);
-  background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("../assets/venue-ballroom-a.jpg");
-}
-
-.session-card--room-B.session-card--soon {
-  border: 2px dashed var(--category);
-  background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("../assets/venue-ballroom-b.jpg");
-}
-
-/* YEN TO EN: keep the 4-avatar row a little smaller at all screen widths (unlike the
-   generic mobile-only shrink rule used for other 4-avatar sessions, e.g. Fukuoka Now),
-   sized to sit comfortably inside the narrow BALLROOM workshop card without crowding. */
-.session-card[data-session-title="YEN TO EN: Turning Money Back into Connection"] .session-avatar {
-  width: 66px;
-  height: 66px;
-  margin-left: -14px;
-  border-width: 4px;
-}
-.session-card[data-session-title="YEN TO EN: Turning Money Back into Connection"] .session-avatar:first-child {
-  margin-left: 0;
-}
-
-/* GRAND BEACH: room photo tinted 80% navy, same treatment as MAIN HALL / GARDEN. */
-.session-card--room-BEACH {
-  background-image: linear-gradient(rgba(21, 29, 85, 0.8), rgba(21, 29, 85, 0.8)), url("../assets/grand-beach.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
-/* OFF-SITE sessions: each one gets its own photo (all sharing room "OUT"), tinted
-   80% navy to match the other plenary/evening-styled cards. */
-.session-card[data-session-title="Bus Transportation"] {
-  background-image: linear-gradient(rgba(21, 29, 85, 0.8), rgba(21, 29, 85, 0.8)), url("../assets/offsite-bus.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
-.session-card[data-session-title="Co-Creator's Gathering (INVITATION ONLY)"] {
-  background-image: linear-gradient(rgba(21, 29, 85, 0.8), rgba(21, 29, 85, 0.8)), url("../assets/offsite-cocreators-gathering.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
-.session-card[data-session-title="Community Dinner Motsunabe"] {
-  background-image: linear-gradient(rgba(21, 29, 85, 0.8), rgba(21, 29, 85, 0.8)), url("../assets/offsite-motsunabe.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
-.session-card[data-session-title="Synapse Festival"] {
-  background-image: linear-gradient(rgba(21, 29, 85, 0.8), rgba(21, 29, 85, 0.8)), url("../assets/offsite-synapse.jpg");
-  background-size: cover;
-  background-position: center;
 }
