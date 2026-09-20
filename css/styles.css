@@ -1685,7 +1685,7 @@ h2 {
 
 .partner-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
   gap: 12px;
   margin-top: 28px;
 }
@@ -1708,6 +1708,11 @@ h2 {
   border-color: var(--indigo);
   box-shadow: 0 6px 18px rgba(31, 41, 106, 0.1);
 }
+
+.partner-grid--sponsors { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 14px; }
+.partner--sponsor { min-height: 116px; }
+.partner--sponsor img { max-height: 80px; }
+.partners-h3 { margin: clamp(36px, 5vw, 56px) 0 14px; font-family: var(--display); font-weight: 400; font-size: 1.9rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--indigo); }
 
 .partner img {
   display: block;
@@ -1787,6 +1792,9 @@ h2 {
   .partners-subgroups { grid-template-columns: 1fr; }
   .collab-list li { flex-direction: column; gap: 2px; }
   .partner-grid { grid-template-columns: repeat(auto-fill, minmax(104px, 1fr)); gap: 8px; }
+  .partner-grid--sponsors { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
+  .partner--sponsor { min-height: 96px; }
+  .partner--sponsor img { max-height: 62px; }
   .partner { min-height: 80px; padding: 12px; }
   .partner img { max-height: 54px; }
 }
