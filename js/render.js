@@ -146,7 +146,7 @@ export function renderSpeakers(schedule, onOpenProfile) {
 
     card.append(portrait);
     card.append(element("span", "speaker-name", speaker.name));
-    card.append(element("span", "speaker-session", speaker.session || speaker.role));
+    card.append(element("span", "speaker-session", speaker.role || speaker.session));
     card.setAttribute("aria-label", `View profile for ${speaker.name}`);
     card.addEventListener("click", () => onOpenProfile(speaker));
     grid.append(card);
@@ -252,7 +252,6 @@ function createSessionCard(schedule, session, selectedCategories, query) {
   const card = element("article", classes.join(" "));
   card.id = sessionId(session);
   card.dataset.category = session.category || "none";
-  card.dataset.sessionTitle = session.title || "";
   card.style.setProperty("--category", categoryColor);
   const cardTop = element("div", "session-card__top");
   cardTop.append(element("p", "room-label", schedule.rooms[session.room] || session.room_label || session.room));
@@ -294,11 +293,11 @@ function createSessionCard(schedule, session, selectedCategories, query) {
   const footer = element("div", "session-footer");
 
   if (session.community_slug) {
-    const link = element("a", "book-link", "Book Your Seat");
+    const link = element("a", "book-link", session.link_label || "Book Your Seat");
     link.href = bookingUrl(schedule.event.booking_base, session.community_slug);
     link.target = "_blank";
     link.rel = "noopener noreferrer";
-    link.setAttribute("aria-label", `Book your seat for ${session.title}`);
+    link.setAttribute("aria-label", `${session.link_label || "Book your seat"}: ${session.title}`);
     footer.append(link);
   }
 
