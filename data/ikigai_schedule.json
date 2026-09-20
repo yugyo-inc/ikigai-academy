@@ -403,7 +403,8 @@
    "who": "Note: No vegan option. Check the community event page for booking and location.",
    "category": null,
    "photos": [],
-   "community_slug": null,
+   "community_slug": "community-dinner-motsunabe",
+   "link_label": "Book Your Seat",
    "note": null
   },
   {
