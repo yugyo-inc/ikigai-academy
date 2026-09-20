@@ -1675,6 +1675,122 @@ h2 {
   color: #5a608a;
 }
 
+.partners-section {
+  padding: clamp(56px, 7vw, 88px) 0 clamp(48px, 6vw, 72px);
+  background: var(--paper);
+  border-top: 1px solid #e3e6f3;
+}
+
+.partners-section h2 { font-size: clamp(2.5rem, 4.6vw, 3.8rem); }
+
+.partner-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.partner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 92px;
+  padding: 14px 16px;
+  border: 1px solid #e3e6f3;
+  border-radius: 12px;
+  background: #fff;
+  text-decoration: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.partner:hover,
+.partner:focus-visible {
+  border-color: var(--indigo);
+  box-shadow: 0 6px 18px rgba(31, 41, 106, 0.1);
+}
+
+.partner img {
+  display: block;
+  max-width: 100%;
+  max-height: 64px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.partner--text small {
+  display: block;
+  margin-top: 4px;
+  font-family: var(--body);
+  font-size: 0.85rem;
+  letter-spacing: 0;
+  text-transform: none;
+  color: #5a608a;
+}
+
+.partner--text span {
+  font-family: var(--display);
+  font-size: 1.15rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--indigo);
+  text-align: center;
+  line-height: 1.15;
+}
+
+.partners-subgroups {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: clamp(28px, 5vw, 64px);
+  margin-top: clamp(40px, 5vw, 60px);
+}
+
+.partners-subgroup h3 {
+  margin: 0 0 14px;
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: 1.6rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--indigo);
+}
+
+.collab-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.collab-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 9px 0;
+  border-bottom: 1px solid #e3e6f3;
+  font-size: 1rem;
+  color: var(--ink);
+}
+
+.collab-list li span {
+  flex-shrink: 0;
+  color: #5a608a;
+  font-size: 0.9rem;
+}
+
+.media-partners {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+@media (max-width: 720px) {
+  .partners-subgroups { grid-template-columns: 1fr; }
+  .collab-list li { flex-direction: column; gap: 2px; }
+  .partner-grid { grid-template-columns: repeat(auto-fill, minmax(104px, 1fr)); gap: 8px; }
+  .partner { min-height: 80px; padding: 12px; }
+  .partner img { max-height: 54px; }
+}
+
 @media (max-width: 900px) {
   .workshop-block .time-group { grid-template-columns: 150px minmax(0, 1fr); }
 }
