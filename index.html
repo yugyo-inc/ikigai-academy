@@ -60,6 +60,21 @@
       </div>
     </header>
 
+    <section class="ticket-nudge" aria-label="Ticket reminder">
+      <div class="section-shell ticket-nudge__inner">
+        <div class="ticket-nudge__copy">
+          <p><strong>No ticket yet?</strong> Your seat at Ikigai Academy is waiting.</p>
+          <div class="ticket-nudge__countdown" id="ticket-countdown" aria-hidden="true">
+            <div class="countdown-unit"><span class="countdown-value" id="cd-days">00</span><span class="countdown-label">Days</span></div>
+            <div class="countdown-unit"><span class="countdown-value" id="cd-hours">00</span><span class="countdown-label">Hrs</span></div>
+            <div class="countdown-unit"><span class="countdown-value" id="cd-mins">00</span><span class="countdown-label">Min</span></div>
+            <div class="countdown-unit"><span class="countdown-value" id="cd-secs">00</span><span class="countdown-label">Sec</span></div>
+          </div>
+        </div>
+        <a class="primary-button ticket-nudge__button" href="https://community.colivefukuoka.com/portal/index?membership_type=ikigai_academy_pass" target="_blank" rel="noopener noreferrer">Get It Now</a>
+      </div>
+    </section>
+
     <nav class="day-nav" aria-label="Choose a program day">
       <div class="day-tabs" id="day-tabs" role="tablist" aria-label="Program days"></div>
     </nav>
@@ -109,6 +124,15 @@
             <p>Tap a photo for a profile and session link.</p>
           </div>
           <div class="speaker-grid" id="speaker-grid"></div>
+        </div>
+      </section>
+
+      <section class="pass-promo-section" id="get-your-pass" aria-labelledby="pass-promo-title">
+        <div class="section-shell section-shell--narrow pass-promo-content">
+          <p class="section-kicker">Ready to join?</p>
+          <h2 id="pass-promo-title">Get Your Ikigai Academy Pass</h2>
+          <p>Secure your seat for two days of keynotes, workshops, and community sessions with the Co-Creators above.</p>
+          <a class="primary-button pass-promo-button" href="https://community.colivefukuoka.com/portal/index?membership_type=ikigai_academy_pass" target="_blank" rel="noopener noreferrer">Get Your Pass</a>
         </div>
       </section>
 
@@ -276,6 +300,14 @@
       </div>
       <a class="back-to-top" href="#top">Back to top</a>
     </footer>
+
+    <div class="sticky-cta-bar" role="complementary" aria-label="Get your pass">
+      <div class="sticky-cta-bar__text">
+        <strong>Ikigai Academy 2026</strong>
+        <span>Oct 1&ndash;2 &middot; THE LUIGANS, Fukuoka</span>
+      </div>
+      <a class="primary-button sticky-cta-bar__button" href="https://community.colivefukuoka.com/portal/index?membership_type=ikigai_academy_pass" target="_blank" rel="noopener noreferrer">Get Your Pass</a>
+    </div>
 
     <noscript>
       <div class="noscript-message">This guide needs JavaScript to load the latest schedule.</div>
