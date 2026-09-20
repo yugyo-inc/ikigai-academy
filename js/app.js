@@ -14,6 +14,7 @@ import {
   getZonedParts,
   parseTimeRange,
 } from "./tokyo-time.js";
+import { initTicketCountdown } from "./countdown.js";
 
 const DATA_URL = "data/ikigai_schedule.json";
 
@@ -25,6 +26,7 @@ const state = {
 };
 
 init();
+initTicketCountdown();
 
 async function init() {
   try {

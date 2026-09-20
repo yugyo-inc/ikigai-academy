@@ -207,10 +207,9 @@ function renderTimeGroup(schedule, group, selectedCategories, query) {
   const range = parseTimeRange(group.time);
   time.append(element("span", "", range?.openEnded ? "Start time · JST" : "Venue time · JST"));
 
-  const isEveningPair = group.sessions.length > 1 && group.sessions.every((session) => session.kind === "evening");
   const grid = element(
     "div",
-    `session-grid${isWorkshopGrid(group.sessions) ? " session-grid--workshops" : ""}${isEveningPair ? " session-grid--pair" : ""}`,
+    `session-grid${isWorkshopGrid(group.sessions) ? " session-grid--workshops" : ""}`,
   );
   group.sessions.sort(compareRooms).forEach((session) => {
     grid.append(createSessionCard(schedule, session, selectedCategories, query));
@@ -295,11 +294,11 @@ function createSessionCard(schedule, session, selectedCategories, query) {
   const footer = element("div", "session-footer");
 
   if (session.community_slug) {
-    const link = element("a", "book-link", session.link_label || "Book Your Seat");
+    const link = element("a", "book-link", "Book Your Seat");
     link.href = bookingUrl(schedule.event.booking_base, session.community_slug);
     link.target = "_blank";
     link.rel = "noopener noreferrer";
-    link.setAttribute("aria-label", `${session.link_label || "Book your seat"}: ${session.title}`);
+    link.setAttribute("aria-label", `Book your seat for ${session.title}`);
     footer.append(link);
   }
 

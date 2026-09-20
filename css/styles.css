@@ -4,7 +4,8 @@
   --blue: #0069a0;
   --orange: #eb6100;
   --green: #00af84;
-  --gold: #f4c542;
+  --gold: #eb6100;
+  --gold-frame: #f4c542;
   --paper: #ffffff;
   --mist: #f3f5fa;
   --sky-mist: #eaf5fb;
@@ -679,10 +680,6 @@ h2 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-.session-grid--pair {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
 .workshop-block {
   display: grid;
   grid-template-columns: 120px repeat(3, minmax(0, 1fr));
@@ -1131,8 +1128,7 @@ h2 {
     margin-bottom: 54px;
   }
 
-  .session-grid--workshops,
-  .session-grid--pair {
+  .session-grid--workshops {
     grid-template-columns: minmax(0, 1fr);
   }
 
@@ -1489,7 +1485,7 @@ h2 {
   border: 0;
   border-radius: 8px;
   background: var(--gold);
-  color: var(--indigo-dark) !important;
+  color: var(--paper) !important;
   cursor: pointer;
   font: inherit;
   font-weight: 800;
@@ -1550,7 +1546,7 @@ h2 {
 .speaker-dialog__portrait img {
   width: 166px;
   height: 166px;
-  border: 5px solid var(--gold);
+  border: 5px solid var(--gold-frame);
   border-radius: 50%;
   object-fit: cover;
 }
@@ -1596,260 +1592,6 @@ h2 {
 .ask-grid p:not(.section-kicker) { max-width: 42ch; font-size: 1.15rem; line-height: 1.6; }
 .copy-code { margin-right: 10px; border-color: var(--gold); background: transparent; color: var(--gold); }
 
-.hero__intro {
-  max-width: 46ch;
-  margin: 26px 0 0;
-  font-size: clamp(0.98rem, 1.35vw, 1.08rem);
-  line-height: 1.62;
-  color: #e3e7ff;
-}
-
-.hero__founder-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  margin-top: 18px;
-  color: var(--gold);
-  font-weight: 600;
-  text-decoration: none;
-  border-bottom: 2px solid rgba(244, 197, 66, 0.55);
-  padding-bottom: 2px;
-  width: max-content;
-}
-
-.hero__founder-link:hover,
-.hero__founder-link:focus-visible {
-  border-bottom-color: var(--gold);
-}
-
-.hero__quick {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
-  margin-top: 26px;
-}
-
-.hero__quick-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  min-height: 56px;
-  padding: 10px 18px 10px 12px;
-  border: 1.5px solid rgba(244, 197, 66, 0.7);
-  border-radius: 12px;
-  background: rgba(21, 29, 85, 0.55);
-  color: #fff;
-  text-decoration: none;
-  text-align: left;
-  backdrop-filter: blur(6px);
-  transition: background 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
-}
-
-.hero__quick-link:hover,
-.hero__quick-link:focus-visible {
-  background: var(--gold);
-  border-color: var(--gold);
-  color: var(--indigo-dark);
-  transform: translateY(-1px);
-}
-
-.hero__quick-link strong { display: block; font-size: 1rem; line-height: 1.2; }
-.hero__quick-link small { display: block; margin-top: 2px; font-size: 0.78rem; line-height: 1.3; opacity: 0.85; }
-
-.hero__quick-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  flex: 0 0 auto;
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  background: var(--gold);
-  color: var(--indigo-dark);
-  font-weight: 800;
-  font-size: 1.05rem;
-}
-
-.hero__quick-link:hover .hero__quick-icon,
-.hero__quick-link:focus-visible .hero__quick-icon {
-  background: var(--indigo-dark);
-  color: var(--gold);
-}
-
-.map-section,
-.ask-section { scroll-margin-top: 84px; }
-
-@media (max-width: 620px) {
-  .hero__quick { flex-direction: column; align-items: stretch; }
-  .hero__quick-link { justify-content: flex-start; }
-}
-
-.founders-section {
-  padding: clamp(60px, 8vw, 96px) 0;
-  background: #f4f5fb;
-  scroll-margin-top: 96px;
-}
-
-.founders-section h2 {
-  font-size: clamp(2.5rem, 4.6vw, 3.8rem);
-}
-
-.founders-shell { max-width: 760px; }
-
-.founders-body {
-  margin-top: 26px;
-}
-
-.founders-body p {
-  margin: 0 0 1.15em;
-  font-size: 1.12rem;
-  line-height: 1.72;
-  color: var(--ink);
-}
-
-.founders-signature {
-  margin: 34px 0 0;
-  padding-top: 22px;
-  border-top: 2px solid var(--orange);
-  font-size: 1.05rem;
-  font-weight: 600;
-  color: var(--indigo);
-  width: max-content;
-  max-width: 100%;
-}
-
-.founders-signature span {
-  display: block;
-  margin-top: 4px;
-  font-weight: 400;
-  color: #5a608a;
-}
-
-.partners-section {
-  padding: clamp(56px, 7vw, 88px) 0 clamp(48px, 6vw, 72px);
-  background: var(--paper);
-  border-top: 1px solid #e3e6f3;
-}
-
-.partners-section h2 { font-size: clamp(2.5rem, 4.6vw, 3.8rem); }
-
-.partner-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-  gap: 12px;
-  margin-top: 28px;
-}
-
-.partner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 92px;
-  padding: 14px 16px;
-  border: 1px solid #e3e6f3;
-  border-radius: 12px;
-  background: #fff;
-  text-decoration: none;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-.partner:hover,
-.partner:focus-visible {
-  border-color: var(--indigo);
-  box-shadow: 0 6px 18px rgba(31, 41, 106, 0.1);
-}
-
-.partner-grid--sponsors { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 14px; }
-.partner--sponsor { min-height: 116px; }
-.partner--sponsor img { max-height: 80px; }
-.partners-h3 { margin: clamp(36px, 5vw, 56px) 0 14px; font-family: var(--display); font-weight: 400; font-size: 1.9rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--indigo); }
-
-.partner img {
-  display: block;
-  max-width: 100%;
-  max-height: 64px;
-  width: auto;
-  height: auto;
-  object-fit: contain;
-}
-
-.partner--text small {
-  display: block;
-  margin-top: 4px;
-  font-family: var(--body);
-  font-size: 0.85rem;
-  letter-spacing: 0;
-  text-transform: none;
-  color: #5a608a;
-}
-
-.partner--text span {
-  font-family: var(--display);
-  font-size: 1.15rem;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--indigo);
-  text-align: center;
-  line-height: 1.15;
-}
-
-.partners-subgroups {
-  display: grid;
-  grid-template-columns: 1.3fr 1fr;
-  gap: clamp(28px, 5vw, 64px);
-  margin-top: clamp(40px, 5vw, 60px);
-}
-
-.partners-subgroup h3 {
-  margin: 0 0 14px;
-  font-family: var(--display);
-  font-weight: 400;
-  font-size: 1.6rem;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--indigo);
-}
-
-.collab-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.collab-list li {
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
-  padding: 9px 0;
-  border-bottom: 1px solid #e3e6f3;
-  font-size: 1rem;
-  color: var(--ink);
-}
-
-.collab-list li span {
-  flex-shrink: 0;
-  color: #5a608a;
-  font-size: 0.9rem;
-}
-
-.media-partners {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
-}
-
-@media (max-width: 720px) {
-  .partners-subgroups { grid-template-columns: 1fr; }
-  .collab-list li { flex-direction: column; gap: 2px; }
-  .partner-grid { grid-template-columns: repeat(auto-fill, minmax(104px, 1fr)); gap: 8px; }
-  .partner-grid--sponsors { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
-  .partner--sponsor { min-height: 96px; }
-  .partner--sponsor img { max-height: 62px; }
-  .partner { min-height: 80px; padding: 12px; }
-  .partner img { max-height: 54px; }
-}
-
 @media (max-width: 900px) {
   .workshop-block .time-group { grid-template-columns: 150px minmax(0, 1fr); }
 }
@@ -1873,7 +1615,6 @@ h2 {
   .hero-face-node--6 { left: 26%; bottom: 3%; top: auto; right: auto; }
   .hero-face-node--7 { left: 51%; bottom: 2%; right: auto; }
   .brand-link { margin-bottom: 24px; }
-  .hero__intro { margin-top: 20px; font-size: 0.98rem; }
   .brand-logo { margin-bottom: 0; }
   .program-clock-line { align-items: flex-start; flex-direction: column; }
   .time-group,
@@ -2068,9 +1809,7 @@ h2 {
 
 /* OFF-SITE sessions: each one gets its own photo (all sharing room "OUT"), tinted
    80% navy to match the other plenary/evening-styled cards. */
-.session-card[data-session-title="Bus Transportation"],
-.session-card[data-session-title="Return Bus from THE LUIGANS"],
-.session-card[data-session-title="Bus to THE LUIGANS (Reservation Required)"] {
+.session-card[data-session-title="Bus Transportation"] {
   background-image: linear-gradient(rgba(21, 29, 85, 0.8), rgba(21, 29, 85, 0.8)), url("../assets/offsite-bus.jpg");
   background-size: cover;
   background-position: center;
@@ -2092,4 +1831,479 @@ h2 {
   background-image: linear-gradient(rgba(21, 29, 85, 0.8), rgba(21, 29, 85, 0.8)), url("../assets/offsite-synapse.jpg");
   background-size: cover;
   background-position: center;
+}
+
+/* Pass promo section: a dedicated conversion moment right after the Co-Creators
+   roster, pointing straight to the community portal purchase flow. */
+.pass-promo-section {
+  padding: clamp(56px, 8vw, 96px) 0;
+  background: linear-gradient(135deg, var(--indigo) 0%, var(--indigo-dark) 100%);
+  color: var(--paper);
+  text-align: center;
+}
+
+.pass-promo-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.pass-promo-content .section-kicker {
+  color: #9edcff;
+}
+
+.pass-promo-content h2 {
+  margin: 0;
+  color: var(--paper);
+}
+
+.pass-promo-content p {
+  max-width: 52ch;
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #e6e9f9;
+}
+
+.pass-promo-button {
+  margin-top: 10px;
+  padding: 15px 34px;
+  font-size: 1.05rem;
+}
+
+/* Sticky purchase bar: stays pinned to the bottom of the viewport at all times so a
+   visitor arriving from an outside link can jump straight to the pass purchase flow. */
+body {
+  padding-bottom: 84px;
+}
+
+.sticky-cta-bar {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 60;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px max(16px, env(safe-area-inset-right)) max(12px, env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left));
+  background: var(--indigo-dark);
+  box-shadow: 0 -8px 24px rgba(21, 29, 85, 0.3);
+}
+
+.sticky-cta-bar__text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  color: var(--paper);
+  line-height: 1.3;
+}
+
+.sticky-cta-bar__text strong {
+  font-size: 0.95rem;
+  font-weight: 800;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sticky-cta-bar__text span {
+  font-size: 0.78rem;
+  color: #c7cdf0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sticky-cta-bar__button {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+  body {
+    padding-bottom: 76px;
+  }
+
+  .sticky-cta-bar__text span {
+    display: none;
+  }
+
+  .sticky-cta-bar__button {
+    padding: 11px 20px;
+  }
+}
+
+@media print {
+  .sticky-cta-bar {
+    display: none;
+  }
+}
+
+/* --- Hero: intro paragraph, "read the founders' message" link, and quick-help nav
+   (Venue Map / Ask Us) inside the dark key-visual hero. --- */
+.hero--keyvisual .hero__intro {
+  max-width: 62ch;
+  margin: 18px auto 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #e6e9f9;
+  text-shadow: 0 2px 8px rgba(21, 29, 85, 0.5);
+}
+
+.hero--keyvisual .hero__founder-link {
+  display: inline-block;
+  margin-top: 14px;
+  color: var(--gold);
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.hero__quick {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 26px;
+}
+
+.hero__quick-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  border: 1px solid rgba(244, 197, 66, 0.4);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--paper);
+  text-align: left;
+  text-decoration: none;
+  transition: background 140ms ease;
+}
+
+.hero__quick-link:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.hero__quick-link strong {
+  display: block;
+  font-size: 0.92rem;
+}
+
+.hero__quick-link small {
+  display: block;
+  color: #c7cdf0;
+  font-size: 0.76rem;
+}
+
+.hero__quick-icon {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--gold);
+  color: var(--indigo-dark);
+  font-weight: 800;
+}
+
+@media screen and (max-width: 620px) {
+  .hero--keyvisual .hero__intro {
+    font-size: 0.94rem;
+  }
+
+  .hero__quick {
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .hero__quick-link {
+    flex: 1 1 220px;
+    padding: 9px 12px;
+  }
+}
+
+/* --- Founders' message section: a short letter from the co-founders, between the
+   Program and Co-Creators sections and the rest of the page. --- */
+.founders-section {
+  padding: clamp(56px, 8vw, 96px) 0;
+  background: var(--mist);
+}
+
+.founders-shell {
+  text-align: center;
+}
+
+.founders-shell h2 {
+  margin: 0 0 24px;
+}
+
+.founders-body {
+  max-width: 68ch;
+  margin: 0 auto;
+  text-align: left;
+  color: var(--ink);
+}
+
+.founders-body p {
+  margin: 0 0 16px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.founders-body p:last-child {
+  margin-bottom: 0;
+}
+
+.founders-signature {
+  max-width: 68ch;
+  margin: 28px auto 0;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  text-align: left;
+  font-weight: 800;
+  color: var(--indigo);
+}
+
+.founders-signature span {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* --- Sponsors & Partners section: sponsor logos, a general partner grid, and two
+   subgroups (Local Collaborators, Media Partners). --- */
+.partners-section {
+  padding: clamp(56px, 8vw, 96px) 0;
+  background: var(--paper);
+}
+
+.partners-h3 {
+  margin: 48px 0 20px;
+  color: var(--indigo);
+  font-size: 1.4rem;
+}
+
+.partner-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  align-items: center;
+  gap: 18px;
+}
+
+.partner-grid--sponsors {
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 22px;
+}
+
+.partner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 64px;
+  padding: 10px;
+  border-radius: 10px;
+  background: var(--mist);
+  transition: transform 140ms ease, box-shadow 140ms ease;
+}
+
+.partner:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.partner img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 46px;
+  object-fit: contain;
+}
+
+.partner--sponsor {
+  min-height: 84px;
+  background: #fff;
+  border: 1px solid var(--line);
+}
+
+.partner--sponsor img {
+  max-height: 60px;
+}
+
+.partner--text {
+  padding: 14px 10px;
+  text-align: center;
+  font-weight: 700;
+  color: var(--indigo);
+  font-size: 0.95rem;
+}
+
+.partner--text small {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.partners-subgroups {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
+  margin-top: 48px;
+}
+
+.partners-subgroup h3 {
+  margin: 0 0 14px;
+  color: var(--indigo);
+  font-size: 1.2rem;
+}
+
+.collab-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.collab-list li {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+  font-weight: 600;
+}
+
+.collab-list li:last-child {
+  border-bottom: 0;
+}
+
+.collab-list li span {
+  display: block;
+  margin-top: 2px;
+  color: var(--muted);
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+
+.media-partners {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 18px;
+}
+
+@media screen and (max-width: 620px) {
+  .partner-grid,
+  .partner-grid--sponsors,
+  .media-partners {
+    grid-template-columns: repeat(auto-fit, minmax(104px, 1fr));
+    gap: 12px;
+  }
+
+  .partners-subgroups {
+    gap: 28px;
+  }
+}
+
+/* --- Ticket-reminder strip: a navy band right under the hero, before the day tabs,
+   with a live countdown to the Academy's opening (Oct 1, 2026, 09:00 JST) and a
+   gold button pointing straight at the pass purchase link. --- */
+.ticket-nudge {
+  padding: 16px 0;
+  background: var(--indigo);
+  color: var(--paper);
+  text-align: center;
+}
+
+.ticket-nudge__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 14px 28px;
+}
+
+.ticket-nudge__copy {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px 20px;
+}
+
+.ticket-nudge p {
+  margin: 0;
+  color: var(--paper);
+  font-size: 0.98rem;
+  font-weight: 600;
+}
+
+.ticket-nudge strong {
+  color: var(--gold);
+  font-weight: 800;
+}
+
+.ticket-nudge__countdown {
+  display: flex;
+  gap: 8px;
+}
+
+.countdown-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 42px;
+  padding: 4px 7px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.09);
+}
+
+.countdown-value {
+  font-family: var(--display);
+  font-size: 1.3rem;
+  line-height: 1;
+  color: var(--gold);
+}
+
+.countdown-label {
+  margin-top: 2px;
+  color: #c7cdf0;
+  font-size: 0.6rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.ticket-nudge__button {
+  min-height: 40px;
+  padding: 9px 20px;
+}
+
+.ticket-nudge__started {
+  margin: 0;
+  color: var(--gold);
+  font-weight: 800;
+}
+
+@media screen and (max-width: 480px) {
+  .ticket-nudge__inner {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .ticket-nudge p {
+    font-size: 0.9rem;
+  }
+
+  .countdown-unit {
+    min-width: 38px;
+  }
+
+  .countdown-value {
+    font-size: 1.1rem;
+  }
 }
