@@ -146,7 +146,7 @@ export function renderSpeakers(schedule, onOpenProfile) {
 
     card.append(portrait);
     card.append(element("span", "speaker-name", speaker.name));
-    card.append(element("span", "speaker-session", speaker.role || speaker.session));
+    card.append(element("span", "speaker-session", speaker.session || speaker.role));
     card.setAttribute("aria-label", `View profile for ${speaker.name}`);
     card.addEventListener("click", () => onOpenProfile(speaker));
     grid.append(card);
@@ -207,9 +207,10 @@ function renderTimeGroup(schedule, group, selectedCategories, query) {
   const range = parseTimeRange(group.time);
   time.append(element("span", "", range?.openEnded ? "Start time · JST" : "Venue time · JST"));
 
+  const isEveningPair = group.sessions.length > 1 && group.sessions.every((session) => session.kind === "evening");
   const grid = element(
     "div",
-    `session-grid${isWorkshopGrid(group.sessions) ? " session-grid--workshops" : ""}`,
+    `session-grid${isWorkshopGrid(group.sessions) ? " session-grid--workshops" : ""}${isEveningPair ? " session-grid--pair" : ""}`,
   );
   group.sessions.sort(compareRooms).forEach((session) => {
     grid.append(createSessionCard(schedule, session, selectedCategories, query));
@@ -252,6 +253,7 @@ function createSessionCard(schedule, session, selectedCategories, query) {
   const card = element("article", classes.join(" "));
   card.id = sessionId(session);
   card.dataset.category = session.category || "none";
+  card.dataset.sessionTitle = session.title || "";
   card.style.setProperty("--category", categoryColor);
   const cardTop = element("div", "session-card__top");
   cardTop.append(element("p", "room-label", schedule.rooms[session.room] || session.room_label || session.room));
