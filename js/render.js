@@ -40,6 +40,11 @@ export function renderHeader(schedule) {
   document.querySelector("#google-map-link").href = schedule.event.google_maps;
   bookingLink.href = schedule.event.booking_base;
   vipLink.href = schedule.event.vip_dinner;
+
+  const stickyVenueMapLink = document.querySelector("#sticky-venue-map-link");
+  const stickyGoogleMapLink = document.querySelector("#sticky-google-map-link");
+  if (stickyVenueMapLink) stickyVenueMapLink.href = schedule.event.venue_map;
+  if (stickyGoogleMapLink) stickyGoogleMapLink.href = schedule.event.google_maps;
 }
 
 export function renderDayTabs(schedule, selectedDay, onSelect) {
