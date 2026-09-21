@@ -470,14 +470,14 @@
       "time": "11:30-12:15",
       "room": "A",
       "room_label": "BALLROOM A",
-      "title": "Session by Akira Iguchi",
-      "who": "Akira Iguchi · details coming soon",
+      "title": "IKIGAI MANIFESTATION: How to Turn Your Ikigai into an Extraordinary Life — The 5-Step Formula to Live the Life You Truly Want",
+      "who": "Akira Iguchi",
       "category": "japan",
       "photos": [
         "iguchi"
       ],
       "community_slug": null,
-      "note": "soon"
+      "note": null
     },
     {
       "day": "2026-10-02",
@@ -1145,7 +1145,7 @@
         "iguchi"
       ],
       "name": "Akira Iguchi",
-      "session": "Session by Akira Iguchi",
+      "session": "IKIGAI MANIFESTATION: How to Turn Your Ikigai into an Extraordinary Life — The 5-Step Formula to Live the Life You Truly Want",
       "category": "japan",
       "when": "Day 2 · 11:30"
     },
