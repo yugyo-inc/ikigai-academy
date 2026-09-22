@@ -22,7 +22,7 @@ const faceObserver =
             observer.unobserve(image);
           });
         },
-        { rootMargin: "160px 0px" },
+        { rootMargin: "1200px 0px" },
       )
     : null;
 
