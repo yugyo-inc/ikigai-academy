@@ -407,6 +407,14 @@ h2 {
   font-size: clamp(2.7rem, 5vw, 4.3rem);
 }
 
+.program-disclaimer {
+  margin: 8px 0 0;
+  max-width: 42ch;
+  color: var(--muted);
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
 .venue-clock {
   color: var(--indigo);
   font-family: var(--display);
