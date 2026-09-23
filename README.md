@@ -102,7 +102,7 @@ Ask Us欄の `volunteers-2025.jpg` は、指定の[受付で笑顔の3人の写�
 - `day`: `2026-10-01` または `2026-10-02`
 - `kind`: `plenary`、`workshop`、`evening` のいずれか
 - `time`: 原則 `HH:MM-HH:MM`。例: `10:30-11:15`
-- `room`: `MAIN`、`A`、`B`、`G`、`BEACH`、`OUT` のいずれか
+- `room`: `MAIN`、`A`、`B`、`G`、`LOUNGE`、`BEACH`、`OUT` のいずれか。Loungeの講演枠は確定するまで追加しない
 - `photos`: `assets/faces/` 内のファイル名から `.jpg` を除いた文字列
 - `community_slug`: communityサイトのURL末尾。ページがない場合は `null`
 - `note`: 通常は `null`。未確定は `"soon"`、前枠からの続きは `"cont"`
@@ -198,16 +198,31 @@ http://localhost:4173
 3. 顔写真が表示される
 4. Coming soonと、2枠をまたぐセッションの結合表示が正しい
 5. 「Book your seat」が正しいcommunityページを開く
-6. スマートフォン幅で3部屋が横スクロールにならず、縦に並ぶ
+6. Listはスマートフォンで縦積みになる。Timelineの試作は時間割内だけ横スクロールし、ページ全体が横にはみ出さない
 7. 会場マップのボタン、Googleマップ、住所コピーが使える
 8. 登壇者写真からプロフィールと該当セッションへ移動できる
-9. 名前・タイトル・カテゴリーの検索で合致した枠が強調される
+9. 名前・タイトル・カテゴリーの検索で、両日から合致した枠だけが表示される。0件表示と解除も確認する
 10. CLF26のコピーボタンが使える
 11. Ask Usで3人の顔が見切れず、WhatsAppグループへのボタンが正しい
 12. トップのヒーローに公式キーグラフィックが表示され、PC・360px幅とも中央揃えの文字が読める
 13. 公開HTMLの `og:image` が `og-ikigai-academy-2026.jpg` を指し、正方形ファビコン・`robots.txt`・`sitemap.xml` が開ける
 
-## 現在進行中の枠の表示
+## 検索と横型時間割のローカル確認
+
+夕食バナーはユーザー提供の motsunabe-banner.png／gathering-banner.png を各セッションの banner で指定しています。画像全体を表示し、予約／招待詳細へリンクします。公開前確認：Motsunabe画像内の「Ichitaka Hakata Ekimae-dori」と予約ページ上部の「Hakata Motsunabe Rakutenchi Hakata Station Branch」が不一致です。Gathering画像の「Exclusive Pass Holders Only」も、運用上の「Invitation Only」と整合を確認してください。未確認のため時間・会場・参加条件を画像に合わせて上書きしていません。
+
+バスとLoungeは時間割上部の2列バナー（スマートフォンでは縦積み）です。バスは画像とOct 1／Oct 2それぞれのOutbound／Returnの4ボタンのみで、説明文は表示しません。リンクはJSONの bus_reservations から生成します。MAINはBallroom A+Bを意味し、横型ではA・Bの2行をまたぐ1枠として表示します。
+
+- 初期表示は横型のTimeline。http://localhost:4173/?view=list#schedule で従来のListも確認できます。バスは上部、夕食は下部に別カードで表示し、Off-site／Grand Beachの行は設けません。ランチは room: "ALL" として全会場にまたがる共通枠です。
+- 上部メニューからSchedule、Co-Creators、Venue、Searchに移動できます。Boothは未実装のため「Soon」と表示し、空ページへはリンクしません。
+- 検索は両日のタイトル・登壇者・カテゴリーを対象とし、合致しない枠は非表示になります。カテゴリーチップだけを使った場合は選択日の枠が対象です。
+- 人名の検索用別表記は `speakers[].search_aliases` の文字列配列で追加できます。表示名は変えません。例：Nikoletaに対する `Nikoletta`。
+- 横型は横軸が時刻、縦軸が会場です。顔・名前の読みやすさのため、時間幅は実際の長さに比例しません。カードに正確な開始・終了時刻を表示します。タイトルから詳細、顔からプロフィールを開けます。
+- 360pxでは時間割内に縦スクロールも残ります。Loungeの画像はユーザー提供の assets/coworking-lounge.png。画像とテキストリンクの両方からショップへ移動できます。
+- Loungeの無料対象・価格・購入先・案内は `event.lounge` にまとめています。Premium Pass、Business Pass、Co-Creatorsが無料、その他は2日間€6.99。営業時間とDay 2午前の講演は未定で、時間枠は作成していません。
+- 自動確認は `node tests/profiles.mjs` と `node tests/guide-ux.mjs`。後者の公開版比較には監査時に取得した `/private/tmp/ikigai-live-*` が必要です。表示確認は別途行ってください。
+
+## 現在進行中の枠の表示（動作）
 
 - 端末の場所に関係なく `Asia/Tokyo` の現在時刻を使う
 - PROGRAM見出しの下に会場時間を表示する
@@ -252,3 +267,8 @@ Service Workerは使っていません。会期直前・会期中の更新が古
 - 未確定の3件は `note: "soon"` のままにし、内容を創作しない
 
 OG画像は `assets/og-ikigai-academy-2026.jpg` です。
+# ローカル確認中の追加項目（2026-09-24・未公開）
+
+- バスの予約先は `event.bus_reservations` に日付別で指定。`outbound_slug` は朝の案内カード、`return_slug` は既存の夕方Bus Transportationカードに表示されます。`outbound_note` で出発案内を編集します。予約先ではログインが必要です。
+- 「Ukiha no Takara」はおばあちゃん2名とOkuma Mitsuruの共同カードです。`members` は構成員の表示、`group_image` は実際の集合写真、`group_image_alt` は写真の説明、`profile_url` は紹介の参照リンクです。集合写真は全体が見える比率で表示します。
+- 予約リンクの表示確認は予約完了の確認とは異なります。購入や予約確定は利用者が予約先で行ってください。

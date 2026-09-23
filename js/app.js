@@ -7,6 +7,8 @@ import {
   renderSpeakerProfile,
   renderSpeakers,
   sessionId,
+  mergeContinuationSlots,
+  renderSessionDetails,
 } from "./render.js";
 import {
   getDefaultDay,
@@ -23,6 +25,7 @@ const state = {
   selectedDay: null,
   selectedCategories: new Set(),
   query: "",
+  view: new URLSearchParams(window.location.search).get("view") === "list" ? "list" : "timeline",
 };
 
 init();
@@ -151,7 +154,7 @@ function renderAll() {
     toggleCategory,
     clearCategories,
   );
-  renderSchedule(state.schedule, state.selectedDay, state.selectedCategories, state.query);
+  renderSchedule(state.schedule, state.selectedDay, state.selectedCategories, state.query, state.view);
   renderSpeakers(state.schedule, openSpeakerProfile);
 }
 
@@ -159,7 +162,7 @@ function selectDay(day) {
   if (day === state.selectedDay) return;
   state.selectedDay = day;
   renderDayTabs(state.schedule, state.selectedDay, selectDay);
-  renderSchedule(state.schedule, state.selectedDay, state.selectedCategories, state.query);
+  renderSchedule(state.schedule, state.selectedDay, state.selectedCategories, state.query, state.view);
   updateNow();
   document.querySelector("#schedule").scrollIntoView({ block: "start" });
 }
@@ -177,7 +180,7 @@ function toggleCategory(category) {
     toggleCategory,
     clearCategories,
   );
-  renderSchedule(state.schedule, state.selectedDay, state.selectedCategories, state.query);
+  renderSchedule(state.schedule, state.selectedDay, state.selectedCategories, state.query, state.view);
   updateNow();
 }
 
@@ -189,7 +192,7 @@ function clearCategories() {
     toggleCategory,
     clearCategories,
   );
-  renderSchedule(state.schedule, state.selectedDay, state.selectedCategories, state.query);
+  renderSchedule(state.schedule, state.selectedDay, state.selectedCategories, state.query, state.view);
   updateNow();
 }
 
@@ -197,16 +200,23 @@ function openSpeakerProfile(speaker) {
   renderSpeakerProfile(state.schedule, speaker, state.selectedDay, goToSpeakerSession);
 }
 
-function goToSpeakerSession(speaker) {
-  const target = findSpeakerSession(state.schedule, speaker, state.selectedDay);
+function goToSpeakerSession(speaker, selectedSession) {
+  const target = selectedSession || findSpeakerSession(state.schedule, speaker, state.selectedDay);
   if (!target) return;
+
+  // A profile link should reveal its session even when an unrelated search is active.
+  state.query = "";
+  state.selectedCategories.clear();
+  document.querySelector("#program-search").value = "";
 
   if (target.day !== state.selectedDay) {
     state.selectedDay = target.day;
     renderDayTabs(state.schedule, state.selectedDay, selectDay);
-    renderSchedule(state.schedule, state.selectedDay, state.selectedCategories, state.query);
-    updateNow();
   }
+
+  renderFilters(state.schedule.categories, state.selectedCategories, toggleCategory, clearCategories);
+  renderSchedule(state.schedule, state.selectedDay, state.selectedCategories, state.query, state.view);
+  updateNow();
 
   window.requestAnimationFrame(() => {
     const card = document.getElementById(sessionId(target));
@@ -224,7 +234,7 @@ function updateNow() {
   clock.textContent = `Venue time: ${programStatus.nowParts.clock} JST`;
   clock.dateTime = `${programStatus.nowParts.date}T${programStatus.nowParts.clock}:00+09:00`;
   const currentIds = new Set(
-    programStatus.type === "current" && programStatus.nowParts.date === state.selectedDay
+    programStatus.type === "current"
       ? programStatus.sessions.map((session) => sessionId(resolveCurrentPrimary(session)))
       : [],
   );
@@ -239,7 +249,22 @@ function updateNow() {
       card.querySelector(".session-card__top")?.append(badge);
     }
   });
-  document.querySelector("#jump-to-current").hidden = currentIds.size === 0;
+  document.querySelector("#jump-to-current").hidden = !document.querySelector("#timeline .session-card.is-current");
+  const nowLine = document.querySelector(".timeline-now-line");
+  if (nowLine) {
+    const ticks = [...document.querySelectorAll(".axis-time")];
+    const minute = programStatus.nowParts.minuteOfDay;
+    const i = ticks.findLastIndex(tick => Number(tick.dataset.minute) <= minute);
+    const first = Number(ticks[0]?.dataset.minute);
+    const last = Number(ticks.at(-1)?.dataset.minute);
+    nowLine.hidden = programStatus.nowParts.date !== state.selectedDay || minute < first || minute > last || i < 0;
+    if (!nowLine.hidden) {
+      const tick = ticks[i];
+      const next = ticks[i + 1];
+      const fraction = next ? (minute - Number(tick.dataset.minute)) / (Number(next.dataset.minute) - Number(tick.dataset.minute)) : 0;
+      nowLine.style.left = `${92 + Number(tick.dataset.offset) + fraction * tick.getBoundingClientRect().width}px`;
+    }
+  }
 }
 
 function resolveCurrentPrimary(session) {
@@ -253,9 +278,56 @@ function resolveCurrentPrimary(session) {
 
 function setupInteractions() {
   const search = document.querySelector("#program-search");
+  const expandSearch = () => {
+    document.querySelector("#search-controls").hidden = false;
+    document.querySelector("#menu-search").setAttribute("aria-expanded", "true");
+    document.querySelector("#open-program-search").setAttribute("aria-expanded", "true");
+    search.scrollIntoView({ block: "center", behavior: "instant" });
+    search.focus({ preventScroll: true });
+  };
+  document.querySelector("#menu-search").addEventListener("click", expandSearch);
+  document.querySelector("#open-program-search").addEventListener("click", expandSearch);
+  document.querySelector("#clear-search").addEventListener("click", () => {
+    state.query = ""; search.value = ""; state.selectedCategories.clear();
+    renderFilters(state.schedule.categories, state.selectedCategories, toggleCategory, clearCategories);
+    renderSchedule(state.schedule, state.selectedDay, state.selectedCategories, "", state.view);
+    updateNow(); search.focus({ preventScroll: true });
+  });
+  for (const view of ["list", "timeline"]) {
+    document.querySelector(`#view-${view}`).addEventListener("click", () => {
+      state.view = view;
+      if (view === "timeline") {
+        state.query = ""; search.value = ""; state.selectedCategories.clear();
+        renderFilters(state.schedule.categories, state.selectedCategories, toggleCategory, clearCategories);
+      }
+      renderSchedule(state.schedule, state.selectedDay, state.selectedCategories, state.query, view);
+      updateNow();
+    });
+  }
+  document.addEventListener("click", event => {
+    const face = event.target.closest("[data-speaker-index]");
+    if (face) {
+      document.querySelector("#session-dialog").close();
+      openSpeakerProfile(state.schedule.speakers[Number(face.dataset.speakerIndex)]);
+    }
+    const detail = event.target.closest("[data-session-index]");
+    if (detail) {
+      const session = mergeContinuationSlots(state.schedule.sessions).find(s => s._index === Number(detail.dataset.sessionIndex));
+      if (session) renderSessionDetails(state.schedule, session);
+    }
+  });
+  document.querySelector("#session-dialog-close").addEventListener("click", () => document.querySelector("#session-dialog").close());
+  document.querySelector("#session-dialog").addEventListener("click", event => {
+    if (event.target.id === "session-dialog") event.target.close();
+  });
+  document.querySelectorAll(".site-menu a").forEach(link => link.addEventListener("click", () => {
+    const target = document.querySelector(link.getAttribute("href"));
+    target.tabIndex = -1;
+    target.focus({ preventScroll: true });
+  }));
   search.addEventListener("input", () => {
     state.query = search.value;
-    renderSchedule(state.schedule, state.selectedDay, state.selectedCategories, state.query);
+  renderSchedule(state.schedule, state.selectedDay, state.selectedCategories, state.query, state.view);
     updateNow();
   });
   document.querySelector("#jump-to-current").addEventListener("click", () => {
