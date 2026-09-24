@@ -12,28 +12,7 @@
     "venue_address": "THE LUIGANS Spa & Resort, 18-25 Saitozaki, Higashi-ku, Fukuoka 811-0321, Japan",
     "google_maps": "https://www.google.com/maps/search/?api=1&query=THE+LUIGANS+Spa+%26+Resort+18-25+Saitozaki+Fukuoka",
     "before_program": "Before 09:00 · BUS TRANSPORTATION — Check your Academy event page on the community site for the departure point, time, and reservation.",
-    "vip_dinner": "https://community.colivefukuoka.com/vipdinner",
-    "lounge": {
-      "name": "Coworking Lounge",
-      "image": "assets/coworking-lounge.png",
-      "free_for": ["Premium Pass holders", "Business Pass holders", "Co-Creators"],
-      "price_eur": 6.99,
-      "purchase_url": "https://community.colivefukuoka.com/portal/shop",
-      "access_note": "A 2-day access pass for October 1–2 is available for other participants. Opening hours will be confirmed.",
-      "day2_note": "Morning sessions in the Lounge are being finalized. Coworking is available outside session times; the exact hours will be confirmed."
-    },
-    "bus_reservations": {
-      "2026-10-01": {
-        "outbound_slug": "oct-1bus-reservation-outbound",
-        "return_slug": "oct-1bus-reservation-return-trip",
-        "outbound_note": "Departures at 08:00 for breakfast or 09:00 for the Academy, from HEARTS Bus Station Hakata or Fukuoka City Hall. Choose your departure point and time on the booking page."
-      },
-      "2026-10-02": {
-        "outbound_slug": "oct-2bus-reservation-outbound",
-        "return_slug": "oct-2bus-reservation-return-trip",
-        "outbound_note": "Departures at 08:00 for breakfast or 09:00 for the Academy, from HEARTS Bus Station Hakata or Fukuoka City Hall. Choose your departure point and time on the booking page."
-      }
-    }
+    "vip_dinner": "https://community.colivefukuoka.com/vipdinner"
   },
   "categories": {
     "japan": {
@@ -58,14 +37,12 @@
     }
   },
   "rooms": {
-    "MAIN": "BALLROOM A+B",
+    "MAIN": "MAIN HALL",
     "A": "BALLROOM A",
     "B": "BALLROOM B",
     "G": "GARDEN",
     "BEACH": "GRAND BEACH",
-    "OUT": "OFF-SITE",
-    "LOUNGE": "LOUNGE",
-    "ALL": "ALL VENUES"
+    "OUT": "OFF-SITE"
   },
   "sessions": [
     {
@@ -83,19 +60,6 @@
         "obaachan2"
       ],
       "community_slug": "elevating-iq-and-happiness-through",
-      "note": null
-    },
-    {
-      "day": "2026-10-01",
-      "kind": "workshop",
-      "time": "10:00-12:30",
-      "room": "G",
-      "room_label": "GARDEN",
-      "title": "Booth Open",
-      "who": "Meet the sponsors in the garden · drop in any time",
-      "category": null,
-      "photos": [],
-      "community_slug": null,
       "note": null
     },
     {
@@ -194,10 +158,10 @@
       "day": "2026-10-01",
       "kind": "plenary",
       "time": "12:30-14:00",
-      "room": "ALL",
-      "room_label": "ALL VENUES",
+      "room": "BEACH",
+      "room_label": "GRAND BEACH",
       "title": "Lunch Buffet + Sponsor Booth Time in the Garden",
-      "who": "All pass holders · All venues",
+      "who": "All pass holders · Grand Beach",
       "category": null,
       "photos": [],
       "community_slug": "lunch-buffet",
@@ -283,7 +247,7 @@
       "time": "15:00-15:45",
       "room": "G",
       "room_label": "GARDEN",
-      "title": "ChaTea Workshop",
+      "title": "CHATEA Workshop",
       "who": "Gil Petersil · details coming soon",
       "category": "senses",
       "photos": [
@@ -328,7 +292,7 @@
       "time": "16:00-16:45",
       "room": "G",
       "room_label": "GARDEN",
-      "title": "ChaTea Workshop (continued)",
+      "title": "CHATEA Workshop (continued)",
       "who": "Gil Petersil",
       "category": "senses",
       "photos": [],
@@ -418,12 +382,10 @@
       "room": "OUT",
       "room_label": "OFF-SITE",
       "title": "Co-Creator's Gathering (INVITATION ONLY)",
-      "banner": "assets/gathering-banner.png",
-      "who": "For invited guests only. Please follow your personal invitation for attendance and event details.",
-      "presentation": "invitation",
+      "who": "For eligible pass holders. Check your invitation and community event page for details.",
       "category": null,
       "photos": [],
-      "community_slug": "https://entrytickets.be/colive-fukuoka/vipdinner",
+      "community_slug": "vipdinner",
       "note": null
     },
     {
@@ -433,11 +395,10 @@
       "room": "OUT",
       "room_label": "OFF-SITE",
       "title": "Community Dinner Motsunabe",
-      "banner": "assets/motsunabe-banner.png",
       "who": "Note: No vegan option. Check the community event page for booking and location.",
       "category": null,
       "photos": [],
-      "community_slug": "https://entrytickets.be/colive-fukuoka/community-dinner-motsunabe-2",
+      "community_slug": null,
       "note": null
     },
     {
@@ -550,10 +511,10 @@
       "day": "2026-10-02",
       "kind": "plenary",
       "time": "12:15-13:30",
-      "room": "ALL",
-      "room_label": "ALL VENUES",
+      "room": "BEACH",
+      "room_label": "GRAND BEACH",
       "title": "Lunch Buffet",
-      "who": "Academy lunch buffet · All venues",
+      "who": "Academy lunch buffet",
       "category": null,
       "photos": [],
       "community_slug": "lunch-buffet",
@@ -686,12 +647,12 @@
       "room": "G",
       "room_label": "GARDEN",
       "title": "Anywhere, But Where?",
-      "who": "Gen Lee",
+      "who": "Rei Lee",
       "category": "world",
       "photos": [
         "gen"
       ],
-      "community_slug": null,
+      "community_slug": "anywhere-but-where",
       "note": null
     },
     {
@@ -774,12 +735,10 @@
         "nikoleta"
       ],
       "name": "Nikoleta Kouli",
-      "search_aliases": ["Nikoletta", "Nikoletta Kouli"],
       "role": "MC",
       "session": "Opening: Chikuzen Hakata Koma",
       "category": "world",
-      "when": "Day 1 · 10:00",
-      "bio": "Nikoleta is a community leader, writer, and podcast host who moved from chemical engineering into community building. Her work in coliving focuses on helping people find connection and a sense of belonging."
+      "when": "Day 1 · 10:00"
     },
     {
       "photos": [
@@ -787,7 +746,7 @@
       ],
       "name": "Akina Shu",
       "role": "Co-founder, Colive Fukuoka",
-      "bio": "Akina founded Nomad University and co-founded Colive Fukuoka. A digital nomad since 2019, she draws on conversations with nomads around the world to create media and programs that connect people across cultures.",
+      "bio": "Akina co-founded Colive Fukuoka to connect international visitors and local communities in Japan.",
       "session": "Co-founders Opening Talk",
       "category": "local",
       "when": "Day 1 · 10:20"
@@ -798,7 +757,7 @@
       ],
       "name": "Ryo Osera",
       "role": "Co-founder, Colive Fukuoka",
-      "bio": "Ryo is the CEO of yugyo inc. and founder and producer of Colive Fukuoka. He co-founded the travel-subscription service HafH and previously worked at Dentsu and as Social Media Director for the Japanese Prime Minister’s Office. His work connects global talent with communities in Japan.",
+      "bio": "Ryo is a co-founder of Colive Fukuoka and CEO of yugyo inc.",
       "session": "Co-founders Opening Talk",
       "category": "local",
       "when": "Day 1 · 10:20"
@@ -810,9 +769,7 @@
       "name": "Masaomi Sakata",
       "session": "Gut-Health Breakfast: Elevating IQ and Happiness through Gut Health",
       "category": "senses",
-      "when": "Day 1 & 2 · 9:00",
-      "role": "Fermentation entrepreneur",
-      "bio": "Masaomi, also known as Koji Prince, develops foods and sweets using fermentation. He launched the 15% brand to make food more inclusive, beginning with an ice cream project that grew from his own exploration of food and well-being."
+      "when": "Day 1 & 2 · 9:00"
     },
     {
       "photos": [
@@ -821,9 +778,7 @@
       "name": "Chikushi Shuraku III",
       "session": "Opening: Chikuzen Hakata Koma",
       "category": "japan",
-      "when": "Day 1 · 10:00",
-      "role": "Traditional performing artist",
-      "bio": "Chikushi Shuraku III is the twentieth-generation head of Chikuzen Hakata Koma, a traditional spinning-top performance recognized as an intangible cultural property of Fukuoka Prefecture. He also performs Hakata Kinshishi taiko and brings these traditions to audiences in Japan and overseas."
+      "when": "Day 1 · 10:00"
     },
     {
       "photos": [
@@ -832,9 +787,7 @@
       "name": "Yumi Imamura (matchabae)",
       "session": "Keynote 2: Matcha Crisis",
       "category": "local",
-      "when": "Day 1 · 11:10",
-      "role": "Japanese tea instructor",
-      "bio": "Yumi grew up in a tea-selling family and shares Japanese tea culture with audiences in Japan and overseas. She leads Chajiyuukan, offering tea experiences through a mobile tea room that brings tea, time, and place together."
+      "when": "Day 1 · 11:10"
     },
     {
       "photos": [
@@ -843,9 +796,7 @@
       "name": "Kiki Fukai",
       "session": "Become Yourself Here: Japan as the Place You Discover Who You Really Are",
       "category": "japan",
-      "when": "Day 1 · 15:00",
-      "role": "Personal branding coach",
-      "bio": "Kiki is a personal branding coach and content creator. Having lived abroad and worked alongside international residents in Japan, she brings perspectives from both sides of cross-cultural life. She helps people find their own voice and build a sense of belonging without losing who they are."
+      "when": "Day 1 · 15:00"
     },
     {
       "photos": [
@@ -854,9 +805,7 @@
       "name": "Ryotaro Sakurai",
       "session": "YEN TO EN: Turning Money Back into Connection",
       "category": "japan",
-      "when": "Day 1 · 17:00",
-      "role": "Founder, Life Bridge",
-      "bio": "Ryotaro founded Life Bridge in 2006. He works with local governments and tourism businesses on inbound tourism, regional development, and travel experiences. Through Ryotaro’s Japan, he introduces places and people across Japan to English-speaking audiences."
+      "when": "Day 1 · 17:00"
     },
     {
       "photos": [
@@ -865,9 +814,7 @@
       "name": "Kazuhiro Arai",
       "session": "YEN TO EN: Turning Money Back into Connection",
       "category": "japan",
-      "when": "Day 1 · 17:00",
-      "role": "Founder, eumo",
-      "bio": "Kazuhiro co-founded Kamakura Investment Management in 2008 and established eumo in 2018. Following a career in banking and investment management, he explores economic models built around empathy, human connection, and well-being."
+      "when": "Day 1 · 17:00"
     },
     {
       "photos": [
@@ -876,9 +823,7 @@
       "name": "Kotaro Motojima",
       "session": "YEN TO EN: Turning Money Back into Connection",
       "category": "japan",
-      "when": "Day 1 · 17:00",
-      "role": "Lawyer",
-      "bio": "Kotaro is a lawyer whose work has included DAO development and legal frameworks with the Japan DAO Association and RuleMakers DAO. At IVS2024, he discussed how legal structures can support communities working toward shared goals."
+      "when": "Day 1 · 17:00"
     },
     {
       "photos": [
@@ -887,9 +832,7 @@
       "name": "Kiyoko Mitsui",
       "session": "YEN TO EN: Turning Money Back into Connection",
       "category": "japan",
-      "when": "Day 1 · 17:00",
-      "role": "Community development, KIBOTCHA",
-      "bio": "Kiyoko leads the KIBOTCHA Smart Eco-Village initiative in Higashimatsushima. Her work connects disaster-prevention education, the reuse of a former school, and community development, exploring ways for people to learn and build a sustainable future together."
+      "when": "Day 1 · 17:00"
     },
     {
       "photos": [
@@ -898,9 +841,7 @@
       "name": "Mikiko & Hidehiko Sudo",
       "session": "Wakachiai: From Everyday Talk to Deep Connection",
       "category": "japan",
-      "when": "Day 2 · 13:30",
-      "role": "Founders, Kokoro Academy",
-      "bio": "Mikiko and Hidehiko are relationship specialists, educators, and founders of Kokoro Academy. Mikiko brings a background in university teaching and communication; Hidehiko holds a PhD in Sport Science and works with behavior change. Together, they developed Wakachiai, a practical approach to sharing feelings and building trust."
+      "when": "Day 2 · 13:30"
     },
     {
       "photos": [
@@ -909,9 +850,7 @@
       "name": "Sanae Akima",
       "session": "Beneath Ikigai & Zen: Discovering the Hidden Worldview of Japan, and Your Own",
       "category": "japan",
-      "when": "Day 2 · 15:30",
-      "role": "Founder and CEO, La torche",
-      "bio": "Sanae is a practitioner-researcher and founder of La torche. She develops projects that help people and communities turn differences into new possibilities. These include Nashite Fukuoka, a community and media initiative exploring why people from different backgrounds are drawn to the city. She is also the author of Brain Management."
+      "when": "Day 2 · 15:30"
     },
     {
       "photos": [
@@ -920,9 +859,7 @@
       "name": "Miki Tsukamoto (Visions)",
       "session": "Rain Won't Stop You, Wind Won't Stop You: Live Music, Picture Books and Miyazawa Kenji in Two Languages",
       "category": "senses",
-      "when": "Day 2 · 16:30",
-      "role": "Pianist, Visions",
-      "bio": "Miki is a pianist and co-founder of Visions with bassist and percussionist Kiyoshi Mamura. Formed in 2000, the duo uses jazz improvisation as a foundation for collaborations with picture-book readings, film, theater, dance, and traditional performing arts."
+      "when": "Day 2 · 16:30"
     },
     {
       "photos": [
@@ -931,9 +868,7 @@
       "name": "Kiyoshi Mamura (Visions)",
       "session": "Rain Won't Stop You, Wind Won't Stop You: Live Music, Picture Books and Miyazawa Kenji in Two Languages",
       "category": "senses",
-      "when": "Day 2 · 16:30",
-      "role": "Bassist and percussionist, Visions",
-      "bio": "Kiyoshi is a bassist and percussionist who formed Visions with pianist Miki Tsukamoto in 2000. Their work combines jazz improvisation with other art forms, including storytelling, film, theater, dance, and traditional performance."
+      "when": "Day 2 · 16:30"
     },
     {
       "photos": [
@@ -942,20 +877,16 @@
       "name": "Multilingual Matt",
       "session": "Speak Before You're Ready",
       "category": "world",
-      "when": "Day 1 · 14:00",
-      "role": "Language and travel creator",
-      "bio": "Matt creates content about language learning, travel, culture, and cross-cultural connection. His work combines humor, storytelling, and practical advice, treating language as a way to practice courage and humility while connecting with people across borders."
+      "when": "Day 1 · 14:00"
     },
     {
       "photos": [
         "gil"
       ],
       "name": "Gil Petersil",
-      "session": "ChaTea Workshop",
+      "session": "CHATEA Workshop",
       "category": "senses",
-      "when": "Day 1 · 15:00",
-      "role": "Co-founder, ChaTea",
-      "bio": "Gil is a facilitator, speaker, and co-founder of ChaTea. His work centers on human communication and relationship building through intentional networking, tea ceremonies, and shared experiences. He helps groups create trust and turn new connections into collaboration."
+      "when": "Day 1 · 15:00"
     },
     {
       "photos": [
@@ -964,9 +895,7 @@
       "name": "Stella Schneider",
       "session": "SME Takeover Lab [ATOTSUGI]: How to Acquire a Small Business",
       "category": "local",
-      "when": "Day 1 · 16:00",
-      "role": "Founder, Business Wege",
-      "bio": "Stella is a German business strategist and founder of Business Wege. She helps founders and entrepreneurs choose business models suited to their goals, from freelancing and small businesses to acquiring an existing company. Her work connects personal priorities with practical business decisions."
+      "when": "Day 1 · 16:00"
     },
     {
       "photos": [
@@ -975,9 +904,7 @@
       "name": "Daycia",
       "session": "Content Strategy for Small Businesses",
       "category": "world",
-      "when": "Day 1 · 16:00",
-      "role": "Creator, Daylightful",
-      "bio": "Daycia created Daylightful, a media brand focused on human connection, intentional travel, and slow cultural immersion. Previously, she worked on content and campaign strategy at Dentsu and P&G. She now shares practical content strategies with small-business owners."
+      "when": "Day 1 · 16:00"
     },
     {
       "photos": [
@@ -986,9 +913,7 @@
       "name": "Yarden Avirav & Roza Gavrilov",
       "session": "Breaking Conceptions: From Nomadic Couple to Nomadic Family",
       "category": "world",
-      "when": "Day 1 · 17:00",
-      "role": "Creators, NomadsTwoGo",
-      "bio": "Yarden and Roza are the couple behind NomadsTwoGo. After years of living and working as digital nomads, becoming parents in 2025 changed how they think about travel, freedom, and home. They share their ongoing experience of finding a nomadic lifestyle that works for a family."
+      "when": "Day 1 · 17:00"
     },
     {
       "photos": [
@@ -997,9 +922,7 @@
       "name": "Nika Rey",
       "session": "Latino Dance: Bachata for Everyone",
       "category": "senses",
-      "when": "Day 1 · 17:00",
-      "role": "Dance instructor and event organizer",
-      "bio": "Nika is an international dance instructor and event organizer who encourages people to move, connect, and enjoy music through dance."
+      "when": "Day 1 · 17:00"
     },
     {
       "photos": [
@@ -1008,9 +931,7 @@
       "name": "Diego Taira",
       "session": "Build Wealth. Find Your Purpose. Design a Life You Don't Need to Retire From.",
       "category": "world",
-      "when": "Day 2 · 10:30",
-      "role": "Co-founder and CEO, Wealth Angels",
-      "bio": "Diego is the co-founder and CEO of Wealth Angels."
+      "when": "Day 2 · 10:30"
     },
     {
       "photos": [
@@ -1019,9 +940,7 @@
       "name": "Roland Tokko",
       "session": "Align and Connect with Your Ikigai Through Soul",
       "category": "world",
-      "when": "Day 2 · 11:30",
-      "role": "Speaker and singer-songwriter",
-      "bio": "Roland is an Estonian speaker, facilitator, and singer-songwriter, and co-founder of Becoming International. He combines speaking, live music, singing, and guided experiences to help people explore purpose and leadership in their own lives."
+      "when": "Day 2 · 11:30"
     },
     {
       "photos": [
@@ -1030,9 +949,7 @@
       "name": "Adam Curnow",
       "session": "Travel Smarter, Work Safer: Everyday Security for Digital Nomads",
       "category": "global",
-      "when": "Day 2 · 13:30",
-      "role": "Founder, KarasuSec",
-      "bio": "Adam founded KarasuSec and works in IT and cybersecurity. A digital nomad himself, he focuses on making security understandable and practical for people who work from anywhere."
+      "when": "Day 2 · 13:30"
     },
     {
       "photos": [
@@ -1041,9 +958,7 @@
       "name": "Oren Chazan",
       "session": "Peace: One Conversation at a Time",
       "category": "global",
-      "when": "Day 2 · 14:30",
-      "role": "Co-owner, Montino Coliving",
-      "bio": "Oren co-owns Montino Coliving and works as an advertising consultant and business coach. Trained in Nonviolent Communication and related practices, he creates coliving and conversation experiences that encourage connection, community, and a more peaceful way of living."
+      "when": "Day 2 · 14:30"
     },
     {
       "photos": [
@@ -1052,9 +967,7 @@
       "name": "Yeji Cheon",
       "session": "Peace: One Conversation at a Time",
       "category": "global",
-      "when": "Day 2 · 14:30",
-      "role": "Founder, Seoul Nooks",
-      "bio": "Yeji founded Seoul Nooks, an intentional coliving and coworking community. Her work connects local Asian cultures with global nomad communities, using workshops and conversations to explore cultural differences, diversity, and how people live together."
+      "when": "Day 2 · 14:30"
     },
     {
       "photos": [
@@ -1072,9 +985,7 @@
       "name": "Carlyn Shaw",
       "session": "The Power of a Smile: Creating Connection and Joy Within and Around You",
       "category": "world",
-      "when": "Day 2 · 14:30",
-      "role": "Speaker and community builder",
-      "bio": "Carlyn is a speaker, writer, and creator of the Whoever Smiles First Wins movement and Live In Joy community. Through travel and everyday encounters, she encourages people to trust themselves, build connections, and make room for joy."
+      "when": "Day 2 · 14:30"
     },
     {
       "photos": [
@@ -1083,9 +994,7 @@
       "name": "Tressia H. Lee",
       "session": "HEARIM: Building Trust Across Cultures at Work",
       "category": "global",
-      "when": "Day 2 · 14:30",
-      "role": "Creator, HEARIM",
-      "bio": "Tressia is a global marketing and Korean cultural strategist from Seoul. She created HEARIM, a Korean-informed communication framework for understanding unspoken expectations and building trust across cultures. Her background spans marketing, localization, education, and cultural strategy, alongside a remote-working career that began in 2014."
+      "when": "Day 2 · 14:30"
     },
     {
       "photos": [
@@ -1094,20 +1003,16 @@
       "name": "Lawrence Tuazon",
       "session": "Beyond Social Media: Grow a Business Through Relationships, Trust and Community",
       "category": "world",
-      "when": "Day 2 · 15:30",
-      "role": "Co-founder, Be Extraordinary Publishing",
-      "bio": "Lawrence is an author, speaker, coach, and co-founder of Be Extraordinary Publishing. He helps people turn their experiences into meaningful work and grow businesses through relationships, partnerships, referrals, and community."
+      "when": "Day 2 · 15:30"
     },
     {
       "photos": [
         "gen"
       ],
-      "name": "Gen Lee",
+      "name": "Rei Lee",
       "session": "Anywhere, But Where?",
       "category": "world",
-      "when": "Day 2 · 15:30",
-      "role": "Founder, LocalNomad",
-      "bio": "Gen founded LocalNomad and explores the future of work, play, and belonging in legacy cities."
+      "when": "Day 2 · 15:30"
     },
     {
       "photos": [
@@ -1116,9 +1021,7 @@
       "name": "Marco Traina",
       "session": "What Keeps a Community Alive? From Shared Spaces to Shared Purpose",
       "category": "global",
-      "when": "Day 2 · 16:30",
-      "role": "Founder, BeetCommunity",
-      "bio": "Marco is an entrepreneur and community builder who founded BeetCommunity in Palermo and Italia Nomad Fest. He also co-founded COFO – Coliving Founders. His work connects remote workers and local residents, encouraging visitors to participate in local life and contribute to the communities that host them."
+      "when": "Day 2 · 16:30"
     },
     {
       "photos": [
@@ -1127,9 +1030,7 @@
       "name": "Freeman Fung",
       "session": "A Conscious Pause: Closing Meditation at the Water's Edge",
       "category": "senses",
-      "when": "Day 2 · 16:30",
-      "role": "Founder, Travel To Transform",
-      "bio": "Freeman is a speaker, author, mindset coach, and meditation facilitator. He founded Travel To Transform and combines personal development with travel and conscious global citizenship. His work encourages people to cultivate presence, self-understanding, and meaningful connections."
+      "when": "Day 2 · 16:30"
     },
     {
       "photos": [
@@ -1138,9 +1039,7 @@
       "name": "Arthur Binard",
       "session": "Rain Won't Stop You, Wind Won't Stop You: Live Music, Picture Books and Miyazawa Kenji in Two Languages",
       "category": "japan",
-      "when": "Day 2 · 16:30",
-      "role": "Poet and translator",
-      "bio": "Arthur is an American-born poet and translator who began writing poetry in Japanese after moving to Japan in 1990. His work spans poetry, essays, picture books, and kamishibai storytelling, including translations between Japanese and English."
+      "when": "Day 2 · 16:30"
     },
     {
       "photos": [
@@ -1149,9 +1048,7 @@
       "name": "Nick Szasz (FUKUOKA NOW)",
       "session": "Keynote 1: Why We Came, Why We Stayed, and What Comes Next",
       "category": "local",
-      "when": "Day 1 · 10:30",
-      "role": "Founder and publisher, Fukuoka Now",
-      "bio": "Nick founded Fukuoka Now in 1998. Through English-language publishing, he introduces Fukuoka and Kyushu to international readers and helps connect visitors and residents with local places, people, and culture."
+      "when": "Day 1 · 10:30"
     },
     {
       "photos": [
@@ -1160,9 +1057,7 @@
       "name": "Douglas Weber",
       "session": "Keynote 1: Why We Came, Why We Stayed, and What Comes Next",
       "category": "local",
-      "when": "Day 1 · 10:30",
-      "role": "Founder, Weber Workshops",
-      "bio": "Douglas is a designer and engineer who studied at Stanford and worked on product design at Apple. At Weber Workshops, he brings that experience to the design and engineering of coffee equipment."
+      "when": "Day 1 · 10:30"
     },
     {
       "photos": [
@@ -1171,9 +1066,7 @@
       "name": "Jean-Pierre Villeneuve",
       "session": "Keynote 1: Why We Came, Why We Stayed, and What Comes Next",
       "category": "local",
-      "when": "Day 1 · 10:30",
-      "role": "Founder and CEO, New Town Technologies",
-      "bio": "Jean-Pierre is the founder and CEO of New Town Technologies, the company behind the Seratone karaoke system."
+      "when": "Day 1 · 10:30"
     },
     {
       "photos": [
@@ -1182,25 +1075,25 @@
       "name": "Micaela Anne",
       "session": "Keynote 1: Why We Came, Why We Stayed, and What Comes Next",
       "category": "local",
-      "when": "Day 1 · 10:30",
-      "role": "Food and travel creator",
-      "bio": "Micaela is a Canadian-born creator who calls Fukuoka home. Through Fukuoka Eats, she shares local food, travel, and everyday discoveries from the region."
+      "when": "Day 1 · 10:30"
     },
     {
       "photos": [
-        "obaachan1",
-        "obaachan2"
+        "obaachan1"
       ],
-      "name": "Ukiha no Takara",
+      "name": "Obaachan Shokudo",
       "session": "Gut-Health Breakfast: Elevating IQ and Happiness through Gut Health",
       "category": "senses",
-      "when": "Day 1 & 2 · 9:00",
-      "role": "Grandma’s Café · Ukiha, Fukuoka",
-      "bio": "Ukiha no Takara is a social enterprise in Ukiha, Fukuoka. Its Grandma’s Café initiative creates meaningful paid work for older women, allowing them to share a lifetime of cooking skills, local recipes, hospitality, and wisdom. The team brings generations together through food, community, and a sense of purpose. At the Academy breakfast, the grandmothers share handmade onigiri and Japanese home cooking.",
-      "members": "Two members of Grandma’s Café and Okuma Mitsuru",
-      "group_image": "assets/ukiha-no-takara.png",
-      "group_image_alt": "Ukiha no Takara on stage at Colive Fukuoka",
-      "profile_url": "https://entrytickets.be/colive-fukuoka/elevating-iq-and-happiness-through"
+      "when": "Day 1 & 2 · 9:00"
+    },
+    {
+      "photos": [
+        "obaachan2"
+      ],
+      "name": "Obaachan Shokudo",
+      "session": "Gut-Health Breakfast: Elevating IQ and Happiness through Gut Health",
+      "category": "senses",
+      "when": "Day 1 & 2 · 9:00"
     },
     {
       "photos": [
@@ -1209,9 +1102,7 @@
       "name": "Jacquie Wortley",
       "session": "Where can we build something that matters?",
       "category": "local",
-      "when": "Day 1 · 14:00",
-      "role": "Researcher and sustainable innovation practitioner",
-      "bio": "Jacquie draws on a decade of UX and product research in her work on sustainable innovation. Working with rural tea farmers, she explores how projects can support local people and regenerate the places they depend on."
+      "when": "Day 1 · 14:00"
     },
     {
       "photos": [
@@ -1220,9 +1111,7 @@
       "name": "Ryu Fujii",
       "session": "Where can we build something that matters?",
       "category": "local",
-      "when": "Day 1 · 14:00",
-      "role": "Community builder",
-      "bio": "Ryu co-founded 369meteor and co-organizes ZōVillage. He is involved with Fracton Ventures and Network School, connecting experimental global communities with grassroots initiatives."
+      "when": "Day 1 · 14:00"
     },
     {
       "photos": [
@@ -1231,9 +1120,7 @@
       "name": "MOE Nakano (JDNA)",
       "session": "Ask a Digital Nomad: Open Roundtables with JDNA",
       "category": "local",
-      "when": "Day 2 · 10:30",
-      "role": "Representative Director, Japan Digital Nomad Association",
-      "bio": "Moe, also known as Tomoe Nakano, moved from design into community building through Asia’s coworking movement. She founded TAOHUB in Thailand, TANEHUB in Akita, and the Japan Digital Nomad Association, where she leads the Community Manager Academy."
+      "when": "Day 2 · 10:30"
     },
     {
       "photos": [
@@ -1242,9 +1129,7 @@
       "name": "Vitto Christaldi (JDNA)",
       "session": "Ask a Digital Nomad: Open Roundtables with JDNA",
       "category": "local",
-      "when": "Day 2 · 10:30",
-      "role": "Coworking and community strategist",
-      "bio": "Vitto is a coworking and community strategist whose experience includes Hubud, Dojo, Tribal, and BWork. His work brings people together through shared workplaces and community experiences, including CU Asia."
+      "when": "Day 2 · 10:30"
     },
     {
       "photos": [
@@ -1253,9 +1138,7 @@
       "name": "Tessei Hosokawa",
       "session": "The \"Death\" of Digital Nomads — Zen, Impermanence, and Living in the Moment",
       "category": "japan",
-      "when": "Day 2 · 10:30",
-      "role": "Founder, NEWSON&COMPANY and Immersive Lab",
-      "bio": "Tessei is a Kyoto-based entrepreneur and founder of NEWSON&COMPANY and Immersive Lab. Early monastic training at a Sōtō Zen temple continues to inform his work. He founded TABICA, now aini, and works across community building, regional revitalization, and immersive experiences."
+      "when": "Day 2 · 10:30"
     },
     {
       "photos": [
@@ -1264,17 +1147,15 @@
       "name": "Akira Iguchi",
       "session": "IKIGAI MANIFESTATION: How to Turn Your Ikigai into an Extraordinary Life — The 5-Step Formula to Live the Life You Truly Want",
       "category": "japan",
-      "when": "Day 2 · 11:30",
-      "role": "Entrepreneur, author, and speaker",
-      "bio": "Akira is an entrepreneur, author, speaker, and founder of Human Plus Inc. His work brings together entrepreneurship, personal development, and his Ikigai Manifestation Method to help people connect their strengths with meaningful work and purpose."
+      "when": "Day 2 · 11:30"
     },
     {
       "photos": [
         "jessica"
       ],
       "name": "Jessica Hagmaier",
-      "role": "Creative strategist and travel writer",
-      "bio": "Jessica is a creative strategist, brand designer, and travel writer. Through long-term solo travel, she explores reinvention, personal freedom, and intentional living, combining storytelling with practical approaches to navigating change.",
+      "role": "Co-Creator, Colive Fukuoka",
+      "bio": "Jessica is a creative strategist, brand designer, and travel writer whose work explores reinvention and intentional living.",
       "session": "You Can't Outrun Your Life: How to Use Travel as a Catalyst for Reinvention",
       "category": "world",
       "when": "Day 1 · 15:00"
