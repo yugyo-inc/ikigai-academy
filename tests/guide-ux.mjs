@@ -48,7 +48,14 @@ const mainHeroWithApprovedLink = main.match(/<header[\s\S]*?<\/header>/)[0].repl
 assert.equal(hero, mainHeroWithApprovedLink, 'Keep hero except the approved direct Venue Map link');
 assert.ok(hero.includes(approvedVenueLink), 'Hero Venue Map must open the external floor map directly');
 const sponsorSection = source => source.slice(source.indexOf('<section class="sponsors-section"'), source.indexOf('<div class="partners-subgroups">'));
-assert.equal(sponsorSection(html), sponsorSection(main), 'Keep existing sponsors');
+const kotoriCard = /<a class="partner(?: partner--text)?" href="https:\/\/(?:www\.facebook\.com\/p\/Kotori-CoworkingHostel-Kotohira-61567819704314\/|kotori-japan\.com\/en\/kotohira\/)"[\s\S]*?<\/a>/;
+assert.equal(sponsorSection(html).replace(kotoriCard, '[Kotori]'), sponsorSection(main).replace(kotoriCard, '[Kotori]'), 'Keep existing sponsors except approved Kotori logo');
+assert.ok(html.includes('src="assets/partners/kotori-kotohira.svg"'));
+assert.ok(html.includes('src="assets/partners/lululu-design-works.jpg"'));
+const collaboratorCards = [...html.matchAll(/<article class="local-collaborator[^"]*">([\s\S]*?)<\/article>/g)].map(match => match[1]);
+assert.equal(collaboratorCards.length, 6);
+assert.ok(collaboratorCards.some(card => card.includes('Koji Prince') && !card.includes('Ukiha')));
+assert.ok(collaboratorCards.some(card => card.includes('Ukiha') && !card.includes('Koji Prince')));
 for (const match of html.matchAll(/(?:src|href)="((?:assets\/)[^"]+)"/g)) {
   assert.ok(fs.existsSync(new URL(match[1], root)), 'Missing local asset: ' + match[1]);
 }

@@ -285,6 +285,13 @@ Service Workerは使っていません。会期直前・会期中の更新が古
 - 未確定の3件は `note: "soon"` のままにし、内容を創作しない
 
 OG画像は `assets/og-ikigai-academy-2026.jpg` です。
+
+## Partners ロゴの出典（2026-09-25）
+
+- Kotori: https://kotori-japan.com/assets/img/kotohira/logo/1.svg （公式サイトの原本SVG、改変なし）
+- LuLuLu design works: https://www.instagram.com/_____lululu_design_works___/ （指定プロフィールのロゴ画像、150px角、改変なし）
+- ロゴはローカル保存し、画像全体を表示します。LuLuLuを大きく使う場合は高解像度の原本へ差し替えてください。
+- うきはの宝と麹王子は別カードで掲載。麹王子のロゴは未提供のため、名称のみ表示しています。
 # ローカル確認中の追加項目（2026-09-24・未公開）
 
 - バスの予約先は `event.bus_reservations` に日付別で指定。`outbound_slug` は朝の案内カード、`return_slug` は既存の夕方Bus Transportationカードに表示されます。`outbound_note` で出発案内を編集します。予約先ではログインが必要です。
