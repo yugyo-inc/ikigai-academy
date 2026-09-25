@@ -14,7 +14,8 @@ for (const [i, session] of data.sessions.entries()) {
     assert.equal(session.note, null);
     assert.ok(session.description.length > 300);
     assert.ok(session.description_source.endsWith('range=G4'));
-    for (const key of ['title','who','note','description','description_source']) before.sessions[i][key] = session[key];
+    assert.equal(session.community_slug, 'https://entrytickets.be/colive-fukuoka/connection-collaboration-turning-ne');
+    for (const key of ['title','who','note','description','description_source','community_slug']) before.sessions[i][key] = session[key];
   } else if (session.who === 'Gil Petersil' && session.note === 'cont') {
     assert.equal(session.title, title + ' (continued)');
     before.sessions[i].title = session.title;

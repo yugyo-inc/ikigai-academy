@@ -12,7 +12,7 @@ const stripDescriptions = input => ({
   speakers: input.speakers.map(s => s.name === 'Gil Petersil' ? {...s, session: '[Gil title]', bio: '[Gil bio]'} : s),
   sessions: input.sessions.map(({description, description_source, ...rest}) =>
     rest.photos.includes('gil') || (rest.who === 'Gil Petersil' && rest.note === 'cont')
-      ? {...rest, title: '[Gil title]', who: 'Gil Petersil', note: rest.note === 'cont' ? 'cont' : null}
+      ? {...rest, title: '[Gil title]', who: 'Gil Petersil', community_slug: '[Gil booking]', note: rest.note === 'cont' ? 'cont' : null}
       : rest)
 });
 assert.deepEqual(stripDescriptions(data), stripDescriptions(previous), 'Only descriptions and their provenance may change');
