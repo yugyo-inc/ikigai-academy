@@ -24,6 +24,8 @@ const moved = {
 };
 for (const [i, session] of data.sessions.entries()) {
   const baseline = main.sessions[i];
+  // Gil's approved content-only update is checked separately in gil.mjs.
+  if (session.photos.includes('gil') || (session.who === 'Gil Petersil' && session.note === 'cont')) continue;
   assert.deepEqual(session.photos, session.who === 'Christian Pedersen' ? ['christian-pedersen'] : baseline.photos, 'Only the approved Christian portrait may change');
   const key = Object.keys(moved).find(key => session.photos.includes(key));
   if (key) {

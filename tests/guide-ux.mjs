@@ -13,7 +13,7 @@ assert.deepEqual(search('Nikoletta').map(s => s.title), ['Opening: Chikuzen Haka
 assert.deepEqual(search(' NIKOLETTA  KOULI ').map(s => s._index), search('Nikoleta').map(s => s._index));
 assert.equal(search('nikoletta', ['world']).length, 0);
 assert.equal(search('Sakata').length, 2);
-assert.equal(search('ChaTea Workshop').length, 1);
+assert.equal(search('Connection & Collaboration').length, 1);
 assert.equal(search('Gil')[0]._displayTime, '15:00-16:45');
 assert.equal(search('MOE')[0]._displayTime, '10:30-12:15');
 assert.equal(search('missing_zzzz').length, 0);
@@ -36,7 +36,7 @@ const now = getProgramStatus(data, new Date('2026-10-01T06:15:00Z'));
 assert.equal(now.nowParts.clock, '15:15');
 assert.equal(now.type, 'current');
 assert.equal(now.sessions.length, 3);
-assert.ok(now.sessions.some(s => /chatea workshop/i.test(s.title)));
+assert.ok(now.sessions.some(s => /connection & collaboration/i.test(s.title)));
 assert.equal(getProgramStatus(data, new Date('2026-10-01T06:50:00Z')).type, 'idle');
 
 const html = fs.readFileSync(new URL('index.html', root), 'utf8');

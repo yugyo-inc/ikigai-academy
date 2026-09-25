@@ -295,14 +295,16 @@
       "time": "15:00-15:45",
       "room": "G",
       "room_label": "GARDEN",
-      "title": "CHATEA Workshop",
-      "who": "Gil Petersil · details coming soon",
+      "title": "Connection & Collaboration: Turning Networking Into Life Opportunities",
+      "who": "Gil Petersil",
       "category": "senses",
       "photos": [
         "gil"
       ],
       "community_slug": null,
-      "note": "soon"
+      "note": null,
+      "description": "Networking is not just about meeting more people. It is about creating connections that can lead to meaningful relationships, unexpected opportunities, and long-term collaboration. In this interactive session, Gil Petersil guides participants through practical ways to connect with greater confidence, intention, and authenticity.\n\nThrough guided conversations and live networking exercises, participants learn how to move beyond small talk, discover mutual value, and build relationships across cultures, industries, and communities. The session explores how to start meaningful conversations, identify opportunities for collaboration and mutual support, and communicate your value without making a conversation feel transactional. Participants practice turning new connections into ongoing personal and professional relationships, with an emphasis on genuine curiosity, shared value, and the possibilities that emerge when people connect with intention.",
+      "description_source": "https://docs.google.com/spreadsheets/d/1m0d4lzHzt6f5BnLd-RWxCClrYlrsBthnSuB9Xk2fsec/edit#gid=1971872080&range=G4"
     },
     {
       "day": "2026-10-02",
@@ -345,7 +347,7 @@
       "time": "16:00-16:45",
       "room": "G",
       "room_label": "GARDEN",
-      "title": "CHATEA Workshop (continued)",
+      "title": "Connection & Collaboration: Turning Networking Into Life Opportunities (continued)",
       "who": "Gil Petersil",
       "category": "senses",
       "photos": [],
@@ -1016,10 +1018,10 @@
         "gil"
       ],
       "name": "Gil Petersil",
-      "session": "CHATEA Workshop",
+      "session": "Connection & Collaboration: Turning Networking Into Life Opportunities",
       "category": "senses",
       "when": "Day 1 · 15:00",
-      "bio": "Gil is a facilitator, speaker, and co-founder of ChaTea. His work centers on human communication and relationship building through intentional networking, tea ceremonies, and shared experiences. He helps groups create trust and turn new connections into collaboration.",
+      "bio": "Gil Petersil is a strategic facilitator, keynote speaker, and co-founder of ChaTea. His work brings together Quantum Networking, human-centered communication, and shared experiences to help people build trust and turn connections into collaboration.\n\nThrough tea ceremonies, Social Fascial Maneuver circles, and intentional networking spaces, he works with wellness movements, festivals, and communities to create opportunities for authentic relationships and mutual support. His approach moves beyond exchanging contacts, focusing on deeper human connection and real-world collaboration.",
       "role": "Co-founder, ChaTea"
     },
     {
