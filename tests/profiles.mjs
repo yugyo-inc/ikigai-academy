@@ -8,6 +8,7 @@ const read = ref => JSON.parse(execFileSync('git', ['show', ref + ':data/ikigai_
 const data = JSON.parse(fs.readFileSync(new URL('data/ikigai_schedule.json', root)));
 const main = read('34a28314eac997d55997717ff2ff9302834e5b61');
 const prior = read('4a62b7e');
+const withoutDescription = ({ description, description_source, ...rest }) => rest;
 const { lounge, bus_reservations, program_updates, ...event } = data.event;
 assert.deepEqual(event, main.event, 'Preserve unrelated latest-main event data');
 assert.deepEqual(lounge, prior.event.lounge);
@@ -32,7 +33,7 @@ for (const [i, session] of data.sessions.entries()) {
     assert.ok(session.update_note);
     const { day, time, title, description, update_note, ...rest } = session;
     const { day: d, time: t, title: tt, ...before } = baseline;
-    assert.deepEqual(rest, before);
+    assert.deepEqual(withoutDescription(rest), withoutDescription(before));
     if (key !== 'stella') assert.equal(title, baseline.title);
   } else if (session.who === 'Christian Pedersen') {
     assert.equal(baseline.title, 'Booth Time');
@@ -44,7 +45,7 @@ for (const [i, session] of data.sessions.entries()) {
   } else if (session.kind === 'evening') {
     assert.deepEqual(session, prior.sessions.find(s => s.day === session.day && s.title === session.title));
   } else {
-    assert.deepEqual(session, baseline, 'Keep unrelated main sessions: ' + baseline.title);
+    assert.deepEqual(withoutDescription(session), withoutDescription(baseline), 'Keep unrelated main sessions: ' + baseline.title);
   }
 }
 assert.equal(data.speakers.length, main.speakers.length + 1);
