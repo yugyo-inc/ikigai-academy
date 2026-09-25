@@ -288,6 +288,8 @@ OG画像は `assets/og-ikigai-academy-2026.jpg` です。
 
 ## Partners ロゴの出典（2026-09-25）
 
+Christianの顔写真は指定原本 https://drive.google.com/file/d/12ho28frrqcl--rU_BM8fhlFoKyJQfSo9/view を使用。顔中心の600px角JPEGとして保存し、セッションと登壇者の両方の `photos` に `christian-pedersen` を指定しています。既存の写真クリック機能で自己紹介と担当イベントを表示します。
+
 - Kotori: https://kotori-japan.com/assets/img/kotohira/logo/1.svg （公式サイトの原本SVG、改変なし）
 - LuLuLu design works: https://www.instagram.com/_____lululu_design_works___/ （指定プロフィールのロゴ画像、150px角、改変なし）
 - ロゴはローカル保存し、画像全体を表示します。LuLuLuを大きく使う場合は高解像度の原本へ差し替えてください。

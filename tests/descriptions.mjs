@@ -4,6 +4,9 @@ import { execFileSync } from 'node:child_process';
 const root = new URL('../', import.meta.url);
 const data = JSON.parse(fs.readFileSync(new URL('data/ikigai_schedule.json', root)));
 const previous = JSON.parse(execFileSync('git', ['show', 'a9f16b7:data/ikigai_schedule.json'], {cwd: root, encoding: 'utf8'}));
+// Approved September 25 portrait addition; all descriptions and other fields remain protected.
+previous.sessions.find(s => s.who === 'Christian Pedersen').photos = ['christian-pedersen'];
+previous.speakers.find(s => s.name === 'Christian Pedersen').photos = ['christian-pedersen'];
 const stripDescriptions = input => ({...input, sessions: input.sessions.map(({description, description_source, ...rest}) => rest)});
 assert.deepEqual(stripDescriptions(data), stripDescriptions(previous), 'Only descriptions and their provenance may change');
 const described = data.sessions.filter(s => s.description);

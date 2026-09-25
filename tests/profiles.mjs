@@ -24,7 +24,7 @@ const moved = {
 };
 for (const [i, session] of data.sessions.entries()) {
   const baseline = main.sessions[i];
-  assert.deepEqual(session.photos, baseline.photos, 'Do not replace images');
+  assert.deepEqual(session.photos, session.who === 'Christian Pedersen' ? ['christian-pedersen'] : baseline.photos, 'Only the approved Christian portrait may change');
   const key = Object.keys(moved).find(key => session.photos.includes(key));
   if (key) {
     assert.deepEqual([session.day, session.time], moved[key]);
@@ -59,7 +59,8 @@ for (const [i, speaker] of main.speakers.entries()) {
 }
 assert.equal(data.speakers.find(s => s.name === 'Cihan Boz').bio, undefined);
 const christian = data.speakers.find(s => s.name === 'Christian Pedersen');
-assert.deepEqual(christian.photos, []);
+assert.deepEqual(christian.photos, ['christian-pedersen']);
+assert.ok(fs.existsSync(new URL('assets/faces/christian-pedersen.jpg', root)));
 assert.ok(christian.bio.length > 100);
 assert.equal(data.speakers.filter(s => s.bio).length, data.speakers.length - 1);
 for (const [photo, [day, time]] of Object.entries(moved)) {
