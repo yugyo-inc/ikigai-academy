@@ -80,6 +80,15 @@ Ask Us欄の `volunteers-2025.jpg` は、指定の[受付で笑顔の3人の写�
 
 ## スケジュールを更新する
 
+### 2026年9月25日の承認済み更新
+
+- 最新main `34a2831` を基準に、削除されていたバス予約4件・ラウンジ案内・夕食バナー／予約先・登壇者紹介文を選択的に復元しました。それ以外のmainの変更は維持しています。
+- Stella：10月2日 11:30–12:15、Akira Iguchi：10月2日 10:30–11:15、Tessei Hosokawa：10月1日 16:00–16:45。会場はいずれもBallroom A。
+- Christian Pedersen：10月2日 13:30–14:15、GardenのBooth Time枠を講演へ更新。カテゴリ・予約URLは未確認のため追加していません。写真は担当者による更新待ちで、代替画像は生成していません。
+- 4名の紹介・セッション説明の出典：[Co-Creator Onboarding](https://docs.google.com/spreadsheets/d/1m0d4lzHzt6f5BnLd-RWxCClrYlrsBthnSuB9Xk2fsec/edit?gid=1971872080#gid=1971872080)、フォームの回答 1、行5・36・40・41。日時はフォームに残る旧日時ではなく主催者の承認内容を採用しています。
+- `event.program_updates` は折りたたみの変更案内、各セッションの `update_note` は変更理由、`description` は開いて読める説明です。案内を終了する際は該当フィールドを削除してください。人物写真・イベント画像自体は変更していません。
+- Entryticket側の日時は別システムです。公開ページと管理画面で別途変更・確認が必要です。
+
 編集するファイルは原則として `data/ikigai_schedule.json` だけです。
 
 ### セッションの主な項目

@@ -27,6 +27,12 @@ const faceObserver =
     : null;
 
 export function renderHeader(schedule) {
+  const updates = document.querySelector("#program-updates");
+  const updateList = document.querySelector("#program-update-list");
+  if (updates && updateList) {
+    updateList.replaceChildren(...(schedule.event.program_updates || []).map(text => element("li", "", text)));
+    updates.hidden = !updateList.childElementCount;
+  }
   setText("event-name", schedule.event.name);
   setText("event-dates", formatDateRange(schedule.event.dates));
   setText("event-venue", schedule.event.venue);
@@ -90,7 +96,8 @@ export function renderSchedule(schedule, selectedDay, selectedCategories, query 
   const timeline = document.querySelector("#timeline");
   const dateLabel = document.querySelector("#schedule-date");
   const status = document.querySelector("#filter-status");
-  const sessions = schedule.sessions.filter((session) => session.day === selectedDay);
+  const sessions = schedule.sessions.filter((session) => session.day === selectedDay)
+    .sort((a, b) => (parseTimeRange(a.time)?.start ?? Infinity) - (parseTimeRange(b.time)?.start ?? Infinity));
   const allDisplaySessions = mergeContinuationSlots(sessions);
   const filtered = selectedCategories.size > 0 || query.trim().length > 0;
   const displaySessions = allDisplaySessions.filter(session => matchesSession(schedule, session, selectedCategories, query));
@@ -204,7 +211,7 @@ export function renderSpeakers(schedule, onOpenProfile) {
       speaker.photos.slice(0, 2).forEach((photo) => portrait.append(createFaceImage(photo)));
     }
 
-    card.append(portrait);
+    if (speaker.group_image || speaker.photos.length) card.append(portrait);
     card.append(element("span", "speaker-name", speaker.name));
     if (speaker.members) card.append(element("span", "speaker-members", speaker.members));
     card.append(element("span", "speaker-session", speaker.session || speaker.role));
@@ -264,7 +271,8 @@ export function renderSpeakerProfile(schedule, speaker, selectedDay, onFindSessi
   } else {
     copy.append(element("p", "speaker-dialog__unlisted", "No session is listed for this person on October 1–2."));
   }
-  content.append(portrait, copy);
+  if (speaker.group_image || speaker.photos.length) content.append(portrait);
+  content.append(copy);
   dialog.showModal();
   dialog.scrollTop = 0;
 }
@@ -380,6 +388,13 @@ function createSessionCard(schedule, session, selectedCategories, query) {
 
   card.append(element("h3", "session-title", session.title));
   if (session.who) card.append(element("p", "session-who", session.who));
+  if (session.update_note) card.append(element("p", "session-update", session.update_note));
+  if (session.description) {
+    const details = element("details", "session-description");
+    details.append(element("summary", "", "About this session"));
+    details.append(element("p", "", session.description));
+    card.append(details);
+  }
 
   const footer = element("div", "session-footer");
 
@@ -660,6 +675,7 @@ function renderHorizontalTimeline(schedule, day, sessions) {
       if (session.room === "MAIN") top.append(element("p", "combined-room-label", schedule.rooms.MAIN));
       if (session.room === "ALL") inner.append(element("p", "", "All venues"));
       if (session.note === "soon") inner.append(element("span", "soon-badge", "Coming soon"));
+      if (session.update_note) inner.append(element("span", "session-update", "Program updated"));
       const heading = element("h3", "");
       const title = element("button", "timeline-title", session.title);
       title.type = "button";

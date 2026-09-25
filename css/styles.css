@@ -2730,3 +2730,9 @@ body:has(dialog[open]) { overflow: hidden; }
   .timeline-scroll { max-height: 62vh; }
   .schedule-views a { padding-left: 0; }
 }
+/* Program changes stay discoverable without expanding the timeline. */
+.program-updates { margin-block: 0 1rem; }
+.program-updates summary, .session-description summary { cursor: pointer; font-weight: 600; }
+.program-updates li { margin-block: .5rem; }
+.session-update { color: #0069A0; font-weight: 600; font-size: 1rem; }
+.session-description p, .speaker-dialog__bio { white-space: pre-line; }

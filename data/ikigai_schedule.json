@@ -12,7 +12,38 @@
     "venue_address": "THE LUIGANS Spa & Resort, 18-25 Saitozaki, Higashi-ku, Fukuoka 811-0321, Japan",
     "google_maps": "https://www.google.com/maps/search/?api=1&query=THE+LUIGANS+Spa+%26+Resort+18-25+Saitozaki+Fukuoka",
     "before_program": "Before 09:00 · BUS TRANSPORTATION — Check your Academy event page on the community site for the departure point, time, and reservation.",
-    "vip_dinner": "https://community.colivefukuoka.com/vipdinner"
+    "vip_dinner": "https://community.colivefukuoka.com/vipdinner",
+    "bus_reservations": {
+      "2026-10-01": {
+        "outbound_slug": "oct-1bus-reservation-outbound",
+        "return_slug": "oct-1bus-reservation-return-trip",
+        "outbound_note": "Departures at 08:00 for breakfast or 09:00 for the Academy, from HEARTS Bus Station Hakata or Fukuoka City Hall. Choose your departure point and time on the booking page."
+      },
+      "2026-10-02": {
+        "outbound_slug": "oct-2bus-reservation-outbound",
+        "return_slug": "oct-2bus-reservation-return-trip",
+        "outbound_note": "Departures at 08:00 for breakfast or 09:00 for the Academy, from HEARTS Bus Station Hakata or Fukuoka City Hall. Choose your departure point and time on the booking page."
+      }
+    },
+    "lounge": {
+      "name": "Coworking Lounge",
+      "image": "assets/coworking-lounge.png",
+      "free_for": [
+        "Premium Pass holders",
+        "Business Pass holders",
+        "Co-Creators"
+      ],
+      "price_eur": 6.99,
+      "purchase_url": "https://community.colivefukuoka.com/portal/shop",
+      "access_note": "A 2-day access pass for October 1–2 is available for other participants. Opening hours will be confirmed.",
+      "day2_note": "Morning sessions in the Lounge are being finalized. Coworking is available outside session times; the exact hours will be confirmed."
+    },
+    "program_updates": [
+      "Stella Schneider: Moved from October 1, 16:00–16:45 to October 2, 11:30–12:15 (JST).",
+      "Tessei Hosokawa: Moved from October 2, 10:30–11:15 to October 1, 16:00–16:45 (JST).",
+      "Akira Iguchi: Updated session details. Moved from 11:30–12:15 to 10:30–11:15 on October 2 (JST).",
+      "Christian Pedersen: New session in the former Booth Time slot: October 2, 13:30–14:15, Garden (JST)."
+    ]
   },
   "categories": {
     "japan": {
@@ -42,7 +73,8 @@
     "B": "BALLROOM B",
     "G": "GARDEN",
     "BEACH": "GRAND BEACH",
-    "OUT": "OFF-SITE"
+    "OUT": "OFF-SITE",
+    "LOUNGE": "LOUNGE"
   },
   "sessions": [
     {
@@ -257,19 +289,21 @@
       "note": "soon"
     },
     {
-      "day": "2026-10-01",
+      "day": "2026-10-02",
       "kind": "workshop",
-      "time": "16:00-16:45",
+      "time": "11:30-12:15",
       "room": "A",
       "room_label": "BALLROOM A",
-      "title": "SME Takeover Lab [ATOTSUGI]: How to Acquire a Small Business",
+      "title": "SME Takeover Lab: How to Acquire a Small Business — Tools, Process & Win-Win Thinking",
       "who": "Stella Schneider (Business Wege) × Ikehiko Corporation",
       "category": "local",
       "photos": [
         "stella"
       ],
       "community_slug": "sme-takeover-lab-how-to-acquire-a-s",
-      "note": null
+      "note": null,
+      "description": "Most entrepreneurs default to building from zero. But there's another path — one that comes with an existing customer base, proven cash flow, and no cold start.\n\nIn this session, Stella Schneider — business strategist and solopreneur from Germany — shares the real process of acquiring a small or medium-sized business (SME). Drawing from 9+ years of hands-on experience and direct tools from the German market, she walks you through the 5 phases of a business takeover: what to look for, what to ask, and how to structure a deal that works for both sides.\n\nWith thousands of SME owners aged 55+ and no succession plan in sight — in Germany, Japan, and beyond — the opportunity is real. This session gives you the framework to act on it. \n\nIncluding real case studys from Japan! tbd\n\nPractical. Structured. No fluff.\n✅ Key Takeaways\nWhy acquiring an SME can be smarter than starting from scratch\nThe 5 phases of a business takeover — explained simply\nWhat to look for (and what to ask) before buying a business\nHow to structure a Win-Win deal for buyer and seller\nDirect tools and frameworks from the German SME market",
+      "update_note": "Moved from October 1, 16:00–16:45 to October 2, 11:30–12:15 (JST)."
     },
     {
       "day": "2026-10-01",
@@ -382,11 +416,13 @@
       "room": "OUT",
       "room_label": "OFF-SITE",
       "title": "Co-Creator's Gathering (INVITATION ONLY)",
-      "who": "For eligible pass holders. Check your invitation and community event page for details.",
+      "who": "For invited guests only. Please follow your personal invitation for attendance and event details.",
       "category": null,
       "photos": [],
-      "community_slug": "vipdinner",
-      "note": null
+      "community_slug": "https://entrytickets.be/colive-fukuoka/vipdinner",
+      "note": null,
+      "banner": "assets/gathering-banner.png",
+      "presentation": "invitation"
     },
     {
       "day": "2026-10-01",
@@ -398,8 +434,9 @@
       "who": "Note: No vegan option. Check the community event page for booking and location.",
       "category": null,
       "photos": [],
-      "community_slug": null,
-      "note": null
+      "community_slug": "https://entrytickets.be/colive-fukuoka/community-dinner-motsunabe-2",
+      "note": null,
+      "banner": "assets/motsunabe-banner.png"
     },
     {
       "day": "2026-10-02",
@@ -419,9 +456,9 @@
       "note": null
     },
     {
-      "day": "2026-10-02",
+      "day": "2026-10-01",
       "kind": "workshop",
-      "time": "10:30-11:15",
+      "time": "16:00-16:45",
       "room": "A",
       "room_label": "BALLROOM A",
       "title": "The \"Death\" of Digital Nomads — Zen, Impermanence, and Living in the Moment",
@@ -431,7 +468,9 @@
         "tessei"
       ],
       "community_slug": null,
-      "note": null
+      "note": null,
+      "description": "Digital nomads live by constantly leaving — familiar cities, close friends, old identities. In a sense, we experience repeated \"small deaths.\" This session explores Buddhist and Zen views on death, impermanence, and rebirth, and how they resonate with the nomadic life. We'll look at reincarnation, karma, and the Zen idea of the \"Great Death\" — completely letting go of the ego so that a freer self can be reborn. Drawing on the landscape of Katsuura and Nachi Falls, we'll reflect on what it means to live fully in this very moment. You'll leave with a gentler, more grounded way of seeing change, loss, and the freedom found in letting go.",
+      "update_note": "Moved from October 2, 10:30–11:15 to October 1, 16:00–16:45 (JST)."
     },
     {
       "day": "2026-10-02",
@@ -467,7 +506,7 @@
     {
       "day": "2026-10-02",
       "kind": "workshop",
-      "time": "11:30-12:15",
+      "time": "10:30-11:15",
       "room": "A",
       "room_label": "BALLROOM A",
       "title": "IKIGAI MANIFESTATION: How to Turn Your Ikigai into an Extraordinary Life — The 5-Step Formula to Live the Life You Truly Want",
@@ -477,7 +516,9 @@
         "iguchi"
       ],
       "community_slug": null,
-      "note": null
+      "note": null,
+      "description": "This session has one goal: you leave able to take the actions that turn \"impossible\" into \"possible.\"\nAkira Iguchi's definition of manifestation: act, results change, beliefs change. Bullied as a teen, he landed in New York with almost no English. He started his company at his friend’s living room from zero, failed many times,  20 years later, he wrote 12 books, build 8 figure business, impacted a million people.\nFive steps: Ikigai → Gift → Purpose → Monetization → Impact & Scaling. You'll leave with:\n1. Your \"impossible,\" written down, and the 1mm Rule toward it: smallest action, 24 hours, one witness\n2. The Ikigai Manifestation hypothesis session\n3. Find your ikigai role model and learn their strategy\n4. The Year-End Kaizen plan: five numbers to review every December and create your new year plan\n5.  How can you scale your impact?\nHuman potential has no limits. Prove it—year after year.",
+      "update_note": "Updated session details. Moved from 11:30–12:15 to 10:30–11:15 on October 2 (JST)."
     },
     {
       "day": "2026-10-02",
@@ -556,12 +597,14 @@
       "time": "13:30-14:15",
       "room": "G",
       "room_label": "GARDEN",
-      "title": "Booth Time",
-      "who": "Meet the sponsors in the garden · drop in any time",
+      "title": "Why Being Yourself Is Your Superpower",
+      "who": "Christian Pedersen",
       "category": null,
       "photos": [],
       "community_slug": null,
-      "note": null
+      "note": null,
+      "description": "Most of us spend our lives performing for others: chasing approval, likes, or money, and hiding the parts of ourselves we think people won't accept. It's exhausting, and I want us to challenge that. \n\nI used to create content for views and money, and it felt like work. When I started doing it for myself, everything changed. I connected deeper and learned to feel free to be silly. \n\nIn this conversational workshop, we'll explore together:\n• What changes when we act for ourselves instead of for approval\n• How to show up on camera as the real you in a digital world\n• How to speak to an audience and truly connect, whether it's one person or thousands",
+      "update_note": "New session in the former Booth Time slot: October 2, 13:30–14:15, Garden (JST)."
     },
     {
       "day": "2026-10-02",
@@ -738,7 +781,12 @@
       "role": "MC",
       "session": "Opening: Chikuzen Hakata Koma",
       "category": "world",
-      "when": "Day 1 · 10:00"
+      "when": "Day 1 · 10:00",
+      "bio": "Nikoleta is a community leader, writer, and podcast host who moved from chemical engineering into community building. Her work in coliving focuses on helping people find connection and a sense of belonging.",
+      "search_aliases": [
+        "Nikoletta",
+        "Nikoletta Kouli"
+      ]
     },
     {
       "photos": [
@@ -769,7 +817,9 @@
       "name": "Masaomi Sakata",
       "session": "Gut-Health Breakfast: Elevating IQ and Happiness through Gut Health",
       "category": "senses",
-      "when": "Day 1 & 2 · 9:00"
+      "when": "Day 1 & 2 · 9:00",
+      "bio": "Masaomi, also known as Koji Prince, develops foods and sweets using fermentation. He launched the 15% brand to make food more inclusive, beginning with an ice cream project that grew from his own exploration of food and well-being.",
+      "role": "Fermentation entrepreneur"
     },
     {
       "photos": [
@@ -778,7 +828,9 @@
       "name": "Chikushi Shuraku III",
       "session": "Opening: Chikuzen Hakata Koma",
       "category": "japan",
-      "when": "Day 1 · 10:00"
+      "when": "Day 1 · 10:00",
+      "bio": "Chikushi Shuraku III is the twentieth-generation head of Chikuzen Hakata Koma, a traditional spinning-top performance recognized as an intangible cultural property of Fukuoka Prefecture. He also performs Hakata Kinshishi taiko and brings these traditions to audiences in Japan and overseas.",
+      "role": "Traditional performing artist"
     },
     {
       "photos": [
@@ -787,7 +839,9 @@
       "name": "Yumi Imamura (matchabae)",
       "session": "Keynote 2: Matcha Crisis",
       "category": "local",
-      "when": "Day 1 · 11:10"
+      "when": "Day 1 · 11:10",
+      "bio": "Yumi grew up in a tea-selling family and shares Japanese tea culture with audiences in Japan and overseas. She leads Chajiyuukan, offering tea experiences through a mobile tea room that brings tea, time, and place together.",
+      "role": "Japanese tea instructor"
     },
     {
       "photos": [
@@ -796,7 +850,9 @@
       "name": "Kiki Fukai",
       "session": "Become Yourself Here: Japan as the Place You Discover Who You Really Are",
       "category": "japan",
-      "when": "Day 1 · 15:00"
+      "when": "Day 1 · 15:00",
+      "bio": "Kiki is a personal branding coach and content creator. Having lived abroad and worked alongside international residents in Japan, she brings perspectives from both sides of cross-cultural life. She helps people find their own voice and build a sense of belonging without losing who they are.",
+      "role": "Personal branding coach"
     },
     {
       "photos": [
@@ -805,7 +861,9 @@
       "name": "Ryotaro Sakurai",
       "session": "YEN TO EN: Turning Money Back into Connection",
       "category": "japan",
-      "when": "Day 1 · 17:00"
+      "when": "Day 1 · 17:00",
+      "bio": "Ryotaro founded Life Bridge in 2006. He works with local governments and tourism businesses on inbound tourism, regional development, and travel experiences. Through Ryotaro’s Japan, he introduces places and people across Japan to English-speaking audiences.",
+      "role": "Founder, Life Bridge"
     },
     {
       "photos": [
@@ -814,7 +872,9 @@
       "name": "Kazuhiro Arai",
       "session": "YEN TO EN: Turning Money Back into Connection",
       "category": "japan",
-      "when": "Day 1 · 17:00"
+      "when": "Day 1 · 17:00",
+      "bio": "Kazuhiro co-founded Kamakura Investment Management in 2008 and established eumo in 2018. Following a career in banking and investment management, he explores economic models built around empathy, human connection, and well-being.",
+      "role": "Founder, eumo"
     },
     {
       "photos": [
@@ -823,7 +883,9 @@
       "name": "Kotaro Motojima",
       "session": "YEN TO EN: Turning Money Back into Connection",
       "category": "japan",
-      "when": "Day 1 · 17:00"
+      "when": "Day 1 · 17:00",
+      "bio": "Kotaro is a lawyer whose work has included DAO development and legal frameworks with the Japan DAO Association and RuleMakers DAO. At IVS2024, he discussed how legal structures can support communities working toward shared goals.",
+      "role": "Lawyer"
     },
     {
       "photos": [
@@ -832,7 +894,9 @@
       "name": "Kiyoko Mitsui",
       "session": "YEN TO EN: Turning Money Back into Connection",
       "category": "japan",
-      "when": "Day 1 · 17:00"
+      "when": "Day 1 · 17:00",
+      "bio": "Kiyoko leads the KIBOTCHA Smart Eco-Village initiative in Higashimatsushima. Her work connects disaster-prevention education, the reuse of a former school, and community development, exploring ways for people to learn and build a sustainable future together.",
+      "role": "Community development, KIBOTCHA"
     },
     {
       "photos": [
@@ -841,7 +905,9 @@
       "name": "Mikiko & Hidehiko Sudo",
       "session": "Wakachiai: From Everyday Talk to Deep Connection",
       "category": "japan",
-      "when": "Day 2 · 13:30"
+      "when": "Day 2 · 13:30",
+      "bio": "Mikiko and Hidehiko are relationship specialists, educators, and founders of Kokoro Academy. Mikiko brings a background in university teaching and communication; Hidehiko holds a PhD in Sport Science and works with behavior change. Together, they developed Wakachiai, a practical approach to sharing feelings and building trust.",
+      "role": "Founders, Kokoro Academy"
     },
     {
       "photos": [
@@ -850,7 +916,9 @@
       "name": "Sanae Akima",
       "session": "Beneath Ikigai & Zen: Discovering the Hidden Worldview of Japan, and Your Own",
       "category": "japan",
-      "when": "Day 2 · 15:30"
+      "when": "Day 2 · 15:30",
+      "bio": "Sanae is a practitioner-researcher and founder of La torche. She develops projects that help people and communities turn differences into new possibilities. These include Nashite Fukuoka, a community and media initiative exploring why people from different backgrounds are drawn to the city. She is also the author of Brain Management.",
+      "role": "Founder and CEO, La torche"
     },
     {
       "photos": [
@@ -859,7 +927,9 @@
       "name": "Miki Tsukamoto (Visions)",
       "session": "Rain Won't Stop You, Wind Won't Stop You: Live Music, Picture Books and Miyazawa Kenji in Two Languages",
       "category": "senses",
-      "when": "Day 2 · 16:30"
+      "when": "Day 2 · 16:30",
+      "bio": "Miki is a pianist and co-founder of Visions with bassist and percussionist Kiyoshi Mamura. Formed in 2000, the duo uses jazz improvisation as a foundation for collaborations with picture-book readings, film, theater, dance, and traditional performing arts.",
+      "role": "Pianist, Visions"
     },
     {
       "photos": [
@@ -868,7 +938,9 @@
       "name": "Kiyoshi Mamura (Visions)",
       "session": "Rain Won't Stop You, Wind Won't Stop You: Live Music, Picture Books and Miyazawa Kenji in Two Languages",
       "category": "senses",
-      "when": "Day 2 · 16:30"
+      "when": "Day 2 · 16:30",
+      "bio": "Kiyoshi is a bassist and percussionist who formed Visions with pianist Miki Tsukamoto in 2000. Their work combines jazz improvisation with other art forms, including storytelling, film, theater, dance, and traditional performance.",
+      "role": "Bassist and percussionist, Visions"
     },
     {
       "photos": [
@@ -877,7 +949,9 @@
       "name": "Multilingual Matt",
       "session": "Speak Before You're Ready",
       "category": "world",
-      "when": "Day 1 · 14:00"
+      "when": "Day 1 · 14:00",
+      "bio": "Matt creates content about language learning, travel, culture, and cross-cultural connection. His work combines humor, storytelling, and practical advice, treating language as a way to practice courage and humility while connecting with people across borders.",
+      "role": "Language and travel creator"
     },
     {
       "photos": [
@@ -886,16 +960,20 @@
       "name": "Gil Petersil",
       "session": "CHATEA Workshop",
       "category": "senses",
-      "when": "Day 1 · 15:00"
+      "when": "Day 1 · 15:00",
+      "bio": "Gil is a facilitator, speaker, and co-founder of ChaTea. His work centers on human communication and relationship building through intentional networking, tea ceremonies, and shared experiences. He helps groups create trust and turn new connections into collaboration.",
+      "role": "Co-founder, ChaTea"
     },
     {
       "photos": [
         "stella"
       ],
       "name": "Stella Schneider",
-      "session": "SME Takeover Lab [ATOTSUGI]: How to Acquire a Small Business",
+      "session": "SME Takeover Lab: How to Acquire a Small Business — Tools, Process & Win-Win Thinking",
       "category": "local",
-      "when": "Day 1 · 16:00"
+      "when": "Day 2 · 11:30",
+      "bio": "Stella Schneider is a German business strategist, solopreneur, and founder of Business Wege — with more than 9 years of experience helping founders and entrepreneurs find their right business model and path forward.\n\nShe's known for cutting through complexity: her framework covers everything from freelancing and solopreneurship to startups, SMEs, and Entrepreneurship Through Acquisition (ETA). At Nomad Summit Chiang Mai 2026, she walked a room full of digital nomads through the 5 business models that actually work for location-independent life — grounded in radical self-awareness before strategy.\n\nAt CoLive Fukuoka, she's going deeper: into the practical process of acquiring an existing SME — with direct tools from the German market and a Win-Win mindset for buyers and sellers alike.",
+      "role": "Founder, Business Wege"
     },
     {
       "photos": [
@@ -904,7 +982,9 @@
       "name": "Daycia",
       "session": "Content Strategy for Small Businesses",
       "category": "world",
-      "when": "Day 1 · 16:00"
+      "when": "Day 1 · 16:00",
+      "bio": "Daycia created Daylightful, a media brand focused on human connection, intentional travel, and slow cultural immersion. Previously, she worked on content and campaign strategy at Dentsu and P&G. She now shares practical content strategies with small-business owners.",
+      "role": "Creator, Daylightful"
     },
     {
       "photos": [
@@ -913,7 +993,9 @@
       "name": "Yarden Avirav & Roza Gavrilov",
       "session": "Breaking Conceptions: From Nomadic Couple to Nomadic Family",
       "category": "world",
-      "when": "Day 1 · 17:00"
+      "when": "Day 1 · 17:00",
+      "bio": "Yarden and Roza are the couple behind NomadsTwoGo. After years of living and working as digital nomads, becoming parents in 2025 changed how they think about travel, freedom, and home. They share their ongoing experience of finding a nomadic lifestyle that works for a family.",
+      "role": "Creators, NomadsTwoGo"
     },
     {
       "photos": [
@@ -922,7 +1004,9 @@
       "name": "Nika Rey",
       "session": "Latino Dance: Bachata for Everyone",
       "category": "senses",
-      "when": "Day 1 · 17:00"
+      "when": "Day 1 · 17:00",
+      "bio": "Nika is an international dance instructor and event organizer who encourages people to move, connect, and enjoy music through dance.",
+      "role": "Dance instructor and event organizer"
     },
     {
       "photos": [
@@ -931,7 +1015,9 @@
       "name": "Diego Taira",
       "session": "Build Wealth. Find Your Purpose. Design a Life You Don't Need to Retire From.",
       "category": "world",
-      "when": "Day 2 · 10:30"
+      "when": "Day 2 · 10:30",
+      "bio": "Diego is the co-founder and CEO of Wealth Angels.",
+      "role": "Co-founder and CEO, Wealth Angels"
     },
     {
       "photos": [
@@ -940,7 +1026,9 @@
       "name": "Roland Tokko",
       "session": "Align and Connect with Your Ikigai Through Soul",
       "category": "world",
-      "when": "Day 2 · 11:30"
+      "when": "Day 2 · 11:30",
+      "bio": "Roland is an Estonian speaker, facilitator, and singer-songwriter, and co-founder of Becoming International. He combines speaking, live music, singing, and guided experiences to help people explore purpose and leadership in their own lives.",
+      "role": "Speaker and singer-songwriter"
     },
     {
       "photos": [
@@ -949,7 +1037,9 @@
       "name": "Adam Curnow",
       "session": "Travel Smarter, Work Safer: Everyday Security for Digital Nomads",
       "category": "global",
-      "when": "Day 2 · 13:30"
+      "when": "Day 2 · 13:30",
+      "bio": "Adam founded KarasuSec and works in IT and cybersecurity. A digital nomad himself, he focuses on making security understandable and practical for people who work from anywhere.",
+      "role": "Founder, KarasuSec"
     },
     {
       "photos": [
@@ -958,7 +1048,9 @@
       "name": "Oren Chazan",
       "session": "Peace: One Conversation at a Time",
       "category": "global",
-      "when": "Day 2 · 14:30"
+      "when": "Day 2 · 14:30",
+      "bio": "Oren co-owns Montino Coliving and works as an advertising consultant and business coach. Trained in Nonviolent Communication and related practices, he creates coliving and conversation experiences that encourage connection, community, and a more peaceful way of living.",
+      "role": "Co-owner, Montino Coliving"
     },
     {
       "photos": [
@@ -967,7 +1059,9 @@
       "name": "Yeji Cheon",
       "session": "Peace: One Conversation at a Time",
       "category": "global",
-      "when": "Day 2 · 14:30"
+      "when": "Day 2 · 14:30",
+      "bio": "Yeji founded Seoul Nooks, an intentional coliving and coworking community. Her work connects local Asian cultures with global nomad communities, using workshops and conversations to explore cultural differences, diversity, and how people live together.",
+      "role": "Founder, Seoul Nooks"
     },
     {
       "photos": [
@@ -985,7 +1079,9 @@
       "name": "Carlyn Shaw",
       "session": "The Power of a Smile: Creating Connection and Joy Within and Around You",
       "category": "world",
-      "when": "Day 2 · 14:30"
+      "when": "Day 2 · 14:30",
+      "bio": "Carlyn is a speaker, writer, and creator of the Whoever Smiles First Wins movement and Live In Joy community. Through travel and everyday encounters, she encourages people to trust themselves, build connections, and make room for joy.",
+      "role": "Speaker and community builder"
     },
     {
       "photos": [
@@ -994,7 +1090,9 @@
       "name": "Tressia H. Lee",
       "session": "HEARIM: Building Trust Across Cultures at Work",
       "category": "global",
-      "when": "Day 2 · 14:30"
+      "when": "Day 2 · 14:30",
+      "bio": "Tressia is a global marketing and Korean cultural strategist from Seoul. She created HEARIM, a Korean-informed communication framework for understanding unspoken expectations and building trust across cultures. Her background spans marketing, localization, education, and cultural strategy, alongside a remote-working career that began in 2014.",
+      "role": "Creator, HEARIM"
     },
     {
       "photos": [
@@ -1003,7 +1101,9 @@
       "name": "Lawrence Tuazon",
       "session": "Beyond Social Media: Grow a Business Through Relationships, Trust and Community",
       "category": "world",
-      "when": "Day 2 · 15:30"
+      "when": "Day 2 · 15:30",
+      "bio": "Lawrence is an author, speaker, coach, and co-founder of Be Extraordinary Publishing. He helps people turn their experiences into meaningful work and grow businesses through relationships, partnerships, referrals, and community.",
+      "role": "Co-founder, Be Extraordinary Publishing"
     },
     {
       "photos": [
@@ -1012,7 +1112,9 @@
       "name": "Rei Lee",
       "session": "Anywhere, But Where?",
       "category": "world",
-      "when": "Day 2 · 15:30"
+      "when": "Day 2 · 15:30",
+      "bio": "Rei founded LocalNomad and explores the future of work, play, and belonging in legacy cities.",
+      "role": "Founder, LocalNomad"
     },
     {
       "photos": [
@@ -1021,7 +1123,9 @@
       "name": "Marco Traina",
       "session": "What Keeps a Community Alive? From Shared Spaces to Shared Purpose",
       "category": "global",
-      "when": "Day 2 · 16:30"
+      "when": "Day 2 · 16:30",
+      "bio": "Marco is an entrepreneur and community builder who founded BeetCommunity in Palermo and Italia Nomad Fest. He also co-founded COFO – Coliving Founders. His work connects remote workers and local residents, encouraging visitors to participate in local life and contribute to the communities that host them.",
+      "role": "Founder, BeetCommunity"
     },
     {
       "photos": [
@@ -1030,7 +1134,9 @@
       "name": "Freeman Fung",
       "session": "A Conscious Pause: Closing Meditation at the Water's Edge",
       "category": "senses",
-      "when": "Day 2 · 16:30"
+      "when": "Day 2 · 16:30",
+      "bio": "Freeman is a speaker, author, mindset coach, and meditation facilitator. He founded Travel To Transform and combines personal development with travel and conscious global citizenship. His work encourages people to cultivate presence, self-understanding, and meaningful connections.",
+      "role": "Founder, Travel To Transform"
     },
     {
       "photos": [
@@ -1039,7 +1145,9 @@
       "name": "Arthur Binard",
       "session": "Rain Won't Stop You, Wind Won't Stop You: Live Music, Picture Books and Miyazawa Kenji in Two Languages",
       "category": "japan",
-      "when": "Day 2 · 16:30"
+      "when": "Day 2 · 16:30",
+      "bio": "Arthur is an American-born poet and translator who began writing poetry in Japanese after moving to Japan in 1990. His work spans poetry, essays, picture books, and kamishibai storytelling, including translations between Japanese and English.",
+      "role": "Poet and translator"
     },
     {
       "photos": [
@@ -1048,7 +1156,9 @@
       "name": "Nick Szasz (FUKUOKA NOW)",
       "session": "Keynote 1: Why We Came, Why We Stayed, and What Comes Next",
       "category": "local",
-      "when": "Day 1 · 10:30"
+      "when": "Day 1 · 10:30",
+      "bio": "Nick founded Fukuoka Now in 1998. Through English-language publishing, he introduces Fukuoka and Kyushu to international readers and helps connect visitors and residents with local places, people, and culture.",
+      "role": "Founder and publisher, Fukuoka Now"
     },
     {
       "photos": [
@@ -1057,7 +1167,9 @@
       "name": "Douglas Weber",
       "session": "Keynote 1: Why We Came, Why We Stayed, and What Comes Next",
       "category": "local",
-      "when": "Day 1 · 10:30"
+      "when": "Day 1 · 10:30",
+      "bio": "Douglas is a designer and engineer who studied at Stanford and worked on product design at Apple. At Weber Workshops, he brings that experience to the design and engineering of coffee equipment.",
+      "role": "Founder, Weber Workshops"
     },
     {
       "photos": [
@@ -1066,7 +1178,9 @@
       "name": "Jean-Pierre Villeneuve",
       "session": "Keynote 1: Why We Came, Why We Stayed, and What Comes Next",
       "category": "local",
-      "when": "Day 1 · 10:30"
+      "when": "Day 1 · 10:30",
+      "bio": "Jean-Pierre is the founder and CEO of New Town Technologies, the company behind the Seratone karaoke system.",
+      "role": "Founder and CEO, New Town Technologies"
     },
     {
       "photos": [
@@ -1075,7 +1189,9 @@
       "name": "Micaela Anne",
       "session": "Keynote 1: Why We Came, Why We Stayed, and What Comes Next",
       "category": "local",
-      "when": "Day 1 · 10:30"
+      "when": "Day 1 · 10:30",
+      "bio": "Micaela is a Canadian-born creator who calls Fukuoka home. Through Fukuoka Eats, she shares local food, travel, and everyday discoveries from the region.",
+      "role": "Food and travel creator"
     },
     {
       "photos": [
@@ -1084,7 +1200,9 @@
       "name": "Obaachan Shokudo",
       "session": "Gut-Health Breakfast: Elevating IQ and Happiness through Gut Health",
       "category": "senses",
-      "when": "Day 1 & 2 · 9:00"
+      "when": "Day 1 & 2 · 9:00",
+      "bio": "Ukiha no Takara is a social enterprise in Ukiha, Fukuoka. Its Grandma’s Café initiative creates meaningful paid work for older women, allowing them to share a lifetime of cooking skills, local recipes, hospitality, and wisdom. The team brings generations together through food, community, and a sense of purpose. At the Academy breakfast, the grandmothers share handmade onigiri and Japanese home cooking.",
+      "role": "Grandma’s Café · Ukiha, Fukuoka"
     },
     {
       "photos": [
@@ -1093,7 +1211,9 @@
       "name": "Obaachan Shokudo",
       "session": "Gut-Health Breakfast: Elevating IQ and Happiness through Gut Health",
       "category": "senses",
-      "when": "Day 1 & 2 · 9:00"
+      "when": "Day 1 & 2 · 9:00",
+      "bio": "Ukiha no Takara is a social enterprise in Ukiha, Fukuoka. Its Grandma’s Café initiative creates meaningful paid work for older women, allowing them to share a lifetime of cooking skills, local recipes, hospitality, and wisdom. The team brings generations together through food, community, and a sense of purpose. At the Academy breakfast, the grandmothers share handmade onigiri and Japanese home cooking.",
+      "role": "Grandma’s Café · Ukiha, Fukuoka"
     },
     {
       "photos": [
@@ -1102,7 +1222,9 @@
       "name": "Jacquie Wortley",
       "session": "Where can we build something that matters?",
       "category": "local",
-      "when": "Day 1 · 14:00"
+      "when": "Day 1 · 14:00",
+      "bio": "Jacquie draws on a decade of UX and product research in her work on sustainable innovation. Working with rural tea farmers, she explores how projects can support local people and regenerate the places they depend on.",
+      "role": "Researcher and sustainable innovation practitioner"
     },
     {
       "photos": [
@@ -1111,7 +1233,9 @@
       "name": "Ryu Fujii",
       "session": "Where can we build something that matters?",
       "category": "local",
-      "when": "Day 1 · 14:00"
+      "when": "Day 1 · 14:00",
+      "bio": "Ryu co-founded 369meteor and co-organizes ZōVillage. He is involved with Fracton Ventures and Network School, connecting experimental global communities with grassroots initiatives.",
+      "role": "Community builder"
     },
     {
       "photos": [
@@ -1120,7 +1244,9 @@
       "name": "MOE Nakano (JDNA)",
       "session": "Ask a Digital Nomad: Open Roundtables with JDNA",
       "category": "local",
-      "when": "Day 2 · 10:30"
+      "when": "Day 2 · 10:30",
+      "bio": "Moe, also known as Tomoe Nakano, moved from design into community building through Asia’s coworking movement. She founded TAOHUB in Thailand, TANEHUB in Akita, and the Japan Digital Nomad Association, where she leads the Community Manager Academy.",
+      "role": "Representative Director, Japan Digital Nomad Association"
     },
     {
       "photos": [
@@ -1129,7 +1255,9 @@
       "name": "Vitto Christaldi (JDNA)",
       "session": "Ask a Digital Nomad: Open Roundtables with JDNA",
       "category": "local",
-      "when": "Day 2 · 10:30"
+      "when": "Day 2 · 10:30",
+      "bio": "Vitto is a coworking and community strategist whose experience includes Hubud, Dojo, Tribal, and BWork. His work brings people together through shared workplaces and community experiences, including CU Asia.",
+      "role": "Coworking and community strategist"
     },
     {
       "photos": [
@@ -1138,7 +1266,9 @@
       "name": "Tessei Hosokawa",
       "session": "The \"Death\" of Digital Nomads — Zen, Impermanence, and Living in the Moment",
       "category": "japan",
-      "when": "Day 2 · 10:30"
+      "when": "Day 1 · 16:00",
+      "bio": "Tessei Hosokawa is a serial entrepreneur based in Kyoto, and the founder and CEO of NEWSON&COMPANY and Immersive Lab. As a university student, he spent six months in monastic training at Chōkokuji (Eiheiji Betsuin), a Sōtō Zen temple in Tokyo — rising before dawn for zazen, an experience that still shapes how he moves through a life of constant change. He later founded TABICA (now \"aini\"), one of Japan's early local-guide platforms connecting travelers with people and place. Through his companies he now works across community-building, regional revitalization, and immersive experiences. He serves as a director of the Japan Digital Nomad Association, an advisor to Japan's Digital Agency and the Ministry of Internal Affairs and Communications, and is in his third year supporting the Japan Tourism Agency's digital nomad promotion program. As an advisor to the town of Nachikatsuura in Wakayama, he runs a nomad project hosted at a local Zen temple. In this session, he brings Zen's view of impermanence into dialogue with the modern nomadic life.",
+      "role": "Founder, NEWSON&COMPANY and Immersive Lab"
     },
     {
       "photos": [
@@ -1147,7 +1277,9 @@
       "name": "Akira Iguchi",
       "session": "IKIGAI MANIFESTATION: How to Turn Your Ikigai into an Extraordinary Life — The 5-Step Formula to Live the Life You Truly Want",
       "category": "japan",
-      "when": "Day 2 · 11:30"
+      "when": "Day 2 · 10:30",
+      "bio": "Akira Iguchi  \nEntrepreneur, Bestselling Author & International Speaker\n\nAkira Iguchi is a Japanese entrepreneur, bestselling author, international speaker, and high-performance strategist dedicated to helping people reach their full potential and create extraordinary lives.\n\nFor more than two decades, Akira has studied and taught the principles of personal growth, entrepreneurship, high performance, and biohacking. As the founder of Human Plus Inc., he has built multimillion-dollar businesses and helped entrepreneurs and leaders transform their performance, businesses, health, and lives.\n\nAkira is the author of 12 books, including the bestselling Lifestyle Millionaire, with more than 300,000 copies sold. He has spoken internationally across 12 countries and shared stages and events with some of the world’s most recognized entrepreneurs and thought leaders, including Richard Branson and Tony Robbins.\n\nHis work brings together business strategy, high performance, biohacking, and his signature Ikigai Manifestation Method, a framework designed to help people discover what they are uniquely meant to contribute, turn that potential into meaningful work, and create greater freedom, impact, and fulfillment.\n\nToday, Akira works with entrepreneurs, founders, and high achievers around the world to help them elevate their health, wealth, performance, and purpose, while becoming the best version of themselves.\n\nHis mission is simple but ambitious:\n\nHelp 1 Billion People live their Ikigai and manifest all their dreams come true.",
+      "role": "Entrepreneur, author, and speaker"
     },
     {
       "photos": [
@@ -1159,6 +1291,15 @@
       "session": "You Can't Outrun Your Life: How to Use Travel as a Catalyst for Reinvention",
       "category": "world",
       "when": "Day 1 · 15:00"
+    },
+    {
+      "name": "Christian Pedersen",
+      "photos": [],
+      "role": "Content creator and speaker",
+      "session": "Why Being Yourself Is Your Superpower",
+      "category": null,
+      "when": "Day 2 · 13:30",
+      "bio": "Christian is traveling the world making content that entertains and inspires millions of people, but it was not always like that.\n\nHe used to hate being in front of a camera, and had to make all the mistakes in the process of learning how to become the version of himself you see today.\n\nNow he speaks and coaches on exactly that: how to get in front of a camera, be yourself, and really connect with people."
     }
   ]
 }
