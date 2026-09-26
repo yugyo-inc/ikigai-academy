@@ -1780,9 +1780,9 @@ h2 {
   top: auto;
 }
 
-/* --- Hero: uniform 80% navy tint over the venue photo (replaces the varying-opacity gradient) --- */
+/* Supplied community photo: keep faces visible and white copy readable. */
 .hero.hero--keyvisual::before {
-  background: rgba(21, 29, 85, 0.8);
+  background: rgba(21, 29, 85, 0.62);
 }
 
 /* --- Venue-specific session card backgrounds: the actual room photo, tinted 80% navy so text
