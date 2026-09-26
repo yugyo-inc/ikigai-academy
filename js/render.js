@@ -576,7 +576,11 @@ function renderLounge(schedule, day) {
 
 // Column widths prioritize readable short sessions, not duration. Exact times stay visible.
 export function buildTimelineLayout(sessions) {
-  const timed = sessions.filter(s => s.presentation !== "invitation" && parseTimeRange(s._displayTime || s.time));
+  // Lunch is a shared program break, even when its physical venue is BEACH.
+  // Keep source venue data intact for the list and session details.
+  const timed = sessions
+    .filter(s => s.presentation !== "invitation" && parseTimeRange(s._displayTime || s.time))
+    .map(s => /^Lunch Buffet\b/i.test(s.title) ? { ...s, room: "ALL" } : s);
   const starts = new Set(timed.map(s => parseTimeRange(s._displayTime || s.time).start));
   const points = [...new Set(timed.flatMap(s => {
     const range = parseTimeRange(s._displayTime || s.time);
