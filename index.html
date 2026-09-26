@@ -43,7 +43,7 @@
       <a href="#co-creators">Co-Creators</a>
       <a href="#venue-map">Venue</a>
       <span class="menu-pending" aria-label="Booth guide is not available yet">Booth <small>Soon</small></span>
-      <button type="button" id="menu-search" aria-controls="search-controls" aria-expanded="false">Search</button>
+      <button type="button" id="menu-search" aria-controls="program-search">Search</button>
     </nav>
 
     <header class="hero hero--keyvisual" id="top">
@@ -113,11 +113,10 @@
               <h3 id="filter-title">Find a session</h3>
               <button class="clear-filters" id="clear-filters" type="button" hidden>Clear</button>
             </div>
-            <div id="search-controls" hidden>
-            <label for="program-search">Search both days by speaker, title, or category</label>
+            <div id="search-controls">
+            <label class="sr-only" for="program-search">Search both days by speaker, title, or category</label>
             <input class="program-search" id="program-search" type="search" placeholder="Search name, title, or category" autocomplete="off">
             </div>
-            <button class="search-open" type="button" id="open-program-search" aria-controls="search-controls" aria-expanded="false">Search sessions</button>
             <div class="filter-chips" id="filter-chips" aria-label="Category filters"></div>
             <div class="search-feedback"><p id="filter-status" role="status" aria-live="polite"></p><button id="clear-search" type="button" hidden>Clear search &amp; filters</button></div>
           </div>

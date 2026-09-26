@@ -1,0 +1,11 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+const html = fs.readFileSync(new URL('../index.html', import.meta.url), 'utf8');
+const app = fs.readFileSync(new URL('../js/app.js', import.meta.url), 'utf8');
+const css = fs.readFileSync(new URL('../css/styles.css', import.meta.url), 'utf8');
+assert.match(html, /<div id="search-controls">/);
+assert.doesNotMatch(html + app, /open-program-search/);
+assert.match(app, /search\.focus\(\{ preventScroll: true \}\)/);
+assert.match(css, /\.filter-chips\s*\{[^}]*margin-top: 18px/s);
+assert.match(css, /\.filter-chip\s*\{[^}]*min-height: 44px/s);
+console.log('PASS: search visible by default, redundant opener removed, category spacing and touch target preserved.');

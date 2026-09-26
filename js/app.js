@@ -279,14 +279,10 @@ function resolveCurrentPrimary(session) {
 function setupInteractions() {
   const search = document.querySelector("#program-search");
   const expandSearch = () => {
-    document.querySelector("#search-controls").hidden = false;
-    document.querySelector("#menu-search").setAttribute("aria-expanded", "true");
-    document.querySelector("#open-program-search").setAttribute("aria-expanded", "true");
     search.scrollIntoView({ block: "center", behavior: "instant" });
     search.focus({ preventScroll: true });
   };
   document.querySelector("#menu-search").addEventListener("click", expandSearch);
-  document.querySelector("#open-program-search").addEventListener("click", expandSearch);
   document.querySelector("#clear-search").addEventListener("click", () => {
     state.query = ""; search.value = ""; state.selectedCategories.clear();
     renderFilters(state.schedule.categories, state.selectedCategories, toggleCategory, clearCategories);
