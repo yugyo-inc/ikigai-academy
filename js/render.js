@@ -163,7 +163,8 @@ export function renderSchedule(schedule, selectedDay, selectedCategories, query 
     return;
   }
 
-  const groups = groupSessionsByTime(displaySessions.filter((session) => session.presentation !== "invitation" && session.title !== "Bus Transportation"));
+  const dinnerSessions = displaySessions.filter(session => session.room === "OUT" && session.kind === "evening" && session.banner);
+  const groups = groupSessionsByTime(displaySessions.filter((session) => session.presentation !== "invitation" && session.title !== "Bus Transportation" && !dinnerSessions.includes(session)));
   for (let index = 0; index < groups.length; ) {
     if (!isWorkshopGroup(groups[index])) {
       timeline.append(renderTimeGroup(schedule, groups[index], selectedCategories, query));
@@ -179,9 +180,16 @@ export function renderSchedule(schedule, selectedDay, selectedCategories, query 
     timeline.append(renderWorkshopBlock(schedule, workshopGroups, selectedCategories, query));
   }
 
-  displaySessions.filter((session) => session.presentation === "invitation").forEach((session) => {
+  displaySessions.filter((session) => session.presentation === "invitation" && !dinnerSessions.includes(session)).forEach((session) => {
     timeline.append(renderInvitationNotice(schedule, session, selectedCategories, query));
   });
+  if (dinnerSessions.length) {
+    const dinners = element("section", "program-dinners program-dinners--list");
+    dinners.setAttribute("aria-label", "Evening events");
+    dinnerSessions.sort((a, b) => Number(a.presentation === "invitation") - Number(b.presentation === "invitation"))
+      .forEach(session => dinners.append(renderDinnerBanner(schedule, session)));
+    timeline.append(dinners);
+  }
 
   if (!displaySessions.length) {
     timeline.append(element("p", "now-empty", "No sessions are listed for this day."));

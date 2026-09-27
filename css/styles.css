@@ -2650,6 +2650,7 @@ body {
 .program-transport .session-card h3, .program-transport .session-card p,
 .program-dinners .session-card h3, .program-dinners .session-card p { color: var(--indigo); text-shadow: none; }
 .program-dinners { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 24px; }
+.program-dinners--list { grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); align-items: start; }
 .event-banner { display: block; margin-bottom: 16px; }
 .event-banner img { display: block; width: 100%; height: auto; object-fit: contain; border-radius: 4px; }
 .program-dinners > .session-card { padding: 16px; }
