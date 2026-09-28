@@ -1,0 +1,49 @@
+.booth-dialog { width: min(1240px, calc(100vw - 48px)); max-width: none; height: min(820px, calc(100dvh - 48px)); max-height: none; padding: 0; border: 0; border-radius: 16px; background: #fff; color: #1f296a; overflow: hidden; }
+.booth-dialog::backdrop { background: rgb(21 29 85 / 65%); }
+.booth-dialog[open] { display: flex; flex-direction: column; }
+.booth-header { display:flex; align-items:center; justify-content:space-between; gap:16px; padding:18px 24px; border-bottom:1px solid #d9deee; flex:none; }
+.booth-header h2 { font-family:var(--display); font-size:36px; line-height:1; margin:0; }
+.booth-header p { margin:6px 0 0; font-size:16px; color:#5a6283; }
+.booth-dialog button { font:inherit; color:inherit; cursor:pointer; }
+.booth-close,.booth-map-tools button { background:white; border:1px solid #b3bbd4; border-radius:6px; min-height:44px; padding:8px 14px; }
+.booth-close { flex:none; }
+.booth-layout { display:grid; grid-template-columns:minmax(0,1.85fr) minmax(300px,1fr); min-height:0; flex:1; }
+.booth-map-panel { min-width:0; padding:24px; background:#f6f8fb; display:flex; flex-direction:column; gap:12px; }
+.booth-map-viewport { overflow:auto; overscroll-behavior:contain; touch-action:pan-x pan-y; border:1px solid #d9deee; background:#fff; border-radius:8px; flex:1; min-height:230px; }
+.booth-map-canvas { position:relative; aspect-ratio:1000 / 540; min-width:100%; }
+.booth-map-canvas svg { display:block; width:100%; height:100%; }
+.booth-map-canvas svg text { font-family:var(--body); fill:#1f296a; font-size:20px; }
+.booth-pin { position:absolute; transform:translate(-50%,-50%); width:3.8%; height:8.15%; padding:0; border:2px solid #1f296a; border-radius:5px; background:white; font-size:var(--booth-map-font,18px) !important; font-weight:700 !important; line-height:1; }
+.booth-pin[aria-pressed="true"] { background:#eb6100; color:#fff; border:3px solid #1f296a; }
+.booth-pin[aria-pressed="true"]::after { content:'✓'; position:absolute; top:-12px; right:-9px; background:#1f296a; border-radius:50%; width:21px; height:21px; line-height:21px; color:#fff; }
+.booth-map-tools { display:flex; justify-content:flex-end; gap:8px; }
+.booth-map-note { font-size:16px; color:#5a6283; margin:0; }
+.booth-sidebar { overflow:auto; overscroll-behavior:contain; padding:24px; border-left:1px solid #d9deee; }
+.booth-list { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+.booth-tile { min-width:0; display:flex; flex-direction:column; text-align:left; padding:10px; border:1px solid #d9deee; border-radius:7px; background:white; gap:8px; }
+.booth-tile[aria-pressed="true"] { border:2px solid #eb6100; padding:9px; background:#fff8f2; }
+.booth-tile-number { font-size:16px; font-weight:700; }
+.booth-tile[aria-pressed="true"] .booth-tile-number::after { content:' ✓'; }
+.booth-logo-box { height:74px; width:100%; display:flex; align-items:center; justify-content:center; gap:6px; }
+.booth-logo-box img { max-width:100%; width:auto; max-height:70px; object-fit:contain; min-width:0; }
+.booth-logo-box:has(img:nth-child(2)) img { max-width:48%; }
+.booth-logo-pending { font-size:16px; color:#656b82; text-align:center; }
+.booth-tile-name { font-size:16px; line-height:1.35; overflow-wrap:anywhere; }
+.booth-detail { margin:0 0 20px; padding:0 0 20px; border-bottom:2px solid #eb6100; }
+.booth-detail:empty { display:none; }
+.booth-detail .booth-logo-box { height:92px; justify-content:flex-start; }
+.booth-detail h3 { margin:12px 0; font-size:22px; line-height:1.3; }
+.booth-detail p { font-size:16px; margin:10px 0; }
+.booth-detail-links { display:flex; flex-wrap:wrap; gap:8px; }
+.booth-detail-links a { padding:10px 16px; min-height:44px; display:inline-flex; align-items:center; border:1px solid #0069a0; border-radius:5px; color:#0069a0; font-weight:600; text-decoration:none; }
+.booth-dialog :focus-visible { outline:3px solid #0069a0; outline-offset:3px; }
+.booth-review-note { font-size:16px; color:#626a84; }
+@media (max-width:760px) {
+ .booth-dialog { width:100%; height:100dvh; margin:0; border-radius:0; }
+ .booth-header { padding:14px 16px; }
+ .booth-layout { display:block; overflow:auto; }
+ .booth-map-panel { padding:16px; }
+ .booth-map-viewport { flex:none; height:290px; }
+ .booth-sidebar { overflow:visible; border-left:0; padding:16px; }
+ .booth-list { gap:10px; }
+}

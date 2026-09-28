@@ -1,0 +1,267 @@
+{
+  "status": "published",
+  "source": "https://www.canva.com/design/DAHTQ4A-hl0/UyN8PVpScXomAeCuGqwMjA/view#6",
+  "dates": "October 1–2",
+  "booths": [
+    {
+      "number": 1,
+      "name": "Grandma’s Café × Koji Prince",
+      "logos": [
+        "assets/partners/ukiha-no-takara-logo.png",
+        "assets/partners/kouji-ouji.png"
+      ],
+      "links": [
+        {
+          "label": "Ukiha no Takara website",
+          "url": "https://ukihanotakara.com/"
+        }
+      ],
+      "description": null,
+      "review": "Koji Prince official URL and joint introduction pending.",
+      "x": 300,
+      "y": 390
+    },
+    {
+      "number": 2,
+      "name": "Visit Yame / Yame City",
+      "logos": [
+        "assets/partners/visit-yame.png"
+      ],
+      "links": [
+        {
+          "label": "Visit website",
+          "url": "https://en.yame.travel/"
+        }
+      ],
+      "description": null,
+      "review": "Logo and destination approved by organizer. Introduction pending.",
+      "x": 360,
+      "y": 390
+    },
+    {
+      "number": 3,
+      "name": "rururu / Koga City",
+      "logos": [
+        "assets/partners/rururu-koga.png"
+      ],
+      "links": [
+        {
+          "label": "Instagram",
+          "url": "https://www.instagram.com/rurururu_4wd/"
+        }
+      ],
+      "description": null,
+      "review": "Logo and destination approved by organizer. Introduction pending.",
+      "x": 405,
+      "y": 390
+    },
+    {
+      "number": 4,
+      "name": "Kubote Satoyama Retreat / Buzen City",
+      "logos": [
+        "assets/partners/kubote-satoyama-retreat.png"
+      ],
+      "links": [
+        {
+          "label": "Visit website",
+          "url": "https://satoyamaretreat-buzen.com/"
+        }
+      ],
+      "description": null,
+      "review": "Logo and destination approved by organizer. Introduction pending.",
+      "x": 450,
+      "y": 390
+    },
+    {
+      "number": 5,
+      "name": "Fukuoka City",
+      "logos": [
+        "assets/partners/go-fukuoka.png"
+      ],
+      "links": [
+        {
+          "label": "Visit website",
+          "url": "https://gofukuoka.jp/"
+        }
+      ],
+      "description": null,
+      "review": "Introduction pending. Existing GO FUKUOKA logo reused.",
+      "x": 495,
+      "y": 390
+    },
+    {
+      "number": 6,
+      "name": "Hirado City",
+      "logos": [
+        "assets/partners/hirado-tourism.png"
+      ],
+      "links": [
+        {
+          "label": "Visit website",
+          "url": "https://hirado-tourism.com/"
+        }
+      ],
+      "description": null,
+      "review": "Logo and destination approved by organizer. Introduction pending.",
+      "x": 540,
+      "y": 390
+    },
+    {
+      "number": 7,
+      "name": "Nagasaki Prefecture",
+      "logos": [
+        "assets/partners/digital-nomad-nagasaki.png"
+      ],
+      "links": [
+        {
+          "label": "Visit website",
+          "url": "https://www.nagasakinomad.com/"
+        }
+      ],
+      "description": null,
+      "review": "Logo and destination approved by organizer. Introduction pending.",
+      "x": 585,
+      "y": 390
+    },
+    {
+      "number": 8,
+      "name": "NomadResort",
+      "logos": [
+        "assets/partners/nomadresort.png"
+      ],
+      "links": [
+        {
+          "label": "Visit website",
+          "url": "https://nomadresort.jp/"
+        }
+      ],
+      "description": null,
+      "review": "Introduction pending.",
+      "x": 630,
+      "y": 390
+    },
+    {
+      "number": 9,
+      "name": "Lila / Ureshino City",
+      "logos": [
+        "assets/partners/lila.png"
+      ],
+      "links": [
+        {
+          "label": "Swallow Base website",
+          "url": "https://swallowbase.com/"
+        }
+      ],
+      "description": null,
+      "review": "Joint introduction pending. Existing Lila / Swallow Base logo reused.",
+      "x": 675,
+      "y": 390
+    },
+    {
+      "number": 10,
+      "name": "Co-Lab HAKUBA",
+      "logos": [
+        "assets/partners/yamaaicrew-unplan.png"
+      ],
+      "links": [
+        {
+          "label": "Visit website",
+          "url": "https://colab-hakuba.com/en"
+        },
+        {
+          "label": "Instagram",
+          "url": "https://www.instagram.com/colab_hakuba/"
+        }
+      ],
+      "description": null,
+      "review": "Introduction pending. Existing logo reads COLAB HAKUBA SUMMIT 2026.",
+      "x": 720,
+      "y": 390
+    },
+    {
+      "number": 11,
+      "name": "Taiwan Digital Fest 2027 / TDNA",
+      "logos": [
+        "assets/partners/taiwan-digital-nomad-association.png"
+      ],
+      "links": [
+        {
+          "label": "TDNA website",
+          "url": "https://dna.org.tw/"
+        }
+      ],
+      "description": null,
+      "review": "Introduction pending.",
+      "x": 765,
+      "y": 390
+    },
+    {
+      "number": 12,
+      "name": "SDEC",
+      "logos": [
+        "assets/partners/sdec.png"
+      ],
+      "links": [
+        {
+          "label": "Visit website",
+          "url": "https://sdec.com.my/web/"
+        }
+      ],
+      "description": null,
+      "review": "Introduction pending.",
+      "x": 810,
+      "y": 390
+    },
+    {
+      "number": 13,
+      "name": "Genki",
+      "logos": [
+        "assets/partners/genki.png"
+      ],
+      "links": [
+        {
+          "label": "Visit website",
+          "url": "https://genki.world/"
+        }
+      ],
+      "description": null,
+      "review": "Introduction pending.",
+      "x": 855,
+      "y": 390
+    },
+    {
+      "number": 14,
+      "name": "Tour de Kyushu / Tsunagaru",
+      "logos": [
+        "assets/partners/tour-de-kyushu.svg"
+      ],
+      "links": [
+        {
+          "label": "Visit website",
+          "url": "https://tourdekyushu.asia/en/"
+        }
+      ],
+      "description": null,
+      "review": "Logo and destination approved by organizer. Introduction pending.",
+      "x": 100,
+      "y": 266
+    },
+    {
+      "number": 15,
+      "name": "Hyuga City",
+      "logos": [
+        "assets/partners/yo-co-el-hyuga.png"
+      ],
+      "links": [
+        {
+          "label": "Visit website",
+          "url": "https://www.hyugacity.jp/"
+        }
+      ],
+      "description": null,
+      "review": "Introduction pending. Supplied Yo-Co-El Hyuga logo reused.",
+      "x": 122,
+      "y": 222
+    }
+  ]
+}

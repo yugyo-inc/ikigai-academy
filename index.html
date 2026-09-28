@@ -34,7 +34,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/booth.css">
     <script type="module" src="js/app.js"></script>
+    <script type="module" src="js/booth.js"></script>
   </head>
   <body>
     <a class="skip-link" href="#schedule">Skip to the schedule</a>
@@ -42,7 +44,7 @@
       <a href="#schedule">Schedule</a>
       <a href="#co-creators">Co-Creators</a>
       <a href="#venue-map">Venue</a>
-      <span class="menu-pending" aria-label="Booth guide is not available yet">Booth <small>Soon</small></span>
+      <button type="button" id="menu-booth" aria-haspopup="dialog" aria-controls="booth-dialog">Booth</button>
       <button type="button" id="menu-search" aria-controls="program-search">Search</button>
     </nav>
 
@@ -267,6 +269,10 @@
         </div>
         <div class="partner-grid partner-grid--sponsors">
           <a class="partner partner--sponsor" href="https://gofukuoka.jp/" target="_blank" rel="noopener noreferrer"><img src="assets/partners/go-fukuoka.png" alt="GO FUKUOKA — Fukuoka City Official Tourist Guide" width="298" height="45" loading="lazy" decoding="async"></a>
+          <a class="partner partner--sponsor" href="https://en.yame.travel/" target="_blank" rel="noopener noreferrer"><img src="assets/partners/visit-yame.png" alt="Visit Yame / Yame City" loading="lazy" decoding="async"></a>
+          <a class="partner partner--sponsor" href="https://www.instagram.com/rurururu_4wd/" target="_blank" rel="noopener noreferrer"><img src="assets/partners/rururu-koga.png" alt="rururu / Koga City" loading="lazy" decoding="async"></a>
+          <a class="partner partner--sponsor" href="https://satoyamaretreat-buzen.com/" target="_blank" rel="noopener noreferrer"><img src="assets/partners/kubote-satoyama-retreat.png" alt="Kubote Satoyama Retreat / Buzen City" loading="lazy" decoding="async"></a>
+          <a class="partner partner--sponsor" href="https://hirado-tourism.com/" target="_blank" rel="noopener noreferrer"><img src="assets/partners/hirado-tourism.png" alt="Hirado City" loading="lazy" decoding="async"></a>
           <a class="partner partner--sponsor" href="https://futrworks.com/" target="_blank" rel="noopener noreferrer"><img src="assets/partners/futrworks.png" alt="FUTRWORKS" loading="lazy" decoding="async"></a>
           <a class="partner partner--sponsor" href="https://swallowbase.com/" target="_blank" rel="noopener noreferrer"><img src="assets/partners/lila.png" alt="Lila / Swallow Base" loading="lazy" decoding="async"></a>
           <a class="partner partner--sponsor" href="https://withpersona.com/" target="_blank" rel="noopener noreferrer"><img src="assets/partners/persona.png" alt="Persona" loading="lazy" decoding="async"></a>
