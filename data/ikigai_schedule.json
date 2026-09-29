@@ -171,10 +171,12 @@
       "room": "MAIN",
       "room_label": "MAIN HALL",
       "title": "Keynote 2: Matcha Crisis",
-      "who": "Yumi Imamura, Tea Farmers and Distributors",
+      "who": "Yumi Imamura · Atsushi Goda · Yasunari Yamashina",
       "category": "local",
       "photos": [
-        "imamura"
+        "imamura",
+        "goda",
+        "yamashina"
       ],
       "community_slug": "matcha-crisis-by-yumi-imamura",
       "note": null,
@@ -901,6 +903,28 @@
       "when": "Day 1 · 11:10",
       "bio": "Yumi grew up in a tea-selling family and shares Japanese tea culture with audiences in Japan and overseas. She leads Chajiyuukan, offering tea experiences through a mobile tea room that brings tea, time, and place together.",
       "role": "Japanese tea instructor"
+    },
+    {
+      "photos": [
+        "goda"
+      ],
+      "name": "Atsushi Goda",
+      "session": "Keynote 2: Matcha Crisis",
+      "category": "local",
+      "when": "Day 1 · 11:10",
+      "bio": "Atsushi Goda is the representative of Goda Seicha and a tea producer. He joins Matcha Crisis to share a producer's perspective on Japanese tea.",
+      "role": "Representative / Tea Producer, Goda Seicha"
+    },
+    {
+      "photos": [
+        "yamashina"
+      ],
+      "name": "Yasunari Yamashina",
+      "session": "Keynote 2: Matcha Crisis",
+      "category": "local",
+      "when": "Day 1 · 11:10",
+      "bio": "Yasunari Yamashina is the representative of Yamashina Chaho and a Japanese tea appraiser. He joins Matcha Crisis to share an appraiser's perspective on Japanese tea.",
+      "role": "Representative / Japanese Tea Appraiser, Yamashina Chaho"
     },
     {
       "photos": [
