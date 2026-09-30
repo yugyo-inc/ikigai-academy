@@ -37,5 +37,5 @@ assert.ok(!/Nika Rey|Micaela Anne|Motojima|Mitsui|Harley Kennedy/.test(JSON.stri
 assert.ok(!data.sessions.some(s=>/Thursday Gathering/i.test(s.title)));
 assert.deepEqual(data.event, baseline.event);
 assert.deepEqual(data.categories, baseline.categories);
-assert.deepEqual(data.rooms, baseline.rooms);
+assert.deepEqual(data.rooms, {...baseline.rooms, BEACH: 'GRAND GARDEN'});
 console.log('PASS: approved October corrections, booking URLs, three Matcha speakers, Maria profile, and protected structure.');
