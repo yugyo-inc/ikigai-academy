@@ -685,7 +685,7 @@ function renderHorizontalTimeline(schedule, day, sessions) {
       top.append(element("p", "result-time", formatTimeLabel(session._displayTime || session.time)));
       inner.append(top);
       if (session.room === "MAIN") top.append(element("p", "combined-room-label", schedule.rooms.MAIN));
-      if (session.room === "ALL") inner.append(element("p", "", "All venues"));
+      if (session.room === "ALL") inner.append(element("p", "", session.room_label || "All venues"));
       if (session.note === "soon") inner.append(element("span", "soon-badge", "Coming soon"));
       if (session.update_note) inner.append(element("span", "session-update", "Program updated"));
       const heading = element("h3", "");
