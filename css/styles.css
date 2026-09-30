@@ -18,6 +18,30 @@
   --body: "Inter", "Noto Sans JP", sans-serif;
 }
 
+/* Additional experiences stay independent of day tabs and timeline slots. */
+.special-events { margin: 28px 0 40px; padding: 24px 0; border-block: 1px solid var(--line); }
+.special-events__heading { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 8px 24px; margin-bottom: 20px; }
+.special-events__heading h3 { margin: 0; font-family: var(--display); font-size: 2rem; color: var(--indigo); }
+.special-events__heading p { margin: 0; color: var(--muted); font-size: .85rem; }
+.special-events__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px 20px; align-items: start; }
+.special-event { min-width: 0; }
+.special-event > img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: contain; background: var(--mist); border-radius: 8px; }
+.special-event__body { padding: 14px 0 0; }
+.special-event h4 { margin: 6px 0 0; color: var(--indigo); font-size: 1.2rem; line-height: 1.3; }
+.special-event__when { margin: 0; font-size: .8rem; font-weight: 700; color: var(--blue); }
+.special-event__subtitle { margin: 4px 0 8px; font-size: .85rem; font-weight: 600; }
+.special-event__where { margin: 0; font-size: .8rem; color: var(--muted); }
+.special-event__intro { margin: 10px 0; font-size: .875rem; line-height: 1.5; }
+.special-event__details { font-size: .875rem; }
+.special-event__details summary { cursor: pointer; color: var(--blue); font-weight: 600; padding: 10px 0; min-height: 44px; }
+.special-event__details p { margin: 8px 0 12px; line-height: 1.55; }
+.special-event__booking { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; margin-top: 10px; padding: 10px 16px; border-radius: 6px; background: var(--orange); color: white; font-size: .875rem; font-weight: 700; text-decoration: none; }
+.special-event__booking:hover { background: var(--indigo); }
+.special-event__booking:focus-visible, .special-event__details summary:focus-visible { outline: 3px solid var(--focus); outline-offset: 4px; }
+@media (min-width: 1400px) { .special-events__grid { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
+@media (max-width: 900px) { .special-events__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 540px) { .special-events__grid { grid-template-columns: 1fr; gap: 28px; } }
+
 * {
   box-sizing: border-box;
 }
